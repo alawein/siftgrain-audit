@@ -24,8 +24,8 @@ headless WebKit cadence was slower. No universal 60 fps claim is made. Field INP
 is unavailable without real-user data; no telemetry is added.
 
 Lighthouse CI uses localhost because Lighthouse does not audit file:// URLs.
-The actual three-run result is docs/lighthouse-results.json: LCP 851-1000 ms,
-TBT 0-196.5 ms, accessibility 1.0. Worst-run LCP <=2500 ms and TBT <=200 ms are
+The actual three-run result is docs/lighthouse-results.json: LCP 769-827 ms,
+TBT 0-150.5 ms, accessibility 1.0. Worst-run LCP <=2500 ms and TBT <=200 ms are
 enforced, along with accessibility 1.0. TBT is a diagnostic, not INP. Individual
 file:// LCP values above are independently measured through Playwright.
 
@@ -47,3 +47,13 @@ development environment; npm reports 17 development-tool findings (11 high,
 4 moderate, 2 low), including Lighthouse CI's transitive dependencies. These
 packages are never embedded in the portable report or required by the Python
 runtime. No forced major upgrade or Dependabot change is performed.
+
+A subsequent final cold mobile-simulator session recorded TBT 271.5/0/0 ms,
+exceeding the unchanged worst-run 200 ms TBT assertion. LCP and accessibility
+passed. This occurred while other tool browser work was active; contention is
+a hypothesis, not a proven cause. docs/lighthouse-contention.json preserves it.
+The single rerun with this suite's other GPU checks idle passed the same original
+mobile profile and bounds: LCP 769-827 ms, TBT 0/150.5/0 ms, and accessibility
+1.0 in all three runs. Both observations are retained; this comparison supports
+contention as a possible cause without proving all host activity was absent.
+No number is reinterpreted as field INP.

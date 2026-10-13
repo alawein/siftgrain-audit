@@ -29,7 +29,7 @@ observed run named here, not a claim that the entire broad brief is complete.
 | Explicit errored-scored numerator policy | done | availability includes errors with scores; readiness/scored-only excludes them; separate sensitivity policies |
 | Atomic output writes and Python 3.11 | done | unchanged shared helper, safety vectors and 3.11 CI matrix |
 | Inspect/lm-eval/HELM/promptfoo/Open LLM convert adapters | partial | five strict local export adapters; HELM per-instance arrays and Open LLM exported JSON only, no arbitrary raw runs/Parquet or network download |
-| GitHub Action and pre-commit denominator gate | done | action.yml, .pre-commit-hooks.yaml; subprocess negative test proves shrinkage exit 1 |
+| GitHub Action and pre-commit denominator gate | done | action.yml, .pre-commit-hooks.yaml; subprocess negative tests prove shrinkage exit 1, including a manifest named --help |
 | Separate score-sensitivity view | done | exact-rational three-policy HTML/optional JSON; no change to pass readiness or core audit JSON |
 | Self-contained waffle, trial strips and table filter | done | every planned trial stays in N; escaped imported text; filters never change N |
 | Optional rich CLI only | done | cli extra and --rich stderr summary; default JSON unchanged |

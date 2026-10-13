@@ -15,8 +15,8 @@ The compatible package and command remain `alawein-eval-audit` and `eval-audit`.
 Its self-contained report offers four vibes, dark/light appearance, missing-trial
 waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
 
-[Brand and name checks](BRAND.md) · [Download test set](benchmarks/dataset-v1.zip) ·
-[Benchmark results](benchmarks/RESULTS.md) · [Migration](MIGRATION.md) ·
+[Brand and name checks](BRAND.md) Â· [Download test set](benchmarks/dataset-v1.zip) Â·
+[Benchmark results](benchmarks/RESULTS.md) Â· [Migration](MIGRATION.md) Â·
 [Performance](PERF.md)
 
 ## Run
@@ -148,7 +148,8 @@ Use the repository composite Action with `manifest` and `records` inputs, pinned
 to the reviewed commit SHA. Its stdlib runner fails on missing, errored, unscored,
 unexpected or malformed work. For pre-commit, use hook `evaluation-completeness`
 with `args: [manifest.json, results.jsonl]`; filenames are never inferred as the
-population. The hook runs even when no matching files changed.
+population. The hook runs even when no matching files changed. Consumer entrypoints treat
+manifest/results arguments as paths, including option-like filenames.
 
 `--sensitivity policy.json` writes separate zero-fill, score-available and
 scored-only means as exact rational strings. Missing is zero only in zero-fill;

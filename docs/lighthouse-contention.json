@@ -1,0 +1,30 @@
+{
+  "access_date": "2026-10-13",
+  "scope": "Three Lighthouse localhost runs; not file:// or field INP",
+  "runs": [
+    {
+      "lcp_ms": 864.93069,
+      "tbt_ms": 271.5000000000001,
+      "accessibility": 1,
+      "performance": 0.95,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    },
+    {
+      "lcp_ms": 825.4019,
+      "tbt_ms": 0,
+      "accessibility": 1,
+      "performance": 0.99,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    },
+    {
+      "lcp_ms": 867.19426,
+      "tbt_ms": 0,
+      "accessibility": 1,
+      "performance": 1,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    }
+  ],
+  "exit_code": 1,
+  "source_sha": "e3e94b7472bdf9ca62364353d693b873308f3f95",
+  "context": "Final cold mobile-simulator run while other tool browser work was active; not a field INP measurement. Original bounds retained for one later isolated rerun."
+}

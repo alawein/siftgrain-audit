@@ -217,7 +217,7 @@ unchanged. Actual new-version publication and live provenance remain pending.
 
 The implementation adds meaningful negative tests before new adapter, sensitivity,
 viewer and gold-gate behavior. Original core/contract/output helpers remain intact.
-The updated suite reaches 186 tests after a new regression reproduced overflow of
+The updated suite reaches 187 tests after a new regression reproduced overflow of
 Python's integer-to-string digit bound when summing two valid 4300-digit scores.
 The policy formatter now uses exact Decimal(int) conversion and leaves the
 process-wide security limit unchanged. Small-score policy output is unchanged.
@@ -259,3 +259,33 @@ Fresh Python 3.11.13 full gate then passed 186 tests, both type checkers, Ruff,
 schemas and wheel/sdist builds. Actual local native Croissant extraction returned
 140 dev and 140 test records with no parse/extraction error. Opt-in Chromium
 worker reported WebGL state webgl2 in an executed browser check.
+
+The final repeated browser suite again passed all nine tests. Its subsequent
+cold Lighthouse session had TBT 271.5/0/0 ms, failing the unchanged worst-run
+assertion while LCP/AA passed. The prior passing run is historical evidence,
+not a substitute for this failure. A single isolated rerun is justified by
+observed concurrent browser work; its actual outcome will be recorded separately.
+
+A final consumer regression used a real manifest literally named --help with a
+missing expected row. The Action wrapper returned argparse help with exit 0
+instead of auditing it. The subprocess test failed before adding the -- positional
+separator to the wrapper and pre-commit entry. Normal CLI help stays unchanged.
+The fresh Python 3.11.13 full gate then passed 187 tests, Ruff, both type checkers,
+schemas and wheel/sdist builds. No browser asset changed in this correction.
+
+## Coordinator closeout
+
+The coordinator reviewed the source and consumer correction, ran the seven
+focused portability/sensitivity cases on Python 3.11.13, and verified native
+Croissant extraction of 140 dev and 140 test records. All five canonical token
+files and the paired Python output-safety module match their sibling bytes.
+The consumer now treats option-like manifest paths literally; its subprocess
+regression fails the old help/exit-zero path and passes the corrected audit.
+The coordinator then ran the full gate on explicitly printed Python 3.11.13:
+187 tests passed in 17.98 seconds; Ruff lint/format, mypy, Pyright, canonical
+schema/fixture validation, wheel and source-distribution builds all passed.
+The original-profile isolated-suite Lighthouse rerun passed all three runs;
+the preceding cold TBT outlier remains in docs/lighthouse-contention.json.
+The wordmark now has an opaque night background so its light lettering remains
+readable on light image-viewer and GitHub backgrounds. No PR, clean clone,
+merge, release, settings change, or dataset upload is inferred from these checks.
