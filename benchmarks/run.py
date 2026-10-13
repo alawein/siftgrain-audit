@@ -29,9 +29,7 @@ FAULTS = ("drop", "duplicate", "error", "nan", "shuffled_epochs", "partial_retri
 
 
 def write_json(path: Path, value: object) -> None:
-    path.write_text(
-        json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + "\n", encoding="utf-8"
-    )
+    path.write_bytes((json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + "\n").encode())
 
 
 def metrics(actual: list[bool], predicted: list[bool]) -> dict:
@@ -252,7 +250,7 @@ def main() -> None:
     write_json(ROOT / "results.json", summary)
     write_json(ROOT / "case-results.json", results)
     checksums = {
-        str(p.relative_to(data)): hashlib.sha256(p.read_bytes()).hexdigest()
+        p.relative_to(data).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
         for p in sorted(data.rglob("*.json"))
         if p.name != "checksums.json"
     }
@@ -267,11 +265,13 @@ def main() -> None:
                 "dataset.schema.json",
             )
         ]
-        for path in sorted(paths):
+        for path in sorted(paths, key=lambda value: value.relative_to(ROOT).as_posix()):
             info = zipfile.ZipInfo(
                 str(path.relative_to(ROOT)).replace("\\", "/"), date_time=(2026, 10, 13, 0, 0, 0)
             )
             info.compress_type = zipfile.ZIP_DEFLATED
+            info.create_system = 3
+            info.external_attr = 0o100644 << 16
             archive.writestr(info, path.read_bytes())
     print(f"PASS: {len(results)} seeded public-log cases; results in benchmarks/results.json")
     if (

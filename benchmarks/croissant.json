@@ -64,7 +64,7 @@
       "description": "Public dev fault-seed answer keys; original source IDs overlap both splits.",
       "contentUrl": "dataset-v1/dev-answers.json",
       "encodingFormat": "application/json",
-      "sha256": "b0666fbc680a0b3f14457b8b799b686e5dbcd5b27affb08d04a9cfa1c23d448c"
+      "sha256": "161473e632d313c886575707f73f6839a0b86fc510d919de8a2fbbdace0a3714"
     },
     {
       "@type": "cr:FileObject",
@@ -73,7 +73,7 @@
       "description": "Public test fault-seed answer keys; original source IDs overlap both splits.",
       "contentUrl": "dataset-v1/test-answers.json",
       "encodingFormat": "application/json",
-      "sha256": "e9d01708cede014eadb544086fbcfcefa40ee2f5f8f91623a7b4743d0a59a047"
+      "sha256": "eb268ea3136600f9d7d8c5dc5922d846d023e17fd2ecd85b5730fd5cca1c743c"
     },
     {
       "@type": "cr:FileObject",
@@ -81,7 +81,7 @@
       "name": "archive",
       "contentUrl": "dataset-v1.zip",
       "encodingFormat": "application/zip",
-      "sha256": "f2b86970a3a3c7bf1349a300239379816c510e42c4c45213f587d23741650a66"
+      "sha256": "df075472efd09bcf3355d3d2737ab2a961b8a8fbdcdc2f7f890f382584928895"
     }
   ],
   "recordSet": [

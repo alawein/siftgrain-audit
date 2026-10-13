@@ -1,7 +1,7 @@
 # Viewer performance
 
 Budget: self-contained acceptance report <= **32 KiB gzip**. Current observed
-report: **9,411 gzip bytes**. CI builds the report, checks this budget and exact
+report: **9,414 gzip bytes**. CI builds the report, checks this budget and exact
 runtime-token identity, runs three real browsers/axe, and runs Lighthouse CI.
 No runtime CDN/library/font fetch is required. The Python core stays stdlib.
 

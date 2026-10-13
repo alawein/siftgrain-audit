@@ -212,3 +212,50 @@ packages-dir setting, completed partial uploads, foreign publishers, canonical
 directory preservation, nested staging rejection, and successful/failed note
 generation ordering. Runtime, adapters, study inputs/results and schemas are
 unchanged. Actual new-version publication and live provenance remain pending.
+
+## Census redesign verification
+
+The implementation adds meaningful negative tests before new adapter, sensitivity,
+viewer and gold-gate behavior. Original core/contract/output helpers remain intact.
+The updated suite reaches 186 tests after a new regression reproduced overflow of
+Python's integer-to-string digit bound when summing two valid 4300-digit scores.
+The policy formatter now uses exact Decimal(int) conversion and leaves the
+process-wide security limit unchanged. Small-score policy output is unchanged.
+
+Local baseline had 170 tests; the first checkpoint passed 183 plus full lint,
+types, schemas and builds. Actual three-engine viewer/axe suite: nine passed,
+all eight appearance/vibe combinations per engine. Lighthouse three-run worst-case
+budgets passed; PERF.md records real measurements and the field/midrange limits.
+Native Inspect0.3.279 parser/accuracy ran on all 280 fault cases. The downloadable
+archive's regeneration was byte-identical before adding its standalone license
+and metadata; its final checksum is recorded in Croissant metadata and RESULTS.md.
+
+Actual mlcroissant1.1.1 parses the official inline-context metadata as two RecordSets;
+local and coordinator extraction each observed 140 dev and 140 test rows. Optional warnings concern
+recommended citeAs/datePublished and newer context terms; no publication date is
+invented for an unpublished dataset. These are executed consumer checks, not
+external certification or an HF upload.
+
+First source checkpoint ae6ca569902269f8b411b7639edae79f787b1f57 matched fresh
+origin/feat/spanward-census. Automatic approval review then rejected the draft-PR
+and fresh-clone command as "blocked by policy". Readback found no PR and no clone.
+No alternate route was attempted. Independent review of the pushed branch and
+local fresh-environment checks continued; neither substitutes for hosted final-head
+checks, clean-clone verification, a PR, merge or landed-content verification.
+
+A subsequent packaging check reproduced Windows CRLF serialization and backslash
+checksum keys: Git normalized corpus blobs, so their recorded checksums did not
+match committed bytes. Two negative tests failed before LF byte serialization,
+POSIX paths and fixed ZIP host attributes/order corrected the artifact. Corpus
+checksums now match each file; ZIP regeneration is tested twice. CI now explicitly
+sets UV_PYTHON per matrix job and prints the actual interpreter; setup-python
+labels alone did not override .python-version. Fresh local verification explicitly
+printed Python 3.11.13 before the full passing suite. No matrix-label-only claim
+or clean-clone substitution is made.
+
+Final corpus ZIP regeneration after LF/POSIX/header correction produced identical
+SHA-256 df075472efd09bcf3355d3d2737ab2a961b8a8fbdcdc2f7f890f382584928895 twice.
+Fresh Python 3.11.13 full gate then passed 186 tests, both type checkers, Ruff,
+schemas and wheel/sdist builds. Actual local native Croissant extraction returned
+140 dev and 140 test records with no parse/extraction error. Opt-in Chromium
+worker reported WebGL state webgl2 in an executed browser check.

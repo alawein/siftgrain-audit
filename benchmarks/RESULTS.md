@@ -30,8 +30,8 @@ No model/scorer/network calls occur during baseline execution. No native lm-eval
 baseline was run because this source is Inspect, not lm-eval. No LLM baseline
 or human experiment was performed.
 
-Observed host timing: median conversion+audit 7.353 ms;
-synthetic 10,000-missing-trial audit 1.1706 s;
+Observed host timing: median conversion+audit 5.301 ms;
+synthetic 10,000-missing-trial audit 0.6774 s;
 tracemalloc peak 3769834 bytes. Platform and Python
 are recorded in results.json. These host-specific timings are descriptive.
 No CI for a fixed exhaustively run seeded suite; three original IDs do not
@@ -42,6 +42,6 @@ Native reproduction after optional installation: `python benchmarks/native_inspe
 using an environment with this repo and inspect-ai==0.3.279 installed.
 
 [Download versioned inputs and separate keys](dataset-v1.zip). Two successive
-runs produced identical ZIP SHA-256 `f2b86970a3a3c7bf1349a300239379816c510e42c4c45213f587d23741650a66`.
+runs produced identical ZIP SHA-256 `df075472efd09bcf3355d3d2737ab2a961b8a8fbdcdc2f7f890f382584928895`.
 The raw third-party log remains ignored; the downloadable suite keeps mapped
 score values and retains upstream MIT attribution in UPSTREAM-LICENSE.txt.

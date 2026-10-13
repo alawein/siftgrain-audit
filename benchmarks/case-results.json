@@ -9,7 +9,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017943800005014054
+    "seconds": 0.006128400003944989
   },
   {
     "actual": true,
@@ -21,7 +21,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014144799999485258
+    "seconds": 0.01699920000100974
   },
   {
     "actual": true,
@@ -33,7 +33,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.012863399999332614
+    "seconds": 0.005106600001454353
   },
   {
     "actual": true,
@@ -45,7 +45,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015524700000241864
+    "seconds": 0.006074899996747263
   },
   {
     "actual": true,
@@ -57,7 +57,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.006030600001395214
+    "seconds": 0.005024899997806642
   },
   {
     "actual": false,
@@ -69,7 +69,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014324700001452584
+    "seconds": 0.006409200002963189
   },
   {
     "actual": true,
@@ -81,7 +81,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007363799995800946
+    "seconds": 0.005306799997924827
   },
   {
     "actual": false,
@@ -93,7 +93,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016632699996989686
+    "seconds": 0.005337800001143478
   },
   {
     "actual": true,
@@ -105,7 +105,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01759640000091167
+    "seconds": 0.006718900003761519
   },
   {
     "actual": true,
@@ -117,7 +117,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.017713900000671856
+    "seconds": 0.004713400005130097
   },
   {
     "actual": true,
@@ -129,7 +129,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.03126449999399483
+    "seconds": 0.004447599996638019
   },
   {
     "actual": true,
@@ -141,7 +141,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.018116699997335672
+    "seconds": 0.004913400000077672
   },
   {
     "actual": false,
@@ -153,7 +153,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00876359999529086
+    "seconds": 0.005545400003029499
   },
   {
     "actual": true,
@@ -165,7 +165,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005090999999083579
+    "seconds": 0.006080400002247188
   },
   {
     "actual": false,
@@ -177,7 +177,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016080500005045906
+    "seconds": 0.004618700004357379
   },
   {
     "actual": true,
@@ -189,7 +189,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017702200006169733
+    "seconds": 0.014314599997305777
   },
   {
     "actual": true,
@@ -201,7 +201,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.01735760000156006
+    "seconds": 0.004290899996703956
   },
   {
     "actual": true,
@@ -213,7 +213,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.02088079999521142
+    "seconds": 0.004442400000698399
   },
   {
     "actual": true,
@@ -225,7 +225,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.016688899995642714
+    "seconds": 0.004287200004910119
   },
   {
     "actual": false,
@@ -237,7 +237,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0054608999998890795
+    "seconds": 0.00607529999979306
   },
   {
     "actual": true,
@@ -249,7 +249,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.009544099993945565
+    "seconds": 0.004807299999811221
   },
   {
     "actual": false,
@@ -261,7 +261,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01743759999953909
+    "seconds": 0.004352900003141258
   },
   {
     "actual": true,
@@ -273,7 +273,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005471100004797336
+    "seconds": 0.004532600003585685
   },
   {
     "actual": true,
@@ -285,7 +285,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.02324170000065351
+    "seconds": 0.006887800002004951
   },
   {
     "actual": true,
@@ -297,7 +297,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015749800004414283
+    "seconds": 0.015371300003607757
   },
   {
     "actual": true,
@@ -309,7 +309,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.005517999998119194
+    "seconds": 0.005438200001663063
   },
   {
     "actual": false,
@@ -321,7 +321,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006654299999354407
+    "seconds": 0.005605599995760713
   },
   {
     "actual": true,
@@ -333,7 +333,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006099600002926309
+    "seconds": 0.005147999996552244
   },
   {
     "actual": false,
@@ -345,7 +345,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007040900003630668
+    "seconds": 0.0060284999999566935
   },
   {
     "actual": true,
@@ -357,7 +357,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004573600002913736
+    "seconds": 0.010903800000960473
   },
   {
     "actual": true,
@@ -369,7 +369,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.0213828000050853
+    "seconds": 0.008036000006541144
   },
   {
     "actual": true,
@@ -381,7 +381,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016053899998951238
+    "seconds": 0.004724700003862381
   },
   {
     "actual": true,
@@ -393,7 +393,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.004974599993147422
+    "seconds": 0.0047260999999707565
   },
   {
     "actual": false,
@@ -405,7 +405,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007540000005974434
+    "seconds": 0.005151999997906387
   },
   {
     "actual": true,
@@ -417,7 +417,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.022001600002113264
+    "seconds": 0.010986499997670762
   },
   {
     "actual": false,
@@ -429,7 +429,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01907319999736501
+    "seconds": 0.004756499998620711
   },
   {
     "actual": true,
@@ -441,7 +441,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01923730000271462
+    "seconds": 0.005302500001562294
   },
   {
     "actual": true,
@@ -453,7 +453,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.012625800001842435
+    "seconds": 0.004536100001132581
   },
   {
     "actual": true,
@@ -465,7 +465,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00481739999668207
+    "seconds": 0.015206300005957019
   },
   {
     "actual": true,
@@ -477,7 +477,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.015508299999055453
+    "seconds": 0.0038200999988475814
   },
   {
     "actual": false,
@@ -489,7 +489,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017425800004275516
+    "seconds": 0.005711400001018774
   },
   {
     "actual": true,
@@ -501,7 +501,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013944900005299132
+    "seconds": 0.005704299997887574
   },
   {
     "actual": false,
@@ -513,7 +513,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0048573000021860935
+    "seconds": 0.004858399996010121
   },
   {
     "actual": true,
@@ -525,7 +525,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.018580400006612763
+    "seconds": 0.0043920000025536865
   },
   {
     "actual": true,
@@ -537,7 +537,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.023226199999044184
+    "seconds": 0.004532999999355525
   },
   {
     "actual": true,
@@ -549,7 +549,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016424299996288028
+    "seconds": 0.005015399998228531
   },
   {
     "actual": true,
@@ -561,7 +561,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.016107300005387515
+    "seconds": 0.004462200005946215
   },
   {
     "actual": false,
@@ -573,7 +573,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005407399999967311
+    "seconds": 0.005708299999241717
   },
   {
     "actual": true,
@@ -585,7 +585,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005743299996538553
+    "seconds": 0.004946100001689047
   },
   {
     "actual": false,
@@ -597,7 +597,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005291400004352909
+    "seconds": 0.014511000001220964
   },
   {
     "actual": true,
@@ -609,7 +609,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01652769999782322
+    "seconds": 0.004464400000870228
   },
   {
     "actual": true,
@@ -621,7 +621,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.004369800000858959
+    "seconds": 0.0045731999998679385
   },
   {
     "actual": true,
@@ -633,7 +633,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017886399997223634
+    "seconds": 0.004419500000949483
   },
   {
     "actual": true,
@@ -645,7 +645,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.014326999997138046
+    "seconds": 0.0047487000047112815
   },
   {
     "actual": false,
@@ -657,7 +657,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013033499999437481
+    "seconds": 0.005090300001029391
   },
   {
     "actual": true,
@@ -669,7 +669,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005388800003856886
+    "seconds": 0.005374899999878835
   },
   {
     "actual": false,
@@ -681,7 +681,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006418499993742444
+    "seconds": 0.0043987999961245805
   },
   {
     "actual": true,
@@ -693,7 +693,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016538000003492925
+    "seconds": 0.005964500000118278
   },
   {
     "actual": true,
@@ -705,7 +705,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.015782700000272598
+    "seconds": 0.004165999998804182
   },
   {
     "actual": true,
@@ -717,7 +717,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014670699994894676
+    "seconds": 0.007749900003545918
   },
   {
     "actual": true,
@@ -729,7 +729,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.015219500004604924
+    "seconds": 0.004289800002879929
   },
   {
     "actual": false,
@@ -741,7 +741,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014409700001124293
+    "seconds": 0.005607499995676335
   },
   {
     "actual": true,
@@ -753,7 +753,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005008400003134739
+    "seconds": 0.005067199999757577
   },
   {
     "actual": false,
@@ -765,7 +765,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016066799995314796
+    "seconds": 0.019280100001196843
   },
   {
     "actual": true,
@@ -777,7 +777,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01578180000069551
+    "seconds": 0.0047272000010707416
   },
   {
     "actual": true,
@@ -789,7 +789,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.014765499996428844
+    "seconds": 0.004573799997160677
   },
   {
     "actual": true,
@@ -801,7 +801,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0056868999963626266
+    "seconds": 0.004366500004834961
   },
   {
     "actual": true,
@@ -813,7 +813,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.016231299996434245
+    "seconds": 0.005382700001064222
   },
   {
     "actual": false,
@@ -825,7 +825,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007878299998992588
+    "seconds": 0.004885200003627688
   },
   {
     "actual": true,
@@ -837,7 +837,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005438799998955801
+    "seconds": 0.004841699999815319
   },
   {
     "actual": false,
@@ -849,7 +849,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01923940000415314
+    "seconds": 0.006290099998295773
   },
   {
     "actual": true,
@@ -861,7 +861,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01802760000282433
+    "seconds": 0.006400899997970555
   },
   {
     "actual": true,
@@ -873,7 +873,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.015916399999696296
+    "seconds": 0.014044200004718732
   },
   {
     "actual": true,
@@ -885,7 +885,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004282900001271628
+    "seconds": 0.005450999997265171
   },
   {
     "actual": true,
@@ -897,7 +897,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.023128600005293265
+    "seconds": 0.004441700002644211
   },
   {
     "actual": false,
@@ -909,7 +909,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.003909800005203579
+    "seconds": 0.005017499999667052
   },
   {
     "actual": true,
@@ -921,7 +921,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013577899997471832
+    "seconds": 0.004462599994440097
   },
   {
     "actual": false,
@@ -933,7 +933,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01397960000031162
+    "seconds": 0.006063400003768038
   },
   {
     "actual": true,
@@ -945,7 +945,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015089100001205225
+    "seconds": 0.005140700006450061
   },
   {
     "actual": true,
@@ -957,7 +957,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.016174700002011377
+    "seconds": 0.004233300001942553
   },
   {
     "actual": true,
@@ -969,7 +969,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013538599996536504
+    "seconds": 0.006966100001591258
   },
   {
     "actual": true,
@@ -981,7 +981,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.017290100004174747
+    "seconds": 0.004473899993172381
   },
   {
     "actual": false,
@@ -993,7 +993,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005700900001102127
+    "seconds": 0.005335599998943508
   },
   {
     "actual": true,
@@ -1005,7 +1005,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004990499997802544
+    "seconds": 0.004597899998771027
   },
   {
     "actual": false,
@@ -1017,7 +1017,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.019047599998884834
+    "seconds": 0.015814400001545437
   },
   {
     "actual": true,
@@ -1029,7 +1029,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005593699999735691
+    "seconds": 0.004814499996427912
   },
   {
     "actual": true,
@@ -1041,7 +1041,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.0172794000027352
+    "seconds": 0.004401900005177595
   },
   {
     "actual": true,
@@ -1053,7 +1053,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016509000000951346
+    "seconds": 0.0037702999979956076
   },
   {
     "actual": true,
@@ -1065,7 +1065,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.017642099999648053
+    "seconds": 0.012898799999675248
   },
   {
     "actual": false,
@@ -1077,7 +1077,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014895300002535805
+    "seconds": 0.005413899998529814
   },
   {
     "actual": true,
@@ -1089,7 +1089,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005133200000273064
+    "seconds": 0.004279300002963282
   },
   {
     "actual": false,
@@ -1101,7 +1101,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0073238000040873885
+    "seconds": 0.015084200000273995
   },
   {
     "actual": true,
@@ -1113,7 +1113,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016633100000035483
+    "seconds": 0.030721700000867713
   },
   {
     "actual": true,
@@ -1125,7 +1125,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.004435800001374446
+    "seconds": 0.013857799996912945
   },
   {
     "actual": true,
@@ -1137,7 +1137,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016250799999397714
+    "seconds": 0.004618599996319972
   },
   {
     "actual": true,
@@ -1149,7 +1149,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.005493100004969165
+    "seconds": 0.021612699994875584
   },
   {
     "actual": false,
@@ -1161,7 +1161,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015237799998431
+    "seconds": 0.006207599995832425
   },
   {
     "actual": true,
@@ -1173,7 +1173,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006750099993951153
+    "seconds": 0.004822900002181996
   },
   {
     "actual": false,
@@ -1185,7 +1185,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.012865800003055483
+    "seconds": 0.004136200004722923
   },
   {
     "actual": true,
@@ -1197,7 +1197,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.025799499999266118
+    "seconds": 0.004346499998064246
   },
   {
     "actual": true,
@@ -1209,7 +1209,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.018664600000192877
+    "seconds": 0.0045695000007981434
   },
   {
     "actual": true,
@@ -1221,7 +1221,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013767399999778718
+    "seconds": 0.0046336999948835
   },
   {
     "actual": true,
@@ -1233,7 +1233,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.016732200005208142
+    "seconds": 0.004079000005731359
   },
   {
     "actual": false,
@@ -1245,7 +1245,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.011882999999215826
+    "seconds": 0.005440100001578685
   },
   {
     "actual": true,
@@ -1257,7 +1257,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004830500001844484
+    "seconds": 0.006467400002293289
   },
   {
     "actual": false,
@@ -1269,7 +1269,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004953000003297348
+    "seconds": 0.008482800003548618
   },
   {
     "actual": true,
@@ -1281,7 +1281,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01822330000140937
+    "seconds": 0.019083300001511816
   },
   {
     "actual": true,
@@ -1293,7 +1293,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.016033399995649233
+    "seconds": 0.004466899998078588
   },
   {
     "actual": true,
@@ -1305,7 +1305,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004350999995949678
+    "seconds": 0.006332299999485258
   },
   {
     "actual": true,
@@ -1317,7 +1317,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.018446699999913108
+    "seconds": 0.009060299998964183
   },
   {
     "actual": false,
@@ -1329,7 +1329,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01317370000469964
+    "seconds": 0.006152399997517932
   },
   {
     "actual": true,
@@ -1341,7 +1341,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00424850000126753
+    "seconds": 0.0050611000042408705
   },
   {
     "actual": false,
@@ -1353,7 +1353,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015548099996522069
+    "seconds": 0.006105599997681566
   },
   {
     "actual": true,
@@ -1365,7 +1365,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004939300000842195
+    "seconds": 0.005229499998677056
   },
   {
     "actual": true,
@@ -1377,7 +1377,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.0159810999975889
+    "seconds": 0.005972799997834954
   },
   {
     "actual": true,
@@ -1389,7 +1389,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00614089999726275
+    "seconds": 0.0058495999983279034
   },
   {
     "actual": true,
@@ -1401,7 +1401,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.013496400002622977
+    "seconds": 0.01722190000145929
   },
   {
     "actual": false,
@@ -1413,7 +1413,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.06248079999932088
+    "seconds": 0.00481479999871226
   },
   {
     "actual": true,
@@ -1425,7 +1425,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005023400000936817
+    "seconds": 0.0041988000011770055
   },
   {
     "actual": false,
@@ -1437,7 +1437,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.012634999999136198
+    "seconds": 0.005890300002647564
   },
   {
     "actual": true,
@@ -1449,7 +1449,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004696099997090641
+    "seconds": 0.006483899996965192
   },
   {
     "actual": true,
@@ -1461,7 +1461,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.005155100006959401
+    "seconds": 0.004407700005685911
   },
   {
     "actual": true,
@@ -1473,7 +1473,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014732700001331978
+    "seconds": 0.004357999998319428
   },
   {
     "actual": true,
@@ -1485,7 +1485,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.012251000000105705
+    "seconds": 0.005507499998202547
   },
   {
     "actual": false,
@@ -1497,7 +1497,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015367400003015064
+    "seconds": 0.014129900002444629
   },
   {
     "actual": true,
@@ -1509,7 +1509,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005245499996817671
+    "seconds": 0.004942200001096353
   },
   {
     "actual": false,
@@ -1521,7 +1521,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014753499999642372
+    "seconds": 0.019083300001511816
   },
   {
     "actual": true,
@@ -1533,7 +1533,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.022799699996539857
+    "seconds": 0.004940200000419281
   },
   {
     "actual": true,
@@ -1545,7 +1545,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.017701600001601037
+    "seconds": 0.004383500003314111
   },
   {
     "actual": true,
@@ -1557,7 +1557,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0042098999983863905
+    "seconds": 0.006910899996000808
   },
   {
     "actual": true,
@@ -1569,7 +1569,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.016869499995664228
+    "seconds": 0.007615199996507727
   },
   {
     "actual": false,
@@ -1581,7 +1581,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016482200000609737
+    "seconds": 0.004259299996192567
   },
   {
     "actual": true,
@@ -1593,7 +1593,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.009332200002972968
+    "seconds": 0.005813499999931082
   },
   {
     "actual": false,
@@ -1605,7 +1605,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016497700002219062
+    "seconds": 0.004969000001437962
   },
   {
     "actual": true,
@@ -1617,7 +1617,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006486600002972409
+    "seconds": 0.005496500001754612
   },
   {
     "actual": true,
@@ -1629,7 +1629,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.02391840000200318
+    "seconds": 0.0071516999960294925
   },
   {
     "actual": true,
@@ -1641,7 +1641,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017827299998316448
+    "seconds": 0.005238600002485327
   },
   {
     "actual": true,
@@ -1653,7 +1653,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.01675779999641236
+    "seconds": 0.01891799999430077
   },
   {
     "actual": false,
@@ -1665,7 +1665,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006161500001326203
+    "seconds": 0.005029699997976422
   },
   {
     "actual": true,
@@ -1677,7 +1677,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006485799996880814
+    "seconds": 0.005298500000208151
   },
   {
     "actual": false,
@@ -1689,7 +1689,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014431000003241934
+    "seconds": 0.005163999994692858
   },
   {
     "actual": true,
@@ -1701,7 +1701,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017908199995872565
+    "seconds": 0.005268700006126892
   },
   {
     "actual": true,
@@ -1713,7 +1713,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.017818200001784135
+    "seconds": 0.005333700006303843
   },
   {
     "actual": true,
@@ -1725,7 +1725,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.02158929999859538
+    "seconds": 0.008448499997030012
   },
   {
     "actual": true,
@@ -1737,7 +1737,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.016141100000822917
+    "seconds": 0.0033557999995537102
   },
   {
     "actual": false,
@@ -1749,7 +1749,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017196299995703157
+    "seconds": 0.0035303000040585175
   },
   {
     "actual": true,
@@ -1761,7 +1761,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00545119999878807
+    "seconds": 0.004797699999471661
   },
   {
     "actual": false,
@@ -1773,7 +1773,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013818300001730677
+    "seconds": 0.009149799996521324
   },
   {
     "actual": true,
@@ -1785,7 +1785,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016407399998570327
+    "seconds": 0.017224700000951998
   },
   {
     "actual": true,
@@ -1797,7 +1797,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.016118200001074
+    "seconds": 0.006131599999207538
   },
   {
     "actual": true,
@@ -1809,7 +1809,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.018336299996008165
+    "seconds": 0.004080400001839735
   },
   {
     "actual": true,
@@ -1821,7 +1821,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.027930900003411807
+    "seconds": 0.0036503000010270625
   },
   {
     "actual": false,
@@ -1833,7 +1833,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.02104010000039125
+    "seconds": 0.00698950000514742
   },
   {
     "actual": true,
@@ -1845,7 +1845,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004503400006797165
+    "seconds": 0.0049127000020234846
   },
   {
     "actual": false,
@@ -1857,7 +1857,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01487450000422541
+    "seconds": 0.004572500001813751
   },
   {
     "actual": true,
@@ -1869,7 +1869,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0045039999968139455
+    "seconds": 0.011785599999711849
   },
   {
     "actual": true,
@@ -1881,7 +1881,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.01833489999989979
+    "seconds": 0.014323600000352599
   },
   {
     "actual": true,
@@ -1893,7 +1893,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01953499999945052
+    "seconds": 0.00516780000180006
   },
   {
     "actual": true,
@@ -1905,7 +1905,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.018268600004375912
+    "seconds": 0.005114400002639741
   },
   {
     "actual": false,
@@ -1917,7 +1917,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005342399999790359
+    "seconds": 0.004615599995304365
   },
   {
     "actual": true,
@@ -1929,7 +1929,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0067086999988532625
+    "seconds": 0.0051015999997616746
   },
   {
     "actual": false,
@@ -1941,7 +1941,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.030959299998357892
+    "seconds": 0.016974800004391
   },
   {
     "actual": true,
@@ -1953,7 +1953,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.022207500005606562
+    "seconds": 0.006725300001562573
   },
   {
     "actual": true,
@@ -1965,7 +1965,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.00831810000090627
+    "seconds": 0.004693299997597933
   },
   {
     "actual": true,
@@ -1977,7 +1977,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01338969999778783
+    "seconds": 0.004535100000794046
   },
   {
     "actual": true,
@@ -1989,7 +1989,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.01583589999791002
+    "seconds": 0.0053479999987757765
   },
   {
     "actual": false,
@@ -2001,7 +2001,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005187900002056267
+    "seconds": 0.0047191999983624555
   },
   {
     "actual": true,
@@ -2013,7 +2013,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007460799999535084
+    "seconds": 0.004734299996925984
   },
   {
     "actual": false,
@@ -2025,7 +2025,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014409400006115902
+    "seconds": 0.016487100001540966
   },
   {
     "actual": true,
@@ -2037,7 +2037,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01734230000147363
+    "seconds": 0.005236900004092604
   },
   {
     "actual": true,
@@ -2049,7 +2049,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.01588659999833908
+    "seconds": 0.004149699998379219
   },
   {
     "actual": true,
@@ -2061,7 +2061,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.019283500005258247
+    "seconds": 0.012423799998941831
   },
   {
     "actual": true,
@@ -2073,7 +2073,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.013922500002081506
+    "seconds": 0.004556499996397179
   },
   {
     "actual": false,
@@ -2085,7 +2085,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0053407999948831275
+    "seconds": 0.006100400001741946
   },
   {
     "actual": true,
@@ -2097,7 +2097,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0154192999980296
+    "seconds": 0.0038696999981766567
   },
   {
     "actual": false,
@@ -2109,7 +2109,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01430640000035055
+    "seconds": 0.005728399999497924
   },
   {
     "actual": true,
@@ -2121,7 +2121,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0057922000050893985
+    "seconds": 0.007374899993010331
   },
   {
     "actual": true,
@@ -2133,7 +2133,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.011902100006409455
+    "seconds": 0.005154099999344908
   },
   {
     "actual": true,
@@ -2145,7 +2145,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01052730000083102
+    "seconds": 0.015294400000129826
   },
   {
     "actual": true,
@@ -2157,7 +2157,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.009848500005318783
+    "seconds": 0.012471800000639632
   },
   {
     "actual": false,
@@ -2169,7 +2169,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.008939400002418552
+    "seconds": 0.01030499999615131
   },
   {
     "actual": true,
@@ -2181,7 +2181,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.003212700001313351
+    "seconds": 0.004106800006411504
   },
   {
     "actual": false,
@@ -2193,7 +2193,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01163010000163922
+    "seconds": 0.005193700002564583
   },
   {
     "actual": true,
@@ -2205,7 +2205,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005266199994366616
+    "seconds": 0.01773900000262074
   },
   {
     "actual": true,
@@ -2217,7 +2217,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.013340500001504552
+    "seconds": 0.004884099995251745
   },
   {
     "actual": true,
@@ -2229,7 +2229,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014616899999964517
+    "seconds": 0.005315900001733098
   },
   {
     "actual": true,
@@ -2241,7 +2241,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.01322960000106832
+    "seconds": 0.005628999999316875
   },
   {
     "actual": false,
@@ -2253,7 +2253,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.003964100003940985
+    "seconds": 0.004945699998643249
   },
   {
     "actual": true,
@@ -2265,7 +2265,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005184699999517761
+    "seconds": 0.004233199993905146
   },
   {
     "actual": false,
@@ -2277,7 +2277,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00991749999957392
+    "seconds": 0.0040499000024283305
   },
   {
     "actual": true,
@@ -2289,7 +2289,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.02153790000011213
+    "seconds": 0.014692900003865361
   },
   {
     "actual": true,
@@ -2301,7 +2301,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.026264599997375626
+    "seconds": 0.009267599998565856
   },
   {
     "actual": true,
@@ -2313,7 +2313,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013852200005203485
+    "seconds": 0.004788699996424839
   },
   {
     "actual": true,
@@ -2325,7 +2325,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.006092200004786719
+    "seconds": 0.0035831999994115904
   },
   {
     "actual": false,
@@ -2337,7 +2337,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01888150000013411
+    "seconds": 0.005265799998596776
   },
   {
     "actual": true,
@@ -2349,7 +2349,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005213300006289501
+    "seconds": 0.0050241999997524545
   },
   {
     "actual": false,
@@ -2361,7 +2361,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015062500002386514
+    "seconds": 0.013240200001746416
   },
   {
     "actual": true,
@@ -2373,7 +2373,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014200999998138286
+    "seconds": 0.0050542000026325695
   },
   {
     "actual": true,
@@ -2385,7 +2385,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.020037200003571343
+    "seconds": 0.005750500000431202
   },
   {
     "actual": true,
@@ -2397,7 +2397,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.018002699995122384
+    "seconds": 0.005444200003694277
   },
   {
     "actual": true,
@@ -2409,7 +2409,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.006611100005102344
+    "seconds": 0.0045328999985940754
   },
   {
     "actual": false,
@@ -2421,7 +2421,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017074300005333498
+    "seconds": 0.010416800003440585
   },
   {
     "actual": true,
@@ -2433,7 +2433,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006562100003066007
+    "seconds": 0.023653600001125596
   },
   {
     "actual": false,
@@ -2445,7 +2445,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016227199994318653
+    "seconds": 0.005597200004558545
   },
   {
     "actual": true,
@@ -2457,7 +2457,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.026560099999187514
+    "seconds": 0.007618900002853479
   },
   {
     "actual": true,
@@ -2469,7 +2469,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.018572500004665926
+    "seconds": 0.015927299995382782
   },
   {
     "actual": true,
@@ -2481,7 +2481,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01712039999983972
+    "seconds": 0.007194600002549123
   },
   {
     "actual": true,
@@ -2493,7 +2493,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.018585999998322222
+    "seconds": 0.004910099996777717
   },
   {
     "actual": false,
@@ -2505,7 +2505,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004988799999409821
+    "seconds": 0.008440300000074785
   },
   {
     "actual": true,
@@ -2517,7 +2517,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00488480000058189
+    "seconds": 0.005403199997090269
   },
   {
     "actual": false,
@@ -2529,7 +2529,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013896199998271186
+    "seconds": 0.0045332000008784235
   },
   {
     "actual": true,
@@ -2541,7 +2541,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014420999999856576
+    "seconds": 0.005755199999839533
   },
   {
     "actual": true,
@@ -2553,7 +2553,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.018867600003432017
+    "seconds": 0.017465999997511972
   },
   {
     "actual": true,
@@ -2565,7 +2565,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.019582200002332684
+    "seconds": 0.004844100003538188
   },
   {
     "actual": true,
@@ -2577,7 +2577,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.005381000002671499
+    "seconds": 0.005276399999274872
   },
   {
     "actual": false,
@@ -2589,7 +2589,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01748310000402853
+    "seconds": 0.014709499999298714
   },
   {
     "actual": true,
@@ -2601,7 +2601,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0051701999982469715
+    "seconds": 0.004686200001742691
   },
   {
     "actual": false,
@@ -2613,7 +2613,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.024710500001674518
+    "seconds": 0.013602999999420717
   },
   {
     "actual": true,
@@ -2625,7 +2625,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013503700000001118
+    "seconds": 0.014379499996721279
   },
   {
     "actual": true,
@@ -2637,7 +2637,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.00531780000164872
+    "seconds": 0.005646300000080373
   },
   {
     "actual": true,
@@ -2649,7 +2649,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015963099998771213
+    "seconds": 0.0166458000021521
   },
   {
     "actual": true,
@@ -2661,7 +2661,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.007068999999319203
+    "seconds": 0.004783700002008118
   },
   {
     "actual": false,
@@ -2673,7 +2673,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.010483600002771709
+    "seconds": 0.005117700005939696
   },
   {
     "actual": true,
@@ -2685,7 +2685,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006449900000006892
+    "seconds": 0.003656000000773929
   },
   {
     "actual": false,
@@ -2697,7 +2697,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.02162279999902239
+    "seconds": 0.004331800002546515
   },
   {
     "actual": true,
@@ -2709,7 +2709,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.018043000003672205
+    "seconds": 0.013494599996192846
   },
   {
     "actual": true,
@@ -2721,7 +2721,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.014393199999176431
+    "seconds": 0.005096000000776257
   },
   {
     "actual": true,
@@ -2733,7 +2733,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017373999995470513
+    "seconds": 0.03984800000034738
   },
   {
     "actual": true,
@@ -2745,7 +2745,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.004571900004521012
+    "seconds": 0.008258900001237635
   },
   {
     "actual": false,
@@ -2757,7 +2757,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01439340000069933
+    "seconds": 0.01564710000093328
   },
   {
     "actual": true,
@@ -2769,7 +2769,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007110799997462891
+    "seconds": 0.005602900004305411
   },
   {
     "actual": false,
@@ -2781,7 +2781,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016038299996580463
+    "seconds": 0.0067875999957323074
   },
   {
     "actual": true,
@@ -2793,7 +2793,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.019302000000607222
+    "seconds": 0.004879200001596473
   },
   {
     "actual": true,
@@ -2805,7 +2805,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.022101399998064153
+    "seconds": 0.003682300004584249
   },
   {
     "actual": true,
@@ -2817,7 +2817,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.019357099998160265
+    "seconds": 0.013885000000300352
   },
   {
     "actual": true,
@@ -2829,7 +2829,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.018980499997269362
+    "seconds": 0.01985689999855822
   },
   {
     "actual": false,
@@ -2841,7 +2841,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.04101890000310959
+    "seconds": 0.004175100002612453
   },
   {
     "actual": true,
@@ -2853,7 +2853,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0062543000021832995
+    "seconds": 0.006609500000195112
   },
   {
     "actual": false,
@@ -2865,7 +2865,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005890899999940302
+    "seconds": 0.014439299993682653
   },
   {
     "actual": true,
@@ -2877,7 +2877,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014687599999888334
+    "seconds": 0.004709699998784345
   },
   {
     "actual": true,
@@ -2889,7 +2889,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.019476000001304783
+    "seconds": 0.005279599994537421
   },
   {
     "actual": true,
@@ -2901,7 +2901,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015209199998935219
+    "seconds": 0.004730199994810391
   },
   {
     "actual": true,
@@ -2913,7 +2913,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.02588600000308361
+    "seconds": 0.004869199998211116
   },
   {
     "actual": false,
@@ -2925,7 +2925,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016332699997292366
+    "seconds": 0.005390299993450753
   },
   {
     "actual": true,
@@ -2937,7 +2937,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01704780000000028
+    "seconds": 0.006142600002931431
   },
   {
     "actual": false,
@@ -2949,7 +2949,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.019298999999591615
+    "seconds": 0.013679499999852851
   },
   {
     "actual": true,
@@ -2961,7 +2961,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.017435599998862017
+    "seconds": 0.014040800000657327
   },
   {
     "actual": true,
@@ -2973,7 +2973,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.005232400006207172
+    "seconds": 0.0049045000050682575
   },
   {
     "actual": true,
@@ -2985,7 +2985,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004267500000423752
+    "seconds": 0.0044019999986630864
   },
   {
     "actual": true,
@@ -2997,7 +2997,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.006807999998272862
+    "seconds": 0.005011499997635838
   },
   {
     "actual": false,
@@ -3009,7 +3009,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.013966700003948063
+    "seconds": 0.013144600001396611
   },
   {
     "actual": true,
@@ -3021,7 +3021,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00511450000340119
+    "seconds": 0.005803100000775885
   },
   {
     "actual": false,
@@ -3033,7 +3033,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01541160000488162
+    "seconds": 0.016313499996613245
   },
   {
     "actual": true,
@@ -3045,7 +3045,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015168199999607168
+    "seconds": 0.006089199996495154
   },
   {
     "actual": true,
@@ -3057,7 +3057,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.01784590000170283
+    "seconds": 0.003878600000462029
   },
   {
     "actual": true,
@@ -3069,7 +3069,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016758899997512344
+    "seconds": 0.014456900004006457
   },
   {
     "actual": true,
@@ -3081,7 +3081,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.0155596999975387
+    "seconds": 0.004277199994248804
   },
   {
     "actual": false,
@@ -3093,7 +3093,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.016716999998607207
+    "seconds": 0.015039099998830352
   },
   {
     "actual": true,
@@ -3105,7 +3105,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.0062800000014249235
+    "seconds": 0.004433199996128678
   },
   {
     "actual": false,
@@ -3117,7 +3117,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015040499994938727
+    "seconds": 0.004266899995855056
   },
   {
     "actual": true,
@@ -3129,7 +3129,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.014599899994209409
+    "seconds": 0.014394799996807706
   },
   {
     "actual": true,
@@ -3141,7 +3141,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.005962299997918308
+    "seconds": 0.004660600003262516
   },
   {
     "actual": true,
@@ -3153,7 +3153,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.015527499999734573
+    "seconds": 0.004389300003822427
   },
   {
     "actual": true,
@@ -3165,7 +3165,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.004553800004941877
+    "seconds": 0.005255099997157231
   },
   {
     "actual": false,
@@ -3177,7 +3177,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01780999999755295
+    "seconds": 0.004934999997203704
   },
   {
     "actual": true,
@@ -3189,7 +3189,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.00544120000267867
+    "seconds": 0.005363900003430899
   },
   {
     "actual": false,
@@ -3201,7 +3201,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.006052800003089942
+    "seconds": 0.005613699999230448
   },
   {
     "actual": true,
@@ -3213,7 +3213,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01692899999761721
+    "seconds": 0.004155200003879145
   },
   {
     "actual": true,
@@ -3225,7 +3225,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.018530399996961933
+    "seconds": 0.013019600002735388
   },
   {
     "actual": true,
@@ -3237,7 +3237,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01814369999920018
+    "seconds": 0.0049989999970421195
   },
   {
     "actual": true,
@@ -3249,7 +3249,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.01771559999906458
+    "seconds": 0.013699800001631957
   },
   {
     "actual": false,
@@ -3261,7 +3261,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.022218899997824337
+    "seconds": 0.005430199998954777
   },
   {
     "actual": true,
@@ -3273,7 +3273,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005280199999106117
+    "seconds": 0.004916899997624569
   },
   {
     "actual": false,
@@ -3285,7 +3285,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.004841500005568378
+    "seconds": 0.005130999998073094
   },
   {
     "actual": true,
@@ -3297,7 +3297,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.007760499996948056
+    "seconds": 0.006709199995384552
   },
   {
     "actual": true,
@@ -3309,7 +3309,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "duplicate",
-    "seconds": 0.023310899996431544
+    "seconds": 0.005431199999293312
   },
   {
     "actual": true,
@@ -3321,7 +3321,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.010318200002075173
+    "seconds": 0.004602000000886619
   },
   {
     "actual": true,
@@ -3333,7 +3333,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": "invalid",
-    "seconds": 0.013444100004562642
+    "seconds": 0.004386000000522472
   },
   {
     "actual": false,
@@ -3345,7 +3345,7 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.01735239999834448
+    "seconds": 0.01509970000188332
   },
   {
     "actual": true,
@@ -3357,6 +3357,6 @@
     "naive_flagged": false,
     "order_deterministic": true,
     "rejected": null,
-    "seconds": 0.005445100003271364
+    "seconds": 0.005623600001854356
   }
 ]

@@ -24,3 +24,14 @@ def test_sensitivity_undefined_mean_and_invalid_score():
         sensitivity.score_sensitivity(
             manifest, [{"id": "a", "status": "scored", "score": True, "reason": ""}]
         )
+
+
+def test_sum_does_not_reject_valid_large_integer_scores():
+    manifest = {"schema_version": 1, "run_id": "large", "expected_ids": ["a", "b"]}
+    score = 9 * 10**4299
+    rows = [
+        {"id": identifier, "status": "scored", "score": score, "reason": ""}
+        for identifier in ("a", "b")
+    ]
+    total = sensitivity.score_sensitivity(manifest, rows)["policies"]["scored_only"]["sum"]
+    assert len(total) == 4301 and total.startswith("18")

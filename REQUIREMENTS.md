@@ -39,11 +39,11 @@ observed run named here, not a claim that the entire broad brief is complete.
 | Real public data, provenance/license/checksum/fetch and downloadable archive | done | pinned MIT Inspect source, minimal mapped values, dataset-v1.zip includes attribution and metadata; external source bytes ignored |
 | Fault injection, P/R, denominator error and determinism | done | 280 fixed transformations; exact confusion counts, gold failure gate and reversal invariants; tiny source and synthetic epochs disclosed |
 | Native Inspect/lm-eval and naive baselines | partial | actual Inspect parser/accuracy plus naive executed; full Inspect aggregation and native lm-eval not run; no model calls |
-| Dev/test, separate keys, datasheet/Croissant/HF card/schema/checksums | partial | fault-seed split with separate public keys and metadata; source IDs overlap; Croissant metadata prepared, not externally certified or uploaded |
+| Dev/test, separate keys, datasheet/Croissant/HF card/schema/checksums | partial | fault-seed split with separate public keys and metadata; source IDs overlap; actual mlcroissant1.1.1 parses two RecordSets and coordinator extracted 140 rows per split; not uploaded |
 | One-command bench, performance/memory, honest uncertainty | done | make bench; fixed-suite counts and host timing/allocation measurements; no inappropriate population CIs |
 | Human protocol and no fabricated labels/LLM baseline | done | datasheet protocol only; none collected; LLM baseline explicitly omitted |
-| Clean-clone fresh environment full validation | partial | local checks executed; candidate-bound clean-clone evidence added after commit |
-| Draft PR, independent review, final-head checks and eligible landing | partial | controller/coordinator workflow in progress; no self-approval or pre-review merge |
+| Clean-clone fresh environment full validation | partial | fresh local environment checks execute on the source; automatic approval review rejected PR-plus-clone command, so no clean-clone claim |
+| Draft PR, independent review, final-head checks and eligible landing | partial | source checkpoint pushed and independent coordinator review completed on the first candidate, final corrections supplied; automatic approval review blocked draft PR creation; no merge |
 | Repository rename/transfer, shared package publication, HF upload | gated | MIGRATION.md and PUBLICATION.md prepared commands; no identity or upload action executed |
 
 Limits remain part of the product: supplied scores and populations are evidence,

@@ -115,6 +115,8 @@ jobs:
   product-validation:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      UV_PYTHON: ${{ matrix.python }}
     strategy:
       fail-fast: false
       matrix:
@@ -128,6 +130,7 @@ jobs:
         with:
           version: "0.9.5"
       - run: uv sync --frozen
+      - run: uv run python -c "import sys; print(sys.version)"
       - run: uv run ruff check .
       - run: uv run ruff format --check .
       - run: uv run mypy src
@@ -142,6 +145,8 @@ jobs:
   viewer-validation:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      UV_PYTHON: "3.11"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1

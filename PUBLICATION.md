@@ -26,3 +26,18 @@ Shared tokens are private and unpublished. No `npm publish` is planned. Pages
 publication, if separately authorized for the reviewed source, uses
 `gh workflow run pages.yml --repo alawein/eval-audit --ref main` after landing and
 fresh source verification. This document is preparation, not deployment evidence.
+
+## Current execution gate
+
+Source branch feat/spanward-census was pushed and fresh remote equality verified.
+Automatic approval review rejected the command containing draft PR creation and
+fresh-clone verification with reason "blocked by policy"; no more specific reason
+was returned. Readback confirms no PR and no clone were created. No retry through
+another tool/controller was attempted. This does not block independent local
+checks, corrections or source checkpoints permitted by the existing scope.
+
+Prepared PR command after the automatic-review block is resolved:
+`gh pr create --repo alawein/eval-audit --draft --base main --head feat/spanward-census --title "feat: add Siftgrain Census completeness studio and fault benchmark" --body-file .verification/pr-body.md`.
+The exact prepared body remains in the checkout's ignored .verification directory.
+A fresh clone and candidate-bound check remain unexecuted; local fresh-environment
+validation is reported separately and never substituted for a clean clone.

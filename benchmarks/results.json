@@ -126,10 +126,10 @@
   "native_inspect_baseline": "Executed separately: native-inspect-results.json (0.3.279)",
   "native_lm_eval_baseline": "not run; source is Inspect, not lm-eval",
   "performance": {
-    "median_case_ms": 14.710150000610156,
+    "median_case_ms": 5.300500000885222,
     "platform": "Windows-11-10.0.26300-SP0",
     "python": "3.13.9 (main, Oct 14 2025, 21:22:32) [MSC v.1944 64 bit (AMD64)]",
-    "stress_10000_missing_seconds": 0.7967305999991368,
+    "stress_10000_missing_seconds": 0.6773596999992151,
     "tracemalloc_peak_bytes": 3769834
   },
   "run_date": "2025-05-12",

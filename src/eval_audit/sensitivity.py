@@ -1,5 +1,6 @@
 """Opt-in descriptive score policies, separate from completeness and pass@k."""
 
+from decimal import Decimal
 from fractions import Fraction
 
 from eval_audit.contract import trial_plan, validate
@@ -15,11 +16,26 @@ def score_sensitivity(manifest: dict, records: list[dict]) -> dict:
     scored = [row for row in present if row["status"] == "scored"]
 
     def policy(rows: list[dict], denominator: int) -> dict:
-        total = sum((Fraction(str(row["score"])) for row in rows), Fraction())
+        total = sum(
+            (
+                Fraction(row["score"]) if type(row["score"]) is int else Fraction(str(row["score"]))
+                for row in rows
+            ),
+            Fraction(),
+        )
+
+        def rational(value: Fraction) -> str:
+            # Arithmetic may add a digit beyond the JSON parser's per-number bound.
+            # Decimal(int) is exact and avoids changing the process-wide int limit.
+            numerator = format(Decimal(value.numerator), "f")
+            if value.denominator == 1:
+                return numerator
+            return numerator + "/" + format(Decimal(value.denominator), "f")
+
         return {
             "denominator": denominator,
-            "sum": str(total),
-            "mean": str(total / denominator) if denominator else None,
+            "sum": rational(total),
+            "mean": rational(total / denominator) if denominator else None,
         }
 
     return {
