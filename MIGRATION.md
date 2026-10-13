@@ -26,3 +26,8 @@ datasets or reads Parquet. Unsupported shapes fail; population is always supplie
 The GitHub repository has been renamed to `alawein/siftgrain-audit`. Keep the
 Python distribution and command names as compatibility entrypoints. No kohyr
 transfer is proposed without explicit destination consent.
+
+After a repository rename, verify current README/badges, package repository
+metadata and the release-workflow repository guard. Read back the native PyPI
+publisher binding against `alawein/siftgrain-audit`; local metadata does not prove
+a registry setting changed.
