@@ -1,4 +1,4 @@
-name: Siftgrain Census
+name: Siftgrain Audit
 description: Fail on incomplete evaluation records against an explicit population
 inputs:
   manifest:

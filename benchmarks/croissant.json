@@ -48,7 +48,7 @@
   "name": "siftgrain-census-faults-v1",
   "description": "Controlled fault-seed splits on three shared archived Inspect sample IDs; synthetic second epoch. Record sets project flat answer-key fields; complete missing-pair keys remain in JSON.",
   "conformsTo": "http://mlcommons.org/croissant/1.0",
-  "url": "https://github.com/alawein/eval-audit",
+  "url": "https://github.com/alawein/siftgrain-audit",
   "license": "https://opensource.org/license/mit",
   "version": "1.0.0",
   "dateCreated": "2026-10-13",

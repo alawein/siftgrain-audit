@@ -84,7 +84,7 @@ def enhance(page: str, manifest: dict | None, records: list[dict] | None) -> str
     head += f"<style>{css}</style><script data-census-viewer>{js}</script>"
     controls = (
         '<a class="skip" href="#evidence">Skip to evidence</a><nav aria-label="Viewer">'
-        '<span class="product">Siftgrain Census <small>evaluation completeness</small></span>'
+        '<span class="product">Siftgrain Audit <small>evaluation completeness</small></span>'
         '<label for="appearance">Appearance</label><select id="appearance">'
         '<option value="dark">Dark</option><option value="light">Light</option></select>'
         '<label for="vibe">Vibe</label><select id="vibe"><option value="cartoon">'

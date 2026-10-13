@@ -11,6 +11,11 @@ requires-python = ">=3.11"
 license = "MIT"
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/alawein/siftgrain-audit#readme"
+Repository = "https://github.com/alawein/siftgrain-audit"
+Issues = "https://github.com/alawein/siftgrain-audit/issues"
+
 [project.optional-dependencies]
 cli = ["rich==15.0.0"]
 

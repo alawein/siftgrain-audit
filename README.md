@@ -1,4 +1,4 @@
-# Siftgrain Census
+# Siftgrain Audit
 
 Count the run before reading the score.
 
@@ -6,11 +6,15 @@ Count the run before reading the score.
 ![Python](assets/label-stack.svg)
 ![Offline CLI](assets/label-runtime.svg)
 
-Declare the expected IDs and supply JSONL results. Eval Audit separates scored,
-errored, unscored, missing, and unexpected records, including errored records
-that retain a score.
+Declare the expected IDs and supply JSONL results. Siftgrain Audit separates
+scored, errored, unscored, missing, and unexpected records, including errored
+records that retain a score.
 
-Siftgrain Census is the evaluation completeness tool in the Siftgrain family.
+Siftgrain Audit is the evaluation completeness tool in the Siftgrain suite,
+alongside [Siftgrain Cite](https://github.com/alawein/siftgrain-cite) for human
+citation review and [Siftgrain State](https://github.com/alawein/siftgrain-state)
+for checking requested outcomes against supplied observations. Audit checks
+record completeness and denominators; it does not validate evaluation methods.
 The compatible package and command remain `alawein-eval-audit` and `eval-audit`.
 Its self-contained report offers four vibes, dark/light appearance, missing-trial
 waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
@@ -111,7 +115,7 @@ small recorded-run exercise with its stated limits. The [ten-sample archive stud
 
 [Inspect error handling](https://inspect.aisi.org.uk/handling-errors.html) and
 [missing-score metric policies](https://inspect.aisi.org.uk/metrics.html) already
-provide native controls. Eval Audit independently compares delivered rows with
+provide native controls. Siftgrain Audit independently compares delivered rows with
 a caller-supplied expected population. [Retry issue 5659](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5659)
 is a report about sample selection, not proof of a general harness defect.
 
@@ -132,7 +136,7 @@ transaction: one complete file can be installed before another fails. A staging
 or installation failure preserves that file's previous bytes. This does not
 provide race-proof input identity checks or a power-loss durability guarantee.
 
-This is [alawein/eval-audit](https://github.com/alawein/eval-audit), an offline
+This is [alawein/siftgrain-audit](https://github.com/alawein/siftgrain-audit), an offline
 coverage auditor. It is unrelated to similarly named statistical or human-grading
 tools. The GitHub v0.3.0 release is published. PyPI v0.3.0 failed because no matching trusted publisher existed; the original distribution name was also rejected. The owner-qualified v0.3.1 release is recorded in release readiness. This redesign has not published a new package release. No third-party adoption is claimed.
 

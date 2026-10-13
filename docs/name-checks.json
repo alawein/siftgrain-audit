@@ -6,10 +6,10 @@
   "selected_family": "Siftgrain",
   "selected_products": [
     "Siftgrain Cite",
-    "Siftgrain Census",
+    "Siftgrain Audit",
     "Siftgrain State"
   ],
-  "limits": "Registry/search snapshot only, not legal trademark clearance. No domain availability asserted; no domain proposed or purchased. Remote repository/package names retained for compatibility pending separately authorized migration.",
+  "limits": "Registry/search snapshot only, not legal trademark clearance. No domain availability asserted; no domain proposed or purchased. Repositories use the Siftgrain slugs; prior package identities remain compatible.",
   "web_searches": [
     {
       "query": "\"Spanward\" software trademark",

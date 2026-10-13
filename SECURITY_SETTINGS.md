@@ -16,7 +16,7 @@ Supported non-Dependabot settings include dependency graph, secret scanning and
 push protection where available, branch protection/review/checks, and least-privilege
 Actions permissions. Actual settings readback belongs to the coordinator; local
 configuration is not proof that a hosted control is enabled. Maintainers can open
-<https://github.com/alawein/eval-audit/settings/security_analysis>; anonymous link
+<https://github.com/alawein/siftgrain-audit/settings/security_analysis>; anonymous link
 checks retain the narrowly scoped settings-page exception.
 
 Coordinator live GitHub readback on October 8 verified secret scanning and push

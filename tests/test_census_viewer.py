@@ -20,6 +20,8 @@ def test_report_keeps_every_planned_trial_and_safe_text():
     assert 'id="status-filter"' in page
     assert 'id="vibe"' in page and "Cartoon" in page and "Calm" in page
     assert "Pixel" in page and "Lab" in page
+    assert "Siftgrain Audit" in page and "Siftgrain Census" not in page
+    assert "https://github.com/alawein/siftgrain-audit" in page
     assert "Content-Security-Policy" in page and "connect-src 'none'" in page
     assert "prefers-reduced-motion" in page
 

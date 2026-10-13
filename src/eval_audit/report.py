@@ -84,7 +84,7 @@ def _render_html(
 ) -> str:
     example = example or {}
     content = html.escape(render_json(report))
-    title = html.escape(str(example.get("title", "Eval audit")))
+    title = html.escape(str(example.get("title", "Siftgrain Audit")))
     description = html.escape(
         str(example.get("description", "Coverage of supplied records, not model accuracy."))
     )
@@ -172,7 +172,7 @@ def _render_html(
         '<meta name="description" content="Coverage of supplied evaluation records: '
         'scored, errored, unscored, missing and unexpected, with input hashes.">'
         '<meta name="theme-color" content="#f4f6f5">'
-        f"<title>{title} | Eval Audit coverage report</title><style>"
+        f"<title>{title} | Siftgrain Audit coverage report</title><style>"
         ":root{color-scheme:light}"
         "body{margin:0;background:#f4f6f5;color:#142c2a;font:17px/1.6 system-ui;"
         "-webkit-tap-highlight-color:transparent}"
@@ -210,7 +210,7 @@ def _render_html(
         "repeat(2,minmax(0,1fr))}.cases{grid-template-columns:minmax(0,1fr)}"
         ".coverage{gap:16px;padding:20px}.hashes{grid-template-columns:minmax(0,1fr);"
         "gap:6px}.hashes dd{margin-bottom:12px}}"
-        '</style></head><body><main><p class="eyebrow">EVAL AUDIT / LOCAL EVIDENCE / '
+        '</style></head><body><main><p class="eyebrow">SIFTGRAIN AUDIT / LOCAL EVIDENCE / '
         "EXPLICIT POPULATION</p>"
         f"<h1>{title}</h1><p>{description}</p>"
         f'<p class="run">Run: <code>{html.escape(str(report.get("run_id", "")))}</code></p>'
@@ -229,7 +229,7 @@ def _render_html(
         + "<section><h2>Inspectable report</h2><details><summary>Expand JSON report</summary><pre>"
         + content
         + "</pre></details></section>"
-        '<footer><a href="https://github.com/alawein/eval-audit">Source and installation</a>'
+        '<footer><a href="https://github.com/alawein/siftgrain-audit">Source and installation</a>'
         "</footer></main></body></html>"
     )
 
