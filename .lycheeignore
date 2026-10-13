@@ -1,2 +1,2 @@
 # Authenticated maintainer-only UI; exact click path retained in SECURITY_SETTINGS.md.
-^https://github\.com/alawein/eval-audit/settings/security_analysis/?$
+^https://github\.com/alawein/siftgrain-audit/settings/security_analysis/?$
