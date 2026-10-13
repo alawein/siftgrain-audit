@@ -5,6 +5,8 @@ from pathlib import Path
 
 from eval_audit.contract import decode, parse, require, trial_mode, validate
 
+FORMATS = ("inspect", "lm-evaluation-harness", "promptfoo", "helm", "open-llm-leaderboard")
+
 
 def bounded_read(path: Path) -> bytes:
     with path.open("rb") as stream:
@@ -56,6 +58,9 @@ def source_rows(format_name: str, source: Path) -> list:
             lines.pop()
         return [parse(line, f"record {index}") for index, line in enumerate(lines, 1)]
     document = parse(raw, "source")
+    if format_name in ("helm", "open-llm-leaderboard"):
+        require(type(document) is list, "source must be a per-instance JSON array")
+        return document
     require(type(document) is dict, "source must be an object")
     if format_name == "inspect":
         rows = document.get("samples")
@@ -79,7 +84,7 @@ def convert(
     score_key: str | None = None,
     score_map: dict[str, int | float] | None = None,
 ) -> list[dict]:
-    require(format_name in ("inspect", "lm-evaluation-harness", "promptfoo"), "unsupported adapter")
+    require(format_name in FORMATS, "unsupported adapter")
     validate(manifest, [])
     require(format_name == "promptfoo" or bool(score_key), "--score-key is required")
     source_records = source_rows(format_name, source)
@@ -101,8 +106,27 @@ def convert(
             entry = scores.get(score_key, {})
             require(type(entry) is dict, f"invalid score at {label}")
             score = entry.get("value")
-        elif format_name == "lm-evaluation-harness":
+        elif format_name in ("lm-evaluation-harness", "open-llm-leaderboard"):
             identifier, trial, score = sample.get("doc_id"), 1, sample.get(score_key)
+        elif format_name == "helm":
+            require(
+                sample.get("perturbation") is None,
+                f"unsupported perturbation at {label}; export original instances separately",
+            )
+            identifier = sample.get("instance_id")
+            trial_index = sample.get("train_trial_index", 0)
+            require(type(trial_index) is int and trial_index >= 0, f"invalid trial at {label}")
+            trial = trial_index + 1
+            stats = sample.get("stats")
+            require(type(stats) is list, f"invalid stats at {label}")
+            require(
+                all(type(stat) is dict and type(stat.get("name")) is dict for stat in stats),
+                f"invalid statistic at {label}",
+            )
+            selected = [stat for stat in stats if stat["name"].get("name") == score_key]
+            require(len(selected) <= 1, f"ambiguous score key at {label}")
+            require(not stats or bool(selected), f"missing score key at {label}")
+            score = selected[0].get("mean") if selected else None
         else:
             test, prompt = sample.get("testIdx"), sample.get("promptIdx")
             require(

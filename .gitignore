@@ -39,3 +39,7 @@ studies/data/
 dist-*/
 release-assets/
 .verification/
+node_modules/
+test-results/
+playwright-report/
+.lighthouseci/

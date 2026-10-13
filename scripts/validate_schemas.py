@@ -8,6 +8,7 @@ from jsonschema import Draft202012Validator
 from eval_audit.adapters import convert
 from eval_audit.contract import load_inputs
 from eval_audit.core import audit
+from eval_audit.sensitivity import score_sensitivity
 
 
 def main() -> None:
@@ -48,6 +49,15 @@ def main() -> None:
             validators["result-record"].validate(record)
         validators["report"].validate(audit(population, records))
     print("PASS: Draft 2020-12 schemas; all canonical examples and four adapter fixtures")
+    sensitivity = json.loads((root / "schema/score-sensitivity.v1.json").read_text())
+    Draft202012Validator.check_schema(sensitivity)
+    Draft202012Validator(sensitivity).validate(score_sensitivity(population, records))
+    benchmark = json.loads((root / "benchmarks/dataset.schema.json").read_text())
+    Draft202012Validator.check_schema(benchmark)
+    for split in ("dev", "test"):
+        Draft202012Validator(benchmark).validate(
+            json.loads((root / f"benchmarks/dataset-v1/{split}-answers.json").read_text())
+        )
 
 
 if __name__ == "__main__":

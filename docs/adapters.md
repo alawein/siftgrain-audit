@@ -67,3 +67,25 @@ Shapes checked against the official [Inspect log documentation](https://inspect.
 and [promptfoo output documentation](https://www.promptfoo.dev/docs/configuration/outputs/).
 Only synthetic fixtures are vendored in tests. Framework evolution may require a
 new adapter version; unsupported structures fail rather than disappearing.
+
+## HELM and Open LLM exported details
+
+`helm` accepts a JSON array from per_instance_stats.json. instance_id becomes
+ID; train_trial_index (zero-based) becomes trial+1. stats must be an array of
+named statistics; exactly one matching name.name selects its numeric/null mean.
+Missing matching metric when other statistics exist, duplicate matching metrics,
+boolean means, and non-null perturbation fail with a record number. Export one
+original scenario/run/metric context at a time. Full scenario_state.json and raw
+request/response logs are not this export format. No perturbation is silently
+merged into its original instance.
+
+`open-llm-leaderboard` accepts an exported JSON array of per-sample harness
+records. doc_id becomes ID, trial is 1, --score-key is a literal numeric field
+name. It does not download gated repositories or read Parquet. Export each
+benchmark/configuration separately; aggregate leaderboard tables fail. This is
+a narrow local export adapter, not support for every historical dataset revision.
+
+All five adapters preserve zero, reject bool/nonfinite values, retain error
+status with scores, and reject duplicates. Unexpected rows remain available to
+the auditor. Discarded metadata includes HELM context/variance/counts and HF
+model/dataset-card metadata. Such fields never supply the expected population.

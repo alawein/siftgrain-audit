@@ -36,3 +36,19 @@ vulnerability alerts and security updates, with automated fixes reporting
 `enabled: false, paused: false`. No settings were changed in that preparation.
 The old proposal to enable those controls is retired by the owner's explicit
 exclusion. These observations are historical, not a claim about later settings.
+
+## October 13 readback and optional restoration
+
+Fresh repository API: secret scanning and push protection enabled; Dependabot
+security updates disabled. Active main-protection ruleset requires signed,
+linear-history squash PRs and markdown-lint, link-check, actionlint, pr-title,
+python-ci. Legacy branch-protection endpoint returns 404 because this repository
+uses rulesets. No setting was changed. Report-only npm audit is now included
+for development browser tooling; pip-audit remains report-only.
+
+Only after a future explicit owner instruction: repository Settings > Advanced
+Security (or Code security and analysis) > Dependabot alerts > Enable; then
+Dependabot security updates > Enable. Version-update PRs separately require
+Settings > Advanced Security > Dependabot version updates > Configure and a
+reviewed .github/dependabot.yml. These are restoration paths, not actions taken
+or authorized by this document. The current entire-family exclusion remains.

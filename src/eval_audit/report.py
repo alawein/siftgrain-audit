@@ -2,6 +2,9 @@ import base64
 import html
 import json
 
+from eval_audit.contract import trial_mode
+from eval_audit.viewer import enhance
+
 
 def render_json(report: dict) -> str:
     return json.dumps(report, sort_keys=True, indent=2, allow_nan=False) + "\n"
@@ -45,6 +48,8 @@ def _links(values: object, *, download: bool = False, files: object = None) -> s
 def _case_cards(report: dict, manifest: dict | None, records: list[dict] | None) -> str:
     if manifest is None or records is None:
         return ""
+    if trial_mode(manifest):
+        return ""
     indexed = {row["id"]: row for row in records}
     missing = set(report.get("missing_ids", []))
     cases = []
@@ -70,7 +75,7 @@ def _case_cards(report: dict, manifest: dict | None, records: list[dict] | None)
     )
 
 
-def render_html(
+def _render_html(
     report: dict,
     *,
     manifest: dict | None = None,
@@ -214,13 +219,28 @@ def render_html(
         + cards
         + "</div>"
         + coverage
+        + '<details class="evidence-details"><summary>'
+        "Record explanations, source and provenance</summary>"
         + _case_cards(report, manifest, records)
         + source
         + how_to
         + evidence
+        + "</details>"
         + "<section><h2>Inspectable report</h2><details><summary>Expand JSON report</summary><pre>"
         + content
         + "</pre></details></section>"
         '<footer><a href="https://github.com/alawein/eval-audit">Source and installation</a>'
         "</footer></main></body></html>"
+    )
+
+
+def render_html(
+    report: dict,
+    *,
+    manifest: dict | None = None,
+    records: list[dict] | None = None,
+    example: dict | None = None,
+) -> str:
+    return enhance(
+        _render_html(report, manifest=manifest, records=records, example=example), manifest, records
     )

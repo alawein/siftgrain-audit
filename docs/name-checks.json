@@ -1,0 +1,300 @@
+{
+  "accessed_at": "2026-10-13T09:16:53.767467+00:00",
+  "publication_date": "not applicable: live registry query",
+  "revision_date": "unknown",
+  "release_date": "unknown",
+  "selected_family": "Siftgrain",
+  "selected_products": [
+    "Siftgrain Cite",
+    "Siftgrain Census",
+    "Siftgrain State"
+  ],
+  "limits": "Registry/search snapshot only, not legal trademark clearance. No domain availability asserted; no domain proposed or purchased. Remote repository/package names retained for compatibility pending separately authorized migration.",
+  "web_searches": [
+    {
+      "query": "\"Spanward\" software trademark",
+      "result": "Rejected: construction software spanward.build and healthcare spanwardops.com",
+      "urls": [
+        "https://spanward.build/",
+        "https://spanwardops.com/"
+      ]
+    },
+    {
+      "query": "\"Siftgrain\" software trademark",
+      "result": "Dictionary matches; no obvious software-brand collision returned in searched results",
+      "urls": [
+        "https://meaningin.com/english-to-urdu/345648/siftgrain-meaning-in-urdu"
+      ]
+    },
+    {
+      "query": "\"Evidlattice\" software trademark",
+      "result": "No result returned in combined search",
+      "urls": []
+    },
+    {
+      "query": "\"Verispindle\" software trademark",
+      "result": "No result returned in combined search",
+      "urls": []
+    }
+  ],
+  "registry_checks": [
+    {
+      "name": "siftgrain",
+      "registry": "npm",
+      "url": "https://registry.npmjs.org/siftgrain",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain",
+      "registry": "pypi",
+      "url": "https://pypi.org/pypi/siftgrain/json",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain",
+      "registry": "huggingface-datasets",
+      "url": "https://huggingface.co/api/datasets?search=siftgrain",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain",
+      "registry": "huggingface-models",
+      "url": "https://huggingface.co/api/models?search=siftgrain",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain",
+      "registry": "huggingface-spaces",
+      "url": "https://huggingface.co/api/spaces?search=siftgrain",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-cite",
+      "registry": "npm",
+      "url": "https://registry.npmjs.org/siftgrain-cite",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain-cite",
+      "registry": "pypi",
+      "url": "https://pypi.org/pypi/siftgrain-cite/json",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain-cite",
+      "registry": "huggingface-datasets",
+      "url": "https://huggingface.co/api/datasets?search=siftgrain-cite",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-cite",
+      "registry": "huggingface-models",
+      "url": "https://huggingface.co/api/models?search=siftgrain-cite",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-cite",
+      "registry": "huggingface-spaces",
+      "url": "https://huggingface.co/api/spaces?search=siftgrain-cite",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-census",
+      "registry": "npm",
+      "url": "https://registry.npmjs.org/siftgrain-census",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain-census",
+      "registry": "pypi",
+      "url": "https://pypi.org/pypi/siftgrain-census/json",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain-census",
+      "registry": "huggingface-datasets",
+      "url": "https://huggingface.co/api/datasets?search=siftgrain-census",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-census",
+      "registry": "huggingface-models",
+      "url": "https://huggingface.co/api/models?search=siftgrain-census",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-census",
+      "registry": "huggingface-spaces",
+      "url": "https://huggingface.co/api/spaces?search=siftgrain-census",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-state",
+      "registry": "npm",
+      "url": "https://registry.npmjs.org/siftgrain-state",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain-state",
+      "registry": "pypi",
+      "url": "https://pypi.org/pypi/siftgrain-state/json",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "siftgrain-state",
+      "registry": "huggingface-datasets",
+      "url": "https://huggingface.co/api/datasets?search=siftgrain-state",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-state",
+      "registry": "huggingface-models",
+      "url": "https://huggingface.co/api/models?search=siftgrain-state",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain-state",
+      "registry": "huggingface-spaces",
+      "url": "https://huggingface.co/api/spaces?search=siftgrain-state",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "evidlattice",
+      "registry": "npm",
+      "url": "https://registry.npmjs.org/evidlattice",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "evidlattice",
+      "registry": "pypi",
+      "url": "https://pypi.org/pypi/evidlattice/json",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "evidlattice",
+      "registry": "huggingface-datasets",
+      "url": "https://huggingface.co/api/datasets?search=evidlattice",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "evidlattice",
+      "registry": "huggingface-models",
+      "url": "https://huggingface.co/api/models?search=evidlattice",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "evidlattice",
+      "registry": "huggingface-spaces",
+      "url": "https://huggingface.co/api/spaces?search=evidlattice",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "verispindle",
+      "registry": "npm",
+      "url": "https://registry.npmjs.org/verispindle",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "verispindle",
+      "registry": "pypi",
+      "url": "https://pypi.org/pypi/verispindle/json",
+      "http_status": 404,
+      "result": "exact name not found"
+    },
+    {
+      "name": "verispindle",
+      "registry": "huggingface-datasets",
+      "url": "https://huggingface.co/api/datasets?search=verispindle",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "verispindle",
+      "registry": "huggingface-models",
+      "url": "https://huggingface.co/api/models?search=verispindle",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "verispindle",
+      "registry": "huggingface-spaces",
+      "url": "https://huggingface.co/api/spaces?search=verispindle",
+      "http_status": 200,
+      "matches": 0
+    },
+    {
+      "name": "siftgrain",
+      "registry": "github",
+      "url": "https://api.github.com/search/repositories?q=siftgrain",
+      "total_count": 0,
+      "matches": [],
+      "error": null
+    },
+    {
+      "name": "siftgrain-cite",
+      "registry": "github",
+      "url": "https://api.github.com/search/repositories?q=siftgrain-cite",
+      "total_count": 0,
+      "matches": [],
+      "error": null
+    },
+    {
+      "name": "siftgrain-census",
+      "registry": "github",
+      "url": "https://api.github.com/search/repositories?q=siftgrain-census",
+      "total_count": 0,
+      "matches": [],
+      "error": null
+    },
+    {
+      "name": "siftgrain-state",
+      "registry": "github",
+      "url": "https://api.github.com/search/repositories?q=siftgrain-state",
+      "total_count": 0,
+      "matches": [],
+      "error": null
+    },
+    {
+      "name": "evidlattice",
+      "registry": "github",
+      "url": "https://api.github.com/search/repositories?q=evidlattice",
+      "total_count": 0,
+      "matches": [],
+      "error": null
+    },
+    {
+      "name": "verispindle",
+      "registry": "github",
+      "url": "https://api.github.com/search/repositories?q=verispindle",
+      "total_count": 0,
+      "matches": [],
+      "error": null
+    }
+  ]
+}

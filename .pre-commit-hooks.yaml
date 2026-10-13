@@ -1,0 +1,7 @@
+- id: evaluation-completeness
+  name: Siftgrain Census evaluation completeness
+  description: Requires args [manifest.json, results.jsonl]; expected population stays explicit
+  entry: eval-audit
+  language: python
+  pass_filenames: false
+  always_run: true

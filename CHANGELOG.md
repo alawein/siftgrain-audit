@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add Siftgrain Census offline four-vibe report and planned-trial evidence.
+- Add strict HELM/Open LLM export adapters, separate score sensitivity, optional rich summary, composite Action and pre-commit hook.
+- Add pinned public-log fault corpus, native Inspect baseline, downloadable test set, browser/accessibility/performance checks and recorded demos.
+- Preserve legacy audit JSON, stdlib runtime and existing package/CLI identities.
+
 ## 0.3.1 (not yet published)
 
 - Rename distribution to alawein-eval-audit; preserve eval_audit imports and eval-audit CLI.

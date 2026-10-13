@@ -11,6 +11,9 @@ requires-python = ">=3.11"
 license = "MIT"
 dependencies = []
 
+[project.optional-dependencies]
+cli = ["rich==15.0.0"]
+
 [project.scripts]
 eval-audit = "eval_audit.cli:main"
 

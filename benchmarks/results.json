@@ -1,0 +1,140 @@
+{
+  "access_date": "2026-10-13",
+  "all_order_deterministic": true,
+  "cases": 280,
+  "human_labels": "none",
+  "invalid_cases_rejected": 80,
+  "license": "MIT",
+  "limitations": [
+    "Three actual archived selected samples; not representative.",
+    "Epoch 2 and all injected faults are synthetic transformations.",
+    "Binary run-level precision/recall, not record localization metrics.",
+    "No statistical CI: deterministic exhaustively enumerated seeded suite."
+  ],
+  "llm_baseline": "omitted; no model calls",
+  "max_absolute_expected_denominator_error": 0,
+  "metrics": {
+    "drop": {
+      "census": {
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tn": 40,
+        "tp": 40
+      },
+      "naive": {
+        "fn": 40,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tn": 40,
+        "tp": 0
+      }
+    },
+    "duplicate": {
+      "census": {
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tn": 40,
+        "tp": 40
+      },
+      "naive": {
+        "fn": 40,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tn": 40,
+        "tp": 0
+      }
+    },
+    "error": {
+      "census": {
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tn": 40,
+        "tp": 40
+      },
+      "naive": {
+        "fn": 40,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tn": 40,
+        "tp": 0
+      }
+    },
+    "nan": {
+      "census": {
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tn": 40,
+        "tp": 40
+      },
+      "naive": {
+        "fn": 40,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tn": 40,
+        "tp": 0
+      }
+    },
+    "partial_retries": {
+      "census": {
+        "fn": 0,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tn": 40,
+        "tp": 40
+      },
+      "naive": {
+        "fn": 40,
+        "fp": 0,
+        "precision": null,
+        "recall": 0.0,
+        "tn": 40,
+        "tp": 0
+      }
+    },
+    "shuffled_epochs": {
+      "census": {
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tn": 80,
+        "tp": 0
+      },
+      "naive": {
+        "fn": 0,
+        "fp": 0,
+        "precision": null,
+        "recall": null,
+        "tn": 80,
+        "tp": 0
+      }
+    }
+  },
+  "native_inspect_baseline": "Executed separately: native-inspect-results.json (0.3.279)",
+  "native_lm_eval_baseline": "not run; source is Inspect, not lm-eval",
+  "performance": {
+    "median_case_ms": 14.710150000610156,
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.9 (main, Oct 14 2025, 21:22:32) [MSC v.1944 64 bit (AMD64)]",
+    "stress_10000_missing_seconds": 0.7967305999991368,
+    "tracemalloc_peak_bytes": 3769834
+  },
+  "run_date": "2025-05-12",
+  "schema_version": 1,
+  "source_commit": "4acfd207ecca8e1c3b754a147c191f2f0f21ba71",
+  "source_sha256": "44f6203d88252de0c33f76c948ad7c537b412cff628c704e9a5449ffba9d5a34",
+  "source_url": "https://raw.githubusercontent.com/UKGovernmentBEIS/inspect_ai/4acfd207ecca8e1c3b754a147c191f2f0f21ba71/tests/analysis/test_logs/2025-05-12T20-28-26-04-00_security-guide.json"
+}

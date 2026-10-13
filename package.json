@@ -1,0 +1,16 @@
+{
+  "name": "siftgrain-census-viewer-checks",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test:browser": "playwright test",
+    "test:tokens": "node --test design-tokens/tokens.test.mjs",
+    "perf": "node scripts/lighthouse.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@axe-core/playwright": "4.13.0",
+    "@lhci/cli": "0.15.1"
+  }
+}

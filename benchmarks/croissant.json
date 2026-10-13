@@ -1,0 +1,255 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "sc": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "dct": "http://purl.org/dc/terms/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "siftgrain-census-faults-v1",
+  "description": "Controlled fault-seed splits on three shared archived Inspect sample IDs; synthetic second epoch. Record sets project flat answer-key fields; complete missing-pair keys remain in JSON.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "url": "https://github.com/alawein/eval-audit",
+  "license": "https://opensource.org/license/mit",
+  "version": "1.0.0",
+  "dateCreated": "2026-10-13",
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Meshal Alawein"
+  },
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "dev-answers",
+      "name": "dev-answers",
+      "description": "Public dev fault-seed answer keys; original source IDs overlap both splits.",
+      "contentUrl": "dataset-v1/dev-answers.json",
+      "encodingFormat": "application/json",
+      "sha256": "b0666fbc680a0b3f14457b8b799b686e5dbcd5b27affb08d04a9cfa1c23d448c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "test-answers",
+      "name": "test-answers",
+      "description": "Public test fault-seed answer keys; original source IDs overlap both splits.",
+      "contentUrl": "dataset-v1/test-answers.json",
+      "encodingFormat": "application/json",
+      "sha256": "e9d01708cede014eadb544086fbcfcefa40ee2f5f8f91623a7b4743d0a59a047"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "archive",
+      "name": "archive",
+      "contentUrl": "dataset-v1.zip",
+      "encodingFormat": "application/zip",
+      "sha256": "f2b86970a3a3c7bf1349a300239379816c510e42c4c45213f587d23741650a66"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dev",
+      "name": "dev",
+      "description": "Flat projection of the separate JSON answer-key array.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dev/case",
+          "name": "case",
+          "description": "case",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].case"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/fault",
+          "name": "fault",
+          "description": "fault",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dev-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].fault"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/should_flag",
+          "name": "should_flag",
+          "description": "should flag",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "dev-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].should_flag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/invalid",
+          "name": "invalid",
+          "description": "invalid",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "dev-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].invalid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dev/expected_trials",
+          "name": "expected_trials",
+          "description": "expected trials",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "dev-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].expected_trials"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "test",
+      "name": "test",
+      "description": "Flat projection of the separate JSON answer-key array.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "test/case",
+          "name": "case",
+          "description": "case",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].case"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test/fault",
+          "name": "fault",
+          "description": "fault",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "test-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].fault"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test/should_flag",
+          "name": "should_flag",
+          "description": "should flag",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "test-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].should_flag"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test/invalid",
+          "name": "invalid",
+          "description": "invalid",
+          "dataType": "sc:Boolean",
+          "source": {
+            "fileObject": {
+              "@id": "test-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].invalid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "test/expected_trials",
+          "name": "expected_trials",
+          "description": "expected trials",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "test-answers"
+            },
+            "extract": {
+              "jsonPath": "$[*].expected_trials"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -9,11 +9,12 @@ from importlib.metadata import version as _package_version
 from pathlib import Path
 from typing import Any
 
-from eval_audit.adapters import bounded_read, convert
+from eval_audit.adapters import FORMATS, bounded_read, convert
 from eval_audit.contract import InputError, decode, load_inputs, parse
 from eval_audit.core import audit
 from eval_audit.output import atomic_write, validate_outputs
 from eval_audit.report import render_html, render_json
+from eval_audit.sensitivity import score_sensitivity
 
 try:
     __version__ = _package_version("alawein-eval-audit")
@@ -25,7 +26,7 @@ def convert_main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(
         description="Convert local per-sample logs; population supplied."
     )
-    parser.add_argument("format", choices=["inspect", "lm-evaluation-harness", "promptfoo"])
+    parser.add_argument("format", choices=FORMATS)
     parser.add_argument("source", type=Path)
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--score-key")
@@ -87,13 +88,29 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("records", type=Path, help="records JSONL file")
     parser.add_argument("--json", type=Path, help="write the JSON report to PATH")
     parser.add_argument("--html", type=Path, help="write the HTML report to PATH")
+    parser.add_argument("--sensitivity", type=Path, help="separate descriptive score-policy JSON")
+    parser.add_argument("--rich", action="store_true", help="optional cli extra summary on stderr")
     parser.add_argument("--force", action="store_true", help="overwrite existing output files")
     parser.add_argument("--version", action="version", version=f"eval-audit {__version__}")
     args = parser.parse_args(argv)
     try:
         manifest, records, hashes = load_inputs(args.manifest, args.records)
         report: dict[str, Any] = audit(manifest, records) | {"inputs": hashes}
-        targets = [(args.json, render_json(report)), (args.html, render_html(report))]
+        if args.rich:
+            try:
+                from rich.console import Console
+            except ImportError as exc:
+                raise InputError("--rich requires the optional cli extra") from exc
+            Console(stderr=True).print(
+                f"Expected: {report['counts']['expected']} | "
+                f"Score present: {report['counts']['score_present']} | Exit: {report['exit_code']}"
+            )
+        targets = [
+            (args.json, render_json(report)),
+            (args.html, render_html(report, manifest=manifest, records=records)),
+        ]
+        if args.sensitivity is not None:
+            targets.append((args.sensitivity, render_json(score_sensitivity(manifest, records))))
         outputs = [path for path, content in targets if path is not None]
         inputs = [args.manifest, args.records]
         validate_outputs(outputs, inputs, args.force)

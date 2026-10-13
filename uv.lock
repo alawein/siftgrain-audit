@@ -11,6 +11,11 @@ name = "alawein-eval-audit"
 version = "0.3.1"
 source = { editable = "." }
 
+[package.optional-dependencies]
+cli = [
+    { name = "rich" },
+]
+
 [package.dev-dependencies]
 dev = [
     { name = "build" },
@@ -27,6 +32,8 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "rich", marker = "extra == 'cli'", specifier = "==15.0.0" }]
+provides-extras = ["cli"]
 
 [package.metadata.requires-dev]
 dev = [

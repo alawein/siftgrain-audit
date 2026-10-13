@@ -1,0 +1,2864 @@
+{
+  "access_date": "2026-10-13",
+  "cases": 280,
+  "definition": "Actual read_eval_log parser and accuracy metric; flags parse rejection or recorded execution errors. Metric gets delivered scores only. No eval/scorer calls.",
+  "framework": "inspect-ai",
+  "limitations": [
+    "Not Inspect's full aggregation pipeline or on_missing policy.",
+    "Does not claim a framework defect or comparative model accuracy."
+  ],
+  "metrics": {
+    "drop": {
+      "fn": 40,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tn": 40,
+      "tp": 0
+    },
+    "duplicate": {
+      "fn": 40,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tn": 40,
+      "tp": 0
+    },
+    "error": {
+      "fn": 0,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tn": 40,
+      "tp": 40
+    },
+    "nan": {
+      "fn": 40,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tn": 40,
+      "tp": 0
+    },
+    "partial_retries": {
+      "fn": 40,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0,
+      "tn": 40,
+      "tp": 0
+    },
+    "shuffled_epochs": {
+      "fn": 0,
+      "fp": 0,
+      "precision": null,
+      "recall": null,
+      "tn": 80,
+      "tp": 0
+    }
+  },
+  "results": [
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1000-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1000-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1000-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1000-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1000-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1000-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1000-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1001-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1001-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1001-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1001-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1001-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1001-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1001-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1002-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1002-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1002-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1002-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1002-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1002-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1002-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1003-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1003-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1003-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1003-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1003-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1003-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1003-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1004-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1004-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1004-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1004-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1004-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1004-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1004-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1005-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1005-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1005-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1005-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1005-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1005-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1005-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1006-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1006-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1006-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1006-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1006-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1006-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1006-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1007-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1007-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1007-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1007-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1007-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1007-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1007-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1008-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1008-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1008-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1008-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1008-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1008-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1008-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1009-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1009-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1009-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1009-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1009-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1009-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1009-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1010-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1010-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1010-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1010-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1010-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1010-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1010-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1011-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1011-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1011-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1011-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1011-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1011-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1011-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1012-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1012-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1012-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1012-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1012-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1012-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1012-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1013-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1013-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1013-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1013-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1013-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1013-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1013-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1014-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1014-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1014-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1014-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1014-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1014-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1014-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1015-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1015-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1015-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1015-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1015-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1015-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1015-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1016-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1016-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1016-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1016-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1016-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1016-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1016-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1017-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1017-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1017-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1017-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1017-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1017-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1017-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1018-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1018-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1018-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1018-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1018-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1018-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1018-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1019-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1019-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1019-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "dev-1019-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "dev-1019-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "dev-1019-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "dev-1019-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2000-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2000-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2000-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2000-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2000-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2000-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2000-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2001-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2001-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2001-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2001-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2001-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2001-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2001-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2002-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2002-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2002-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2002-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2002-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2002-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2002-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2003-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2003-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2003-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2003-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2003-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2003-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2003-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2004-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2004-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2004-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2004-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2004-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2004-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2004-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2005-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2005-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2005-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2005-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2005-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2005-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2005-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2006-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2006-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2006-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2006-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2006-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2006-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2006-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2007-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2007-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2007-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2007-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2007-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2007-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2007-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2008-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2008-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2008-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2008-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2008-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2008-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2008-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2009-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2009-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2009-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2009-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2009-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2009-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2009-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2010-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2010-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2010-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2010-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2010-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2010-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2010-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2011-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2011-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2011-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2011-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2011-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2011-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2011-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2012-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2012-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2012-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2012-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2012-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2012-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2012-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2013-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2013-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2013-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2013-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2013-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2013-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2013-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2014-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2014-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2014-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2014-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2014-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2014-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2014-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2015-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2015-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2015-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2015-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2015-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2015-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2015-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2016-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2016-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2016-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2016-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2016-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2016-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2016-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2017-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2017-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2017-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2017-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2017-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2017-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2017-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2018-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2018-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2018-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2018-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2018-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2018-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2018-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2019-clean",
+      "denominator_error": 0,
+      "fault": "clean",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2019-drop",
+      "denominator_error": -1,
+      "fault": "drop",
+      "flagged": false,
+      "metric_input_denominator": 5,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2019-duplicate",
+      "denominator_error": 1,
+      "fault": "duplicate",
+      "flagged": false,
+      "metric_input_denominator": 7,
+      "parser_rejected": false
+    },
+    {
+      "actual": true,
+      "case": "test-2019-error",
+      "denominator_error": null,
+      "fault": "error",
+      "flagged": true,
+      "metric_input_denominator": null,
+      "parser_rejected": true,
+      "reason": "ValidationError"
+    },
+    {
+      "accuracy": "nonfinite",
+      "actual": true,
+      "case": "test-2019-nan",
+      "denominator_error": 0,
+      "fault": "nan",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": false,
+      "case": "test-2019-shuffled_epochs",
+      "denominator_error": 0,
+      "fault": "shuffled_epochs",
+      "flagged": false,
+      "metric_input_denominator": 6,
+      "parser_rejected": false
+    },
+    {
+      "accuracy": 1.0,
+      "actual": true,
+      "case": "test-2019-partial_retries",
+      "denominator_error": -3,
+      "fault": "partial_retries",
+      "flagged": false,
+      "metric_input_denominator": 3,
+      "parser_rejected": false
+    }
+  ],
+  "source_sha256": "44f6203d88252de0c33f76c948ad7c537b412cff628c704e9a5449ffba9d5a34",
+  "version": "0.3.279"
+}

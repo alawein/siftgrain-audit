@@ -1,0 +1,18 @@
+name: Siftgrain Census
+description: Fail on incomplete evaluation records against an explicit population
+inputs:
+  manifest:
+    description: Expected population JSON path
+    required: true
+  records:
+    description: Canonical result JSONL path
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Check evaluation completeness
+      shell: bash
+      env:
+        CENSUS_MANIFEST: ${{ inputs.manifest }}
+        CENSUS_RECORDS: ${{ inputs.records }}
+      run: python "$GITHUB_ACTION_PATH/scripts/coverage_gate.py" "$CENSUS_MANIFEST" "$CENSUS_RECORDS"

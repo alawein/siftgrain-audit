@@ -1,0 +1,28 @@
+{
+  "access_date": "2026-10-13",
+  "scope": "Three Lighthouse localhost runs; not file:// or field INP",
+  "runs": [
+    {
+      "lcp_ms": 999.64135,
+      "tbt_ms": 113.49999999999989,
+      "accessibility": 1,
+      "performance": 0.99,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    },
+    {
+      "lcp_ms": 851.0464,
+      "tbt_ms": 196.5,
+      "accessibility": 1,
+      "performance": 0.97,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    },
+    {
+      "lcp_ms": 915.2494,
+      "tbt_ms": 0,
+      "accessibility": 1,
+      "performance": 1,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    }
+  ],
+  "exit_code": 0
+}

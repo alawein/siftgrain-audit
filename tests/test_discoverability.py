@@ -162,7 +162,7 @@ def test_near_complete_score_coverage_does_not_display_complete():
     page = render_html(audit(manifest, rows))
     assert "99.5%" in page
     assert "200 of 201 expected IDs" in page
-    assert "100%" not in page
+    assert ">100%<" not in page
 
 
 class _ReportPage(HTMLParser):

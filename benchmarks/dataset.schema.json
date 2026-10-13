@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alawein.github.io/eval-audit/benchmark-case.v1.json",
+  "title": "Benchmark answer key v1",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "case",
+      "fault",
+      "should_flag",
+      "invalid",
+      "expected_trials",
+      "missing"
+    ],
+    "properties": {
+      "case": {
+        "type": "string"
+      },
+      "fault": {
+        "enum": [
+          "clean",
+          "drop",
+          "duplicate",
+          "error",
+          "nan",
+          "shuffled_epochs",
+          "partial_retries"
+        ]
+      },
+      "should_flag": {
+        "type": "boolean"
+      },
+      "invalid": {
+        "type": "boolean"
+      },
+      "expected_trials": {
+        "const": 6
+      },
+      "missing": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "trial"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "trial": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

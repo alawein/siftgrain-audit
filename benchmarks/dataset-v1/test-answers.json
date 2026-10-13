@@ -1,0 +1,1482 @@
+[
+  {
+    "case": "test-2000-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2000-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2000-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2000-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2000-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2000-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2000-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2001-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2001-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2001-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2001-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2001-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2001-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2001-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2002-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2002-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2002-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2002-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2002-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2002-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2002-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2003-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2003-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2003-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2003-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2003-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2003-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2003-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2004-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2004-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2004-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2004-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2004-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2004-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2004-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2005-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2005-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2005-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2005-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2005-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2005-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2005-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2006-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2006-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2006-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2006-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2006-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2006-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2006-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2007-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2007-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2007-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2007-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2007-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2007-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2007-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2008-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2008-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2008-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2008-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2008-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2008-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2008-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2009-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2009-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2009-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2009-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2009-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2009-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2009-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2010-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2010-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2010-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2010-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2010-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2010-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2010-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2011-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2011-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2011-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2011-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2011-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2011-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2011-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2012-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2012-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2012-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2012-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2012-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2012-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2012-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2013-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2013-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2013-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2013-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2013-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2013-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2013-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2014-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2014-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2014-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2014-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2014-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2014-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2014-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2015-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2015-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2015-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2015-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2015-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2015-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2015-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2016-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2016-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2016-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2016-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2016-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2016-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2016-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2017-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2017-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2017-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2017-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2017-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2017-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2017-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2018-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2018-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2018-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2018-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2018-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2018-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2018-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2019-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2019-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "test-2019-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2019-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2019-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "test-2019-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "test-2019-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  }
+]

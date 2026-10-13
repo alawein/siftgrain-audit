@@ -1,5 +1,32 @@
 # Audit verification
 
+## Current baseline verification, October 13, 2026
+
+Prechange baseline: clean main `7fe0b7b05369ed3778d72775c3f2f913604ef96f`.
+Fresh baseline pytest: **170 passed in 8.49 seconds**, no skips. All file:line
+references in this table bind that baseline, before this redesign's edits.
+
+| Prior hypothesis | Finding now | Baseline evidence |
+| --- | --- | --- |
+| Repeated trials absent | Refuted; superseded by v0.3.0 | src/eval_audit/core.py:35 and contract.py:56, trial plans and pair identity |
+| No adapter support | Partially confirmed | adapters.py:82 supports Inspect, lm-eval and promptfoo; HELM/Open LLM missing |
+| NaN/infinity/bool silently accepted | Refuted | contract.py:114-126 exact numeric types, finite floats and row-number diagnostics; parse rejects lexical constants |
+| Errored-score numerator undefined | Refuted | core.py:21,54,71 availability includes numeric error scores; core.py:74 excludes errors from all-k-scored readiness; docs/contract.md explicit |
+| Nonatomic writes | Refuted | output.py:26 stages same-directory bytes and atomically installs per file; multiple outputs are not a transaction |
+| Python floor too high | Refuted | pyproject.toml:10 requires Python >=3.11; CI matrix covers 3.11-3.13 |
+| Schemas absent | Refuted | schema/manifest.v1.json, result-record.v1.json, report.v1.json are Draft 2020-12; tests/test_schemas.py |
+| Only synthetic empirical evidence | Partially confirmed | studies/inspect-security-guide and harness-coverage contain actual tiny pinned public-log studies; no seeded fault benchmark existed |
+| Animated trial viewer and sensitivity absent | Confirmed | report.py:75 renders static counts/cards; cli.py:90 has no separate score-policy output |
+| Generic name collision | Confirmed as positioning risk | Existing README disambiguates eval-audit; dated docs/name-checks.json records proposed-family searches |
+| First PR has one check not passing | Partially confirmed, pending status | Fresh API for PR1 head e4f955490ba2508135b14851e0a1b918238d2ea1 returned 30 success check-runs, zero nonpassing; legacy CodeRabbit commit status remains pending since October 4. This is not a failed required build. |
+
+Current remote history and settings observations: docs/recent-history.json.
+Main uses an active ruleset, not legacy branch-protection API; a 404 on the latter
+is not proof of unprotected main. No settings or Dependabot controls changed.
+Current changes add regression tests for strict adapters, policy separation,
+viewer states, consumer exit failure and benchmark gold failure. Historical
+verification below remains bound to its own explicitly named revisions.
+
 ## Phase 0, October 8, 2026
 
 Source: `compass_artifact_wf-8f32e147-9bf3-5208-ba05-acfbbd390eae_text_markdown.md`,

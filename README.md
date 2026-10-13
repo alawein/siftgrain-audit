@@ -1,6 +1,6 @@
-# Eval Audit
+# Siftgrain Census
 
-Find gaps in evaluation results before interpreting the scores.
+Count the run before reading the score.
 
 ![Evaluation coverage](assets/label-purpose.svg)
 ![Python](assets/label-stack.svg)
@@ -9,6 +9,15 @@ Find gaps in evaluation results before interpreting the scores.
 Declare the expected IDs and supply JSONL results. Eval Audit separates scored,
 errored, unscored, missing, and unexpected records, including errored records
 that retain a score.
+
+Siftgrain Census is the evaluation completeness tool in the Siftgrain family.
+The compatible package and command remain `alawein-eval-audit` and `eval-audit`.
+Its self-contained report offers four vibes, dark/light appearance, missing-trial
+waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
+
+[Brand and name checks](BRAND.md) · [Download test set](benchmarks/dataset-v1.zip) ·
+[Benchmark results](benchmarks/RESULTS.md) · [Migration](MIGRATION.md) ·
+[Performance](PERF.md)
 
 ## Run
 
@@ -64,7 +73,7 @@ Deterministic JSON, readable HTML, input SHA-256 hashes, sorted missing/unexpect
 IDs, and errored records retaining a score. The population is supplied, never
 guessed. Zero is a present score. Unexpected records do not inflate counts.
 
-No accuracy, quality, means or rankings. It cannot verify the supplied population
+The audit JSON computes no accuracy, quality, means or rankings. It cannot verify the supplied population
 or whether a partial score is usable. Native framework diagnostics remain useful.
 
 For repeated trials, add `"trials_per_id": 5` to the manifest, or an exact ID-to-count
@@ -76,7 +85,7 @@ with a numeric score contributes to score availability, but remains errored and
 does not qualify for these readiness counts.
 
 Convert local Inspect `.eval`/`.json`, lm-evaluation-harness per-sample JSONL or
-promptfoo JSON with an explicit population:
+promptfoo JSON, HELM per-instance statistics or Open LLM exported details with an explicit population:
 
 ```sh
 uv run eval-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl
@@ -125,10 +134,31 @@ provide race-proof input identity checks or a power-loss durability guarantee.
 
 This is [alawein/eval-audit](https://github.com/alawein/eval-audit), an offline
 coverage auditor. It is unrelated to similarly named statistical or human-grading
-tools. The GitHub v0.3.0 release is published. PyPI v0.3.0 failed because no matching trusted publisher existed; the original distribution name was also rejected. The owner-qualified distribution alawein-eval-audit v0.3.1 awaits pending-publisher acceptance and publication. No third-party adoption is claimed.
+tools. The GitHub v0.3.0 release is published. PyPI v0.3.0 failed because no matching trusted publisher existed; the original distribution name was also rejected. The owner-qualified v0.3.1 release is recorded in release readiness. This redesign has not published a new package release. No third-party adoption is claimed.
 
 [Release readiness](RELEASE_READY.md) and [security settings](SECURITY_SETTINGS.md)
 record the publication setup and observed access limits.
 
 MIT code; original CC0 synthetic fixtures. AI-assisted independent implementation.
 No client work, production ownership or adoption claim.
+
+## CI and policy views
+
+Use the repository composite Action with `manifest` and `records` inputs, pinned
+to the reviewed commit SHA. Its stdlib runner fails on missing, errored, unscored,
+unexpected or malformed work. For pre-commit, use hook `evaluation-completeness`
+with `args: [manifest.json, results.jsonl]`; filenames are never inferred as the
+population. The hook runs even when no matching files changed.
+
+`--sensitivity policy.json` writes separate zero-fill, score-available and
+scored-only means as exact rational strings. Missing is zero only in zero-fill;
+error scores are excluded only in scored-only. This is descriptive arithmetic,
+not a pass@k or pass^k rate. `--rich` adds an optional stderr summary after
+`uv sync --extra cli`; ordinary JSON stays machine-readable.
+
+`make bench` reproduces the pinned public-log fault suite. It can fetch only
+when explicitly requested by that benchmark script; the product never fetches.
+Browser checks: `npm ci`, `uv run python scripts/build_demo.py`, then
+`npm run test:browser`, `npm run perf`, and `uv run python scripts/check_perf.py`.
+All browser dependencies are development-only. Actual recordings are in
+`brand/demos/`; no human-study measurements are claimed.
