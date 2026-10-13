@@ -9,7 +9,7 @@
     "Siftgrain Audit",
     "Siftgrain State"
   ],
-  "limits": "Registry/search snapshot only, not legal trademark clearance. No domain availability asserted; no domain proposed or purchased. Repositories use the Siftgrain slugs; prior package identities remain compatible.",
+  "limits": "Registry/search snapshot only, not legal trademark clearance. No domain availability asserted; no domain proposed or purchased. Repositories use the Siftgrain slugs; prior package identities remain compatible. Siftgrain Audit and its name slug were owner-selected after this snapshot; the retained siftgrain-census queries establish no exact-name collision or trademark clearance for Audit.",
   "web_searches": [
     {
       "query": "\"Spanward\" software trademark",
