@@ -95,6 +95,22 @@ def test_existing_report_preserves_both_outputs_without_force(tmp_path, capsys):
     assert report.read_bytes() == b"keep existing report"
 
 
+def test_unexpected_record_needs_attention_despite_complete_expected_scores(tmp_path, capsys):
+    manifest, source = inputs(tmp_path, complete=True)
+    native = json.loads(source.read_text(encoding="utf-8"))
+    native["results"].append({"testIdx": 9, "promptIdx": 0, "score": 1})
+    source.write_text(json.dumps(native), encoding="utf-8")
+    output = tmp_path / "results.jsonl"
+    report = tmp_path / "report.html"
+    assert main(command(manifest, source, output) + ["--html", str(report)]) == 1
+    capsys.readouterr()
+    assert main([str(manifest), str(output)]) == 1
+    actual = json.loads(capsys.readouterr().out)
+    assert actual["counts"]["scored"] == actual["counts"]["expected"] == 2
+    assert actual["unexpected_ids"] == ["9:0"]
+    assert report.exists()
+
+
 def test_bad_source_preserves_existing_outputs_with_force(tmp_path, capsys):
     manifest, source = inputs(tmp_path)
     output = tmp_path / "results.jsonl"

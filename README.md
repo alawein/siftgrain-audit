@@ -91,8 +91,8 @@ uv run eval-audit convert inspect log.json --manifest manifest.json --score-key 
 
 Open `report.html` locally. The converted rows remain in `results.jsonl` for
 inspection or reuse. With `--html`, exit 0 means complete scored coverage,
-1 means missing, errored or unscored work remains, and 2 means invalid input or
-an I/O failure. Without `--html`, conversion still exits 0 on successful
+1 means missing, unexpected, errored or unscored records need attention, and
+2 means invalid input or an I/O failure. Without `--html`, conversion still exits 0 on successful
 conversion, which does not establish coverage. Expected IDs always come from
 your manifest, never from the results being checked.
 
