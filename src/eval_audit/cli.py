@@ -75,11 +75,20 @@ def convert_main(argv: list[str]) -> int:
             atomic_write(args.html, html, args.force)
             counts = report["counts"]
             print(
-                f"eval-audit: expected {counts['expected']}; missing {counts['missing']}; "
+                f"eval-audit: IDs: expected {counts['expected']}; missing {counts['missing']}; "
                 f"errored {counts['errored']}; unscored {counts['unscored']}; "
+                f"unexpected {len(report['unexpected_ids'])}; "
                 f"exit {report['exit_code']}",
                 file=sys.stderr,
             )
+            trial_counts = report.get("trial_counts")
+            if trial_counts is not None:
+                print(
+                    f"eval-audit: trials: expected {trial_counts['expected']}; "
+                    f"missing {trial_counts['missing']}; errored {trial_counts['errored']}; "
+                    f"unscored {trial_counts['unscored']}; unexpected {trial_counts['unexpected']}",
+                    file=sys.stderr,
+                )
             return int(report["exit_code"])
         return 0
     except (
