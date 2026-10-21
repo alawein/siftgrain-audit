@@ -39,6 +39,11 @@ def convert_main(argv: list[str]) -> int:
         type=Path,
         help="also audit converted records and write an HTML report; exit 1 if work remains",
     )
+    parser.add_argument(
+        "--json",
+        type=Path,
+        help="also audit converted records and write a JSON report; exit 1 if work remains",
+    )
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args(argv)
     try:
@@ -52,7 +57,7 @@ def convert_main(argv: list[str]) -> int:
                 raise InputError("score map must be an object")
             inputs.append(args.score_map)
         rows = convert(args.format, manifest, args.source, args.score_key, score_map)
-        outputs = [args.output] + ([args.html] if args.html is not None else [])
+        outputs = [path for path in (args.output, args.json, args.html) if path is not None]
         validate_outputs(outputs, inputs, args.force)
         content = "".join(
             json.dumps(row, sort_keys=True, allow_nan=False, ensure_ascii=False) + "\n"
@@ -61,18 +66,21 @@ def convert_main(argv: list[str]) -> int:
         if len(content.encode("utf-8")) > 5 * 1024 * 1024:
             raise InputError("converted records exceed 5 MiB")
         report: dict[str, Any] | None = None
-        html = None
-        if args.html is not None:
+        targets = [(args.output, content)]
+        if args.html is not None or args.json is not None:
             report = audit(manifest, rows) | {
                 "inputs": {
                     "manifest_sha256": hashlib.sha256(raw_manifest).hexdigest(),
                     "records_sha256": hashlib.sha256(content.encode("utf-8")).hexdigest(),
                 }
             }
-            html = render_html(report)
-        atomic_write(args.output, content, args.force)
-        if args.html is not None and report is not None and html is not None:
-            atomic_write(args.html, html, args.force)
+            if args.json is not None:
+                targets.append((args.json, render_json(report)))
+            if args.html is not None:
+                targets.append((args.html, render_html(report)))
+        for path, payload in targets:
+            atomic_write(path, payload, args.force)
+        if report is not None:
             counts = report["counts"]
             print(
                 f"eval-audit: IDs: expected {counts['expected']}; missing {counts['missing']}; "

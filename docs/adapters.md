@@ -11,11 +11,11 @@ as per-sample results.
 or I/O failure. Conversion success does not establish complete coverage; run the
 normal audit afterward. JSONL output is sorted by `(id, trial)`.
 
-Add `--html REPORT.html` to convert and audit in one command. This writes the
-same HTML report as auditing the converted JSONL separately, including hashes
+Add `--html REPORT.html`, `--json REPORT.json`, or both to convert and audit in
+one command. These write the same reports as auditing the converted JSONL separately, including hashes
 of the exact manifest and converted records. The hashes do not cover the native
-source export. With this option, exit 0 means complete scored coverage, 1 means
-work remains and 2 means invalid input or I/O failure. Conversion without this
+source export. With either report option, exit 0 means complete scored coverage, 1 means
+work remains and 2 means invalid input or I/O failure. Conversion without either
 option keeps its existing exit codes and writes no report. A short coverage
 summary goes to stderr only when the report was written; stdout stays empty.
 The summary labels ID counts and includes unexpected IDs, which can cause exit
@@ -25,8 +25,9 @@ out-of-plan record; unexpected-trial counts include each out-of-plan pair.
 An expected ID with an extra trial can therefore count as unexpected.
 All output paths are checked against each other and all inputs, including a
 score map, before writing. `--force` is required to replace an existing report.
-Each output is installed atomically, but the two outputs are not one transaction;
-an I/O failure installing the report can leave successfully converted rows.
+Each output is installed atomically, but the outputs are not one transaction;
+an I/O failure installing a report can leave successfully converted rows or an
+earlier report. Neither report option changes the default conversion-only mode.
 Canonical JSONL uses real UTF-8 text and must also fit the 5 MiB input cap. If
 normalization expands the file beyond that limit, conversion fails before staging
 and preserves existing output bytes. Corrupt compressed archives return exit 2.
