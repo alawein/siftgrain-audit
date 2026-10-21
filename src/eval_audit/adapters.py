@@ -1,9 +1,10 @@
 """Narrow, offline mappings of local per-sample framework logs."""
 
+import json
 import zipfile
 from pathlib import Path
 
-from eval_audit.contract import decode, parse, require, trial_mode, validate
+from eval_audit.contract import InputError, decode, parse, require, trial_mode, validate
 
 
 def bounded_read(path: Path) -> bytes:
@@ -11,6 +12,23 @@ def bounded_read(path: Path) -> bytes:
         raw = stream.read(5 * 1024 * 1024 + 1)
     require(len(raw) <= 5 * 1024 * 1024, "source exceeds 5 MiB")
     return raw
+
+
+def _score_key_hint(scores: dict) -> str:
+    names = []
+    for name in sorted(scores):
+        if len(name) > 80:
+            continue
+        escaped = json.dumps(name, ensure_ascii=True)
+        if len(escaped) <= 80:
+            names.append(escaped)
+        if len(names) == 5:
+            break
+    hint = "available --score-key values: " + (", ".join(names) or "none shown")
+    omitted = len(scores) - len(names)
+    if omitted:
+        hint += f"; {omitted} additional name(s) omitted; inspect source"
+    return hint
 
 
 def source_rows(format_name: str, source: Path) -> list:
@@ -97,7 +115,8 @@ def convert(
             scores = sample.get("scores")
             scores = {} if scores is None else scores
             require(type(scores) is dict, f"invalid scores at {label}")
-            require(not scores or score_key in scores, f"missing score key at {label}")
+            if scores and score_key not in scores:
+                raise InputError(f"missing score key at {label}; {_score_key_hint(scores)}")
             entry = scores.get(score_key, {})
             require(type(entry) is dict, f"invalid score at {label}")
             score = entry.get("value")
