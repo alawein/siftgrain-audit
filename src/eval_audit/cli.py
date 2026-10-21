@@ -1,4 +1,5 @@
 import argparse
+import hashlib
 import json
 import lzma
 import sys
@@ -33,10 +34,16 @@ def convert_main(argv: list[str]) -> int:
         "--score-map", type=Path, help="explicit categorical-to-numeric JSON object"
     )
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--html",
+        type=Path,
+        help="also audit converted records and write an HTML report; exit 1 if work remains",
+    )
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args(argv)
     try:
-        manifest = parse(decode(bounded_read(args.manifest), "manifest"), "manifest")
+        raw_manifest = bounded_read(args.manifest)
+        manifest = parse(decode(raw_manifest, "manifest"), "manifest")
         score_map = None
         inputs = [args.source, args.manifest]
         if args.score_map is not None:
@@ -45,14 +52,35 @@ def convert_main(argv: list[str]) -> int:
                 raise InputError("score map must be an object")
             inputs.append(args.score_map)
         rows = convert(args.format, manifest, args.source, args.score_key, score_map)
-        validate_outputs([args.output], inputs, args.force)
+        outputs = [args.output] + ([args.html] if args.html is not None else [])
+        validate_outputs(outputs, inputs, args.force)
         content = "".join(
             json.dumps(row, sort_keys=True, allow_nan=False, ensure_ascii=False) + "\n"
             for row in rows
         )
         if len(content.encode("utf-8")) > 5 * 1024 * 1024:
             raise InputError("converted records exceed 5 MiB")
+        report: dict[str, Any] | None = None
+        html = None
+        if args.html is not None:
+            report = audit(manifest, rows) | {
+                "inputs": {
+                    "manifest_sha256": hashlib.sha256(raw_manifest).hexdigest(),
+                    "records_sha256": hashlib.sha256(content.encode("utf-8")).hexdigest(),
+                }
+            }
+            html = render_html(report)
         atomic_write(args.output, content, args.force)
+        if args.html is not None and report is not None and html is not None:
+            atomic_write(args.html, html, args.force)
+            counts = report["counts"]
+            print(
+                f"eval-audit: expected {counts['expected']}; missing {counts['missing']}; "
+                f"errored {counts['errored']}; unscored {counts['unscored']}; "
+                f"exit {report['exit_code']}",
+                file=sys.stderr,
+            )
+            return int(report["exit_code"])
         return 0
     except (
         ValueError,
