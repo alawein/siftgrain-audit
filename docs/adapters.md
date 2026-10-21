@@ -44,6 +44,13 @@ scores yield `scored`, and absent/null scores yield `unscored`. Failed grading
 Zero remains present. An errored sample retaining a score remains errored.
 Inspect missing score keys fail if another score is present, avoiding accidental
 selection of the wrong scorer. Samples without any scores become unscored.
+For a missing Inspect scorer, the error names the source record and shows up to
+five available scorer names in alphabetical order. Names use JSON escaping so
+control characters cannot alter the terminal. Each displayed name is at most
+80 escaped characters; omitted names are counted rather than truncated into
+misleading choices. Only scorer names are shown, never score values or other
+source content. Choose the intended literal name with `--score-key` and retry;
+Audit does not select a scorer automatically, even when only one exists.
 
 Scores must be finite numbers; booleans, arrays and objects fail. Categorical
 strings fail unless an explicit `--score-map` JSON object maps them to finite
