@@ -18,6 +18,11 @@ source export. With this option, exit 0 means complete scored coverage, 1 means
 work remains and 2 means invalid input or I/O failure. Conversion without this
 option keeps its existing exit codes and writes no report. A short coverage
 summary goes to stderr only when the report was written; stdout stays empty.
+The summary labels ID counts and includes unexpected IDs, which can cause exit
+1 even when every expected ID is scored. Trial-enabled manifests also print a
+separate trial summary. Unexpected-ID counts are distinct IDs with any
+out-of-plan record; unexpected-trial counts include each out-of-plan pair.
+An expected ID with an extra trial can therefore count as unexpected.
 All output paths are checked against each other and all inputs, including a
 score map, before writing. `--force` is required to replace an existing report.
 Each output is installed atomically, but the two outputs are not one transaction;

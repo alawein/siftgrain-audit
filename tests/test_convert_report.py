@@ -45,6 +45,9 @@ def test_conversion_report_matches_separate_audit(tmp_path, capsys, complete, ex
     captured = capsys.readouterr()
     assert captured.out == ""
     assert "missing" in captured.err.lower()
+    assert "IDs: expected 2" in captured.err
+    assert "unexpected 0" in captured.err
+    assert "trials:" not in captured.err
     assert main([str(manifest), str(output), "--html", str(separate)]) == expected_exit
     assert combined.read_bytes() == separate.read_bytes()
     assert json.loads(output.read_text().splitlines()[0])["score"] == 0
@@ -103,12 +106,85 @@ def test_unexpected_record_needs_attention_despite_complete_expected_scores(tmp_
     output = tmp_path / "results.jsonl"
     report = tmp_path / "report.html"
     assert main(command(manifest, source, output) + ["--html", str(report)]) == 1
-    capsys.readouterr()
+    summary = capsys.readouterr()
+    assert summary.out == ""
+    assert "IDs: expected 2; missing 0; errored 0; unscored 0; unexpected 1; exit 1" in summary.err
     assert main([str(manifest), str(output)]) == 1
     actual = json.loads(capsys.readouterr().out)
     assert actual["counts"]["scored"] == actual["counts"]["expected"] == 2
     assert actual["unexpected_ids"] == ["9:0"]
     assert report.exists()
+
+
+@pytest.mark.parametrize("schema_version", [1, 2])
+def test_trial_summary_distinguishes_id_and_trial_problems(tmp_path, capsys, schema_version):
+    manifest = tmp_path / "manifest.json"
+    source = tmp_path / "source.json"
+    output = tmp_path / "results.jsonl"
+    report = tmp_path / "report.html"
+    separate = tmp_path / "separate.html"
+    manifest.write_text(
+        json.dumps(
+            {
+                "schema_version": schema_version,
+                "run_id": "synthetic-trials",
+                "expected_ids": ["a", "b"],
+                "trials_per_id": 2,
+            }
+        ),
+        encoding="utf-8",
+    )
+    source.write_text(
+        json.dumps(
+            {
+                "samples": [
+                    {"id": "a", "epoch": 1, "scores": {"metric": {"value": 0}}},
+                    {
+                        "id": "a",
+                        "epoch": 2,
+                        "scores": {"metric": {"value": 0.4}},
+                        "error": "synthetic",
+                    },
+                    {"id": "b", "epoch": 1},
+                    {"id": "b", "epoch": 3, "scores": {"metric": {"value": 1}}},
+                    {"id": "b", "epoch": 4, "scores": {"metric": {"value": 1}}},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+    assert (
+        main(
+            [
+                "convert",
+                "inspect",
+                str(source),
+                "--manifest",
+                str(manifest),
+                "--score-key",
+                "metric",
+                "--output",
+                str(output),
+                "--html",
+                str(report),
+            ]
+        )
+        == 1
+    )
+    summary = capsys.readouterr()
+    assert summary.out == ""
+    assert "IDs: expected 2; missing 1; errored 1; unscored 0; unexpected 1; exit 1" in summary.err
+    assert "trials: expected 4; missing 1; errored 1; unscored 1; unexpected 2" in summary.err
+    assert main([str(manifest), str(output), "--html", str(separate)]) == 1
+    assert report.read_bytes() == separate.read_bytes()
+
+
+def test_conversion_without_report_keeps_success_exit_and_no_summary(tmp_path, capsys):
+    manifest, source = inputs(tmp_path)
+    output = tmp_path / "results.jsonl"
+    assert main(command(manifest, source, output)) == 0
+    captured = capsys.readouterr()
+    assert captured.out == captured.err == ""
 
 
 def test_bad_source_preserves_existing_outputs_with_force(tmp_path, capsys):
