@@ -1,6 +1,8 @@
 # Eval Audit
 
-Find gaps in evaluation results before interpreting the scores.
+Eval Audit is an offline Python command line tool for people who run
+evaluations and need to know which expected results are missing before they
+read the scores. The package is `alawein-eval-audit`; the command is `eval-audit`.
 
 ![Evaluation coverage](assets/label-purpose.svg)
 ![Python](assets/label-stack.svg)
@@ -10,11 +12,9 @@ Declare the expected IDs and supply JSONL results. Eval Audit separates scored,
 errored, unscored, missing, and unexpected records, including errored records
 that retain a score.
 
-## Run
+## Install and run
 
-Python 3.11+. Build the v0.3.1 wheel from this branch with `uv build`, then install it
-with `python -m pip install path/to/alawein_eval_audit-0.3.1-py3-none-any.whl`.
-No runtime dependencies. From a clone:
+Python 3.11+. No runtime dependencies. Clone the repository, then:
 
 ```sh
 uv sync --frozen
@@ -50,7 +50,7 @@ retaining a number stays errored.
 This is score availability, not refund correctness or task quality. The auditor
 does not decide whether the supplied refund claim is correct, the completion
 observation is fresh, or the agent caused a change. The source text provides
-context for original synthetic, AI-assisted, non-client CC0 fixtures.
+context for the synthetic fixtures.
 
 The page shows expected-record cards, reasons, provenance, and input hashes. It
 links to `acceptance-report.json` and byte-for-byte copies of the manifest,
@@ -109,9 +109,8 @@ report's how-to-read section explains missing, unexpected, errored with score,
 unscored, score-present coverage, and exit codes. [Input contract](docs/contract.md),
 [test evidence](docs/evaluation.md), [usefulness exercise](docs/usefulness.md),
 [provenance](docs/provenance.md).
-[Related work and first-PR check history](docs/related-work.md) put these checks
-in context; [the public-log pilot](studies/inspect-security-guide/README.md) is a
-small recorded-run exercise with its stated limits. The [ten-sample archive study](studies/harness-coverage/README.md) independently verifies its selected population and unscored records.
+[Related work](docs/related-work.md) puts these checks in context; [the public-log pilot](studies/inspect-security-guide/README.md) is a
+small recorded-run exercise with its stated limits. The [ten-sample archive study](studies/harness-coverage/README.md) checks its selected population and unscored records.
 
 ## Related work and how this differs
 
@@ -138,12 +137,9 @@ transaction: one complete file can be installed before another fails. A staging
 or installation failure preserves that file's previous bytes. This does not
 provide race-proof input identity checks or a power-loss durability guarantee.
 
-This is [alawein/eval-audit](https://github.com/alawein/eval-audit), an offline
-coverage auditor. It is unrelated to similarly named statistical or human-grading
-tools. The GitHub v0.3.0 release is published. PyPI v0.3.0 failed because no matching trusted publisher existed; the original distribution name was also rejected. The owner-qualified distribution alawein-eval-audit v0.3.1 awaits pending-publisher acceptance and publication. No third-party adoption is claimed.
+This is [alawein/siftgrain-audit](https://github.com/alawein/siftgrain-audit), an
+offline coverage auditor. It is unrelated to similarly named statistical or
+human-grading tools. Releases are tagged v0.1.0 through v0.3.1.
 
-[Release readiness](RELEASE_READY.md) and [security settings](SECURITY_SETTINGS.md)
-record the publication setup and observed access limits.
-
-MIT code; original CC0 synthetic fixtures. AI-assisted independent implementation.
-No client work, production ownership or adoption claim.
+Code is MIT ([LICENSE](LICENSE)). The synthetic example fixtures are CC0
+([examples/LICENSE](examples/LICENSE)).
