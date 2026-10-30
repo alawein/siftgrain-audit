@@ -19,8 +19,8 @@ The compatible package and command remain `alawein-eval-audit` and `eval-audit`.
 Its self-contained report offers four vibes, dark/light appearance, missing-trial
 waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
 
-[Brand and name checks](BRAND.md) Â· [Download test set](benchmarks/dataset-v1.zip) Â·
-[Benchmark results](benchmarks/RESULTS.md) Â· [Migration](MIGRATION.md) Â·
+[Brand and name checks](BRAND.md) | [Download test set](benchmarks/dataset-v1.zip) |
+[Benchmark results](benchmarks/RESULTS.md) | [Migration](MIGRATION.md) |
 [Performance](PERF.md)
 
 ## Run

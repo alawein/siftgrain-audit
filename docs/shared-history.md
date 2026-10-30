@@ -236,7 +236,7 @@ Current default branch main; archived False; rulesets listed in shared-history.j
 ### Pull requests (kohyr/.github)
 
 - `#6` (authenticated source): chore: add CodeRabbit config matching the alawein kit; closed; created 2026-10-08T04:13:23Z; updated 2026-10-08T04:28:38Z; merged 2026-10-08T04:28:36Z.
-- `#5` (authenticated source): docs: add shared agent instructions for Codex, Cursor, Kilo, Grok andÃ¢â‚¬Â¦; closed; created 2026-10-08T01:44:50Z; updated 2026-10-08T02:00:54Z; merged 2026-10-08T02:00:52Z.
+- `#5` (authenticated source): docs: add shared agent instructions for Codex, Cursor, Kilo, Grok and...; closed; created 2026-10-08T01:44:50Z; updated 2026-10-08T02:00:54Z; merged 2026-10-08T02:00:52Z.
 - `#4` (authenticated source): docs: explain shared organization defaults; closed; created 2026-10-04T16:44:12Z; updated 2026-10-04T16:45:14Z; merged 2026-10-04T16:45:11Z.
 
 ### Settings-visible observations (kohyr/.github)
