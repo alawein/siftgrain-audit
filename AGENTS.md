@@ -11,7 +11,7 @@ before behavior changes. Python 3.11+, stdlib runtime; uv manages the dev lock.
 - Escape imported text in HTML; reject malformed input without dropping records.
 - Preserve input/output identity checks, including existing hard links.
 - Examples are synthetic, AI-assisted, non-client, CC0 data. No adoption claim.
-- Do not edit the lock manually, expose secrets or spend money.
+- Do not edit the lock manually or expose secrets. Inference spending follows canonical policy; other spending requires owner authorization.
 
 Owner authorized publication mode (c), October 4, 2026: bootstrap, first-release
 feature and release PRs to main, public MIT repo, GitHub Release v0.1.0 and Pages
