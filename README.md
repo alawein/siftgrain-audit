@@ -2,7 +2,9 @@
 
 Eval Audit is an offline Python command line tool for people who run
 evaluations and need to know which expected results are missing before they
-read the scores. The package is `alawein-eval-audit`; the command is `eval-audit`.
+read the scores.
+
+The package is `alawein-eval-audit`; the command is `eval-audit`.
 
 ![Evaluation coverage](assets/label-purpose.svg)
 ![Python](assets/label-stack.svg)
