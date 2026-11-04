@@ -4,7 +4,7 @@ import json
 import zipfile
 from pathlib import Path
 
-from eval_audit.contract import InputError, decode, parse, require, trial_mode, validate
+from siftgrain_audit.contract import InputError, decode, parse, require, trial_mode, validate
 
 
 def bounded_read(path: Path) -> bytes:

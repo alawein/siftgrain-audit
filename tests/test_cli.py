@@ -1,6 +1,6 @@
 import pytest
 
-from eval_audit.cli import main
+from siftgrain_audit.cli import main
 
 
 def test_help(capsys):

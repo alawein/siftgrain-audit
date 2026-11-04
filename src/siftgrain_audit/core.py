@@ -1,4 +1,4 @@
-from eval_audit.contract import trial_mode, trial_plan, validate
+from siftgrain_audit.contract import trial_mode, trial_plan, validate
 
 
 def audit(manifest: dict, records: list[dict]) -> dict:

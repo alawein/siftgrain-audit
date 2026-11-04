@@ -1,4 +1,4 @@
-# Eval audit
+# Siftgrain audit
 
 Strict, offline evaluation coverage auditor. Read README.md and docs/contract.md
 before behavior changes. Python 3.11+, stdlib runtime; uv manages the dev lock.

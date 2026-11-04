@@ -5,9 +5,9 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
-from eval_audit.adapters import convert
-from eval_audit.contract import load_inputs
-from eval_audit.core import audit
+from siftgrain_audit.adapters import convert
+from siftgrain_audit.contract import load_inputs
+from siftgrain_audit.core import audit
 
 
 def main() -> None:

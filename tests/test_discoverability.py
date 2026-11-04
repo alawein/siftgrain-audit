@@ -10,19 +10,19 @@ import pytest
 from test_audit import manifest as make_manifest
 from test_audit import row as make_row
 
-from eval_audit.cli import __version__, main
-from eval_audit.contract import InputError, load_inputs, validate
-from eval_audit.core import audit
-from eval_audit.report import render_html
+from siftgrain_audit.cli import __version__, main
+from siftgrain_audit.contract import InputError, load_inputs, validate
+from siftgrain_audit.core import audit
+from siftgrain_audit.report import render_html
 
 
 def test_distribution_metadata_preserves_module_and_cli():
     project = tomllib.loads(
         (Path(__file__).parents[1] / "pyproject.toml").read_text(encoding="utf-8")
     )["project"]
-    assert project["name"] == "alawein-eval-audit"
+    assert project["name"] == "siftgrain-audit"
     assert project["version"] == "0.3.1"
-    assert project["scripts"] == {"eval-audit": "eval_audit.cli:main"}
+    assert project["scripts"] == {"siftgrain-audit": "siftgrain_audit.cli:main"}
     assert project["dependencies"] == []
 
 
@@ -52,7 +52,7 @@ def test_crlf_records_parse():
     import tempfile
     from pathlib import Path
 
-    from eval_audit.contract import load_inputs
+    from siftgrain_audit.contract import load_inputs
 
     with tempfile.TemporaryDirectory() as directory:
         root = Path(directory)
@@ -99,7 +99,7 @@ def test_version_flag_prints_carried_version(capsys):
         main(["--version"])
     assert exc.value.code == 0
     out = capsys.readouterr().out.strip()
-    assert out == f"eval-audit {__version__}"
+    assert out == f"siftgrain-audit {__version__}"
     assert __version__[0].isdigit()
 
 

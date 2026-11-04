@@ -6,7 +6,7 @@ import os
 import pytest
 from test_convert_report import command, inputs
 
-from eval_audit.cli import main
+from siftgrain_audit.cli import main
 
 
 @pytest.mark.parametrize("complete", [False, True])

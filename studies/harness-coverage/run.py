@@ -7,8 +7,8 @@ import tempfile
 import zipfile
 from pathlib import Path
 
-from eval_audit.adapters import convert
-from eval_audit.core import audit
+from siftgrain_audit.adapters import convert
+from siftgrain_audit.core import audit
 
 SOURCE_SHA256 = "6631813cb3cc25908d760d36677925a0e5753d06602c7d97385a4f448bafd9a1"
 

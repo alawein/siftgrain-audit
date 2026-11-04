@@ -16,7 +16,7 @@ Supported non-Dependabot settings include dependency graph, secret scanning and
 push protection where available, branch protection/review/checks, and least-privilege
 Actions permissions. Actual settings readback belongs to the coordinator; local
 configuration is not proof that a hosted control is enabled. Maintainers can open
-<https://github.com/alawein/eval-audit/settings/security_analysis>; anonymous link
+<https://github.com/alawein/siftgrain-audit/settings/security_analysis>; anonymous link
 checks retain the narrowly scoped settings-page exception.
 
 Coordinator live GitHub readback on October 8 verified secret scanning and push
@@ -25,7 +25,7 @@ non-Dependabot settings change was needed. This is attributed coordinator eviden
 separate from this worker's local tests.
 
 The trusted publisher requires the accepted PyPI distribution, owner `alawein`,
-repository `eval-audit`, workflow `release.yml`, and environment `pypi`. See
+repository `siftgrain-audit`, workflow `release.yml`, and environment `pypi`. See
 [release readiness](RELEASE_READY.md). Credentials remain owner-entered through
 the managed-secret flow. Do not create or rotate a token as a workaround.
 

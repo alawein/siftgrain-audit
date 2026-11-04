@@ -1,7 +1,7 @@
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from eval_audit.core import audit
+from siftgrain_audit.core import audit
 
 
 @st.composite

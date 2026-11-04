@@ -1,9 +1,9 @@
 # Shared local output helpers
 
-`src/eval_audit/output.py` intentionally duplicates the stdlib helpers in
+`src/siftgrain_audit/output.py` intentionally duplicates the stdlib helpers in
 `alawein/outcome-check`, `src/outcome_check/output.py`: `same_location`,
 `validate_outputs`, and `atomic_write`. Keep these three functions identical.
-`src/eval_audit/report.py:render_json` also duplicates the JSON renderer in
+`src/siftgrain_audit/report.py:render_json` also duplicates the JSON renderer in
 `src/outcome_check/report.py`. Both sort keys, indent by two spaces, reject NaN,
 use ASCII-safe JSON strings and append one final newline. HTML renderers are
 tool-specific and escape imported text. Keep the JSON function identical too.
