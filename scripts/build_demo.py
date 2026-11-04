@@ -1,9 +1,9 @@
 import hashlib
 from pathlib import Path
 
-from eval_audit.contract import load_inputs
-from eval_audit.core import audit
-from eval_audit.report import render_html, render_json
+from siftgrain_audit.contract import load_inputs
+from siftgrain_audit.core import audit
+from siftgrain_audit.report import render_html, render_json
 
 
 def main() -> None:

@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from eval_audit.report import render_json
+from siftgrain_audit.report import render_json
 
 
 def test_renderer_deterministic_ascii_and_final_newline():

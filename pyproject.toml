@@ -3,7 +3,7 @@ requires = ["hatchling==1.32.4"]
 build-backend = "hatchling.build"
 
 [project]
-name = "alawein-eval-audit"
+name = "siftgrain-audit"
 version = "0.3.1"
 description = "Audit coverage of supplied evaluation records."
 readme = "README.md"
@@ -12,7 +12,7 @@ license = "MIT"
 dependencies = []
 
 [project.scripts]
-eval-audit = "eval_audit.cli:main"
+siftgrain-audit = "siftgrain_audit.cli:main"
 
 [dependency-groups]
 dev = [
@@ -30,7 +30,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/eval_audit"]
+packages = ["src/siftgrain_audit"]
 
 [tool.ruff]
 line-length = 100

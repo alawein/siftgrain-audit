@@ -6,7 +6,7 @@ rows reveals these gaps. No files are fetched and no framework package is needed
 All source records are processed or conversion fails. Never pass aggregate metrics
 as per-sample results.
 
-`eval-audit convert FORMAT SOURCE --manifest PATH --output PATH [--score-key KEY]
+`siftgrain-audit convert FORMAT SOURCE --manifest PATH --output PATH [--score-key KEY]
 [--score-map MAP.json] [--force]` returns 0 on conversion and 2 on invalid input
 or I/O failure. Conversion success does not establish complete coverage; run the
 normal audit afterward. JSONL output is sorted by `(id, trial)`.

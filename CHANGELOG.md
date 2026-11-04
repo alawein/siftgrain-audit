@@ -2,6 +2,7 @@
 
 ## 0.3.1 (not yet published)
 
+- Rename distribution, import package and command to siftgrain-audit; output bytes unchanged.
 - Rename distribution to alawein-eval-audit; preserve eval_audit imports and eval-audit CLI.
 - Build once, retain and attest exact artifacts, reconcile registry retries and immutable release assets.
 - Add mirrored output conformance vectors and a pinned ten-sample offline Inspect study.

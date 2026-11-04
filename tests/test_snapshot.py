@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from eval_audit.cli import main
+from siftgrain_audit.cli import main
 
 
 def test_committed_snapshot_matches_canonical_inputs(capsys):

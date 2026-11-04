@@ -10,14 +10,14 @@ from importlib.metadata import version as _package_version
 from pathlib import Path
 from typing import Any
 
-from eval_audit.adapters import bounded_read, convert
-from eval_audit.contract import InputError, decode, load_inputs, parse
-from eval_audit.core import audit
-from eval_audit.output import atomic_write, validate_outputs
-from eval_audit.report import render_html, render_json
+from siftgrain_audit.adapters import bounded_read, convert
+from siftgrain_audit.contract import InputError, decode, load_inputs, parse
+from siftgrain_audit.core import audit
+from siftgrain_audit.output import atomic_write, validate_outputs
+from siftgrain_audit.report import render_html, render_json
 
 try:
-    __version__ = _package_version("alawein-eval-audit")
+    __version__ = _package_version("siftgrain-audit")
 except PackageNotFoundError:
     __version__ = "0.3.1"
 
@@ -83,7 +83,8 @@ def convert_main(argv: list[str]) -> int:
         if report is not None:
             counts = report["counts"]
             print(
-                f"eval-audit: IDs: expected {counts['expected']}; missing {counts['missing']}; "
+                f"siftgrain-audit: IDs: expected {counts['expected']}; "
+                f"missing {counts['missing']}; "
                 f"errored {counts['errored']}; unscored {counts['unscored']}; "
                 f"unexpected {len(report['unexpected_ids'])}; "
                 f"exit {report['exit_code']}",
@@ -92,7 +93,7 @@ def convert_main(argv: list[str]) -> int:
             trial_counts = report.get("trial_counts")
             if trial_counts is not None:
                 print(
-                    f"eval-audit: trials: expected {trial_counts['expected']}; "
+                    f"siftgrain-audit: trials: expected {trial_counts['expected']}; "
                     f"missing {trial_counts['missing']}; errored {trial_counts['errored']}; "
                     f"unscored {trial_counts['unscored']}; unexpected {trial_counts['unexpected']}",
                     file=sys.stderr,
@@ -108,7 +109,7 @@ def convert_main(argv: list[str]) -> int:
         OverflowError,
         RecursionError,
     ) as exc:
-        print(f"eval-audit: {exc}", file=sys.stderr)
+        print(f"siftgrain-audit: {exc}", file=sys.stderr)
         return 2
 
 
@@ -123,7 +124,7 @@ def main(argv: list[str] | None = None) -> int:
             "records are JSONL rows with id, status, score, reason; "
             "see docs/contract.md. "
             "convert inspect|lm-evaluation-harness|promptfoo SOURCE --manifest PATH --output PATH. "
-            "example: eval-audit examples/manifest.json examples/results.jsonl. "
+            "example: siftgrain-audit examples/manifest.json examples/results.jsonl. "
             "exit 0 complete scored population; exit 1 work remains; "
             "exit 2 invalid input or I/O."
         ),
@@ -133,7 +134,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--json", type=Path, help="write the JSON report to PATH")
     parser.add_argument("--html", type=Path, help="write the HTML report to PATH")
     parser.add_argument("--force", action="store_true", help="overwrite existing output files")
-    parser.add_argument("--version", action="version", version=f"eval-audit {__version__}")
+    parser.add_argument("--version", action="version", version=f"siftgrain-audit {__version__}")
     args = parser.parse_args(argv)
     try:
         manifest, records, hashes = load_inputs(args.manifest, args.records)
@@ -149,5 +150,5 @@ def main(argv: list[str] | None = None) -> int:
             sys.stdout.write(render_json(report))
         return int(report["exit_code"])
     except (InputError, ValueError, OSError, OverflowError, RecursionError) as exc:
-        print(f"eval-audit: {exc}", file=sys.stderr)
+        print(f"siftgrain-audit: {exc}", file=sys.stderr)
         return 2

@@ -10,7 +10,7 @@ Each file: UTF-8 without BOM, <= 5 MiB. Records <= 10,000. Empty results are val
 blank rows invalid. LF separates rows; final LF optional. CRLF works as JSON
 whitespace. U+2028 is content. Duplicate JSON keys and unknown fields fail.
 
-`eval-audit MANIFEST RECORDS [--json PATH] [--html PATH] [--force]` prints JSON
+`siftgrain-audit MANIFEST RECORDS [--json PATH] [--html PATH] [--force]` prints JSON
 unless --json is supplied. Hashes cover exact input bytes. Expected IDs define
 counts. Score coverage includes scored and errored records with a number. Missing
 and unscored records stay separate. Output parents must exist; resolved aliases
@@ -69,8 +69,8 @@ in addition to JSON Schema. No schema is fetched by runtime.
 
 ## Current release state, October 8, 2026
 
-The v0.3.0 [merged PR](https://github.com/alawein/eval-audit/pull/15), immutable
-`v0.3.0` tag, and [GitHub Release](https://github.com/alawein/eval-audit/releases/tag/v0.3.0)
+The v0.3.0 [merged PR](https://github.com/alawein/siftgrain-audit/pull/15), immutable
+`v0.3.0` tag, and [GitHub Release](https://github.com/alawein/siftgrain-audit/releases/tag/v0.3.0)
 are published. The historical PyPI run link now returns 404, so the recorded
 invalid-publisher result cannot be independently verified here. The authenticated
 form separately rejected the

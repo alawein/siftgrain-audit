@@ -3,7 +3,7 @@ import tempfile
 
 import pytest
 
-from eval_audit.output import atomic_write
+from siftgrain_audit.output import atomic_write
 
 
 def test_force_replace_failure_keeps_old_file(tmp_path, monkeypatch):
