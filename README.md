@@ -23,6 +23,17 @@ uv sync --frozen
 uv run siftgrain-audit examples/manifest.json examples/results.jsonl
 ```
 
+For your own run, create a manifest with your expected IDs independently of the
+results, supply JSONL rows, and run:
+
+```sh
+uv run siftgrain-audit manifest.json results.jsonl --html report.html --json report.json
+```
+
+HTML includes the supplied manifest, result bytes and reasons as downloadable
+local evidence. Review those contents before sharing the report. Downloads retain
+exact input bytes and their displayed hashes. Nothing is uploaded.
+
 JSON prints to stdout by default, so a first run writes nothing to the repo. Add
 `--html report.html` or `--json report.json` for files; reruns over an existing
 path need `--force`. `siftgrain-audit --help` shows the manifest and JSONL shapes, the

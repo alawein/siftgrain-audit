@@ -77,7 +77,27 @@ def convert_main(argv: list[str]) -> int:
             if args.json is not None:
                 targets.append((args.json, render_json(report)))
             if args.html is not None:
-                targets.append((args.html, render_html(report)))
+                targets.append(
+                    (
+                        args.html,
+                        render_html(
+                            report,
+                            manifest=manifest,
+                            records=rows,
+                            example={
+                                "downloads": {
+                                    "Download report JSON": "report.json",
+                                    "Expected-ID manifest": "manifest.json",
+                                    "Result rows": "results.jsonl",
+                                },
+                                "download_files": {
+                                    "manifest.json": raw_manifest,
+                                    "results.jsonl": content.encode("utf-8"),
+                                },
+                            },
+                        ),
+                    )
+                )
         for path, payload in targets:
             atomic_write(path, payload, args.force)
         if report is not None:
@@ -139,7 +159,30 @@ def main(argv: list[str] | None = None) -> int:
     try:
         manifest, records, hashes = load_inputs(args.manifest, args.records)
         report: dict[str, Any] = audit(manifest, records) | {"inputs": hashes}
-        targets = [(args.json, render_json(report)), (args.html, render_html(report))]
+        example = None
+        if args.html is not None:
+            files = {
+                "manifest.json": bounded_read(args.manifest),
+                "results.jsonl": bounded_read(args.records),
+            }
+            for name, key in (
+                ("manifest.json", "manifest_sha256"),
+                ("results.jsonl", "records_sha256"),
+            ):
+                if hashlib.sha256(files[name]).hexdigest() != hashes[key]:
+                    raise InputError("input changed while preparing HTML download")
+            example = {
+                "downloads": {
+                    "Download report JSON": "report.json",
+                    "Expected-ID manifest": "manifest.json",
+                    "Result rows": "results.jsonl",
+                },
+                "download_files": files,
+            }
+        targets = [
+            (args.json, render_json(report)),
+            (args.html, render_html(report, manifest=manifest, records=records, example=example)),
+        ]
         outputs = [path for path, content in targets if path is not None]
         inputs = [args.manifest, args.records]
         validate_outputs(outputs, inputs, args.force)
