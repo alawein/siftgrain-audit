@@ -207,10 +207,14 @@ def render_html(
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         '<meta name="description" content="Coverage of supplied evaluation records: '
         'scored, errored, unscored, missing and unexpected, with input hashes.">'
-        '<meta name="theme-color" content="#f4f6f5">'
+        '<meta name="theme-color" content="#101c1b">'
         f"<title>{title} | Siftgrain Audit coverage report</title><style>"
-        ":root{color-scheme:light}"
-        "body{margin:0;background:#f4f6f5;color:#142c2a;font:17px/1.6 system-ui;"
+        ":root{color-scheme:dark}"
+        "body{--bg:#101c1b;--surface:#1a2e2b;--text:#edf5f2;--border:#78988e;"
+        "--link:#98e1cd;color-scheme:dark}"
+        "body:has(#theme-light:checked){--bg:#f4f6f5;--surface:#fff;--text:#142c2a;"
+        "--border:#718b82;--link:#075851;color-scheme:light}"
+        "body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui;"
         "-webkit-tap-highlight-color:transparent}"
         "*{box-sizing:border-box}main{max-width:1120px;margin:auto;padding:36px 24px}"
         "h1{font-size:clamp(2.4rem,5vw,3.7rem);line-height:1.1;margin:12px 0;"
@@ -218,7 +222,7 @@ def render_html(
         "section{margin-top:36px}.run{overflow-wrap:anywhere;font-size:.9rem}"
         ".eyebrow{letter-spacing:.12em;font-size:.85rem}"
         ".cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;"
-        "margin-top:24px}.card{background:white;border:1px solid #baccc6;"
+        "margin-top:24px}.card{background:var(--surface);border:1px solid var(--border);"
         "border-radius:12px;padding:16px;min-width:0}"
         ".card strong{display:block;font-size:2rem;font-variant-numeric:tabular-nums}"
         ".card span{display:block}"
@@ -228,25 +232,45 @@ def render_html(
         ".coverage span{display:block}.exit{border:1px solid #9bbcb1;border-radius:6px;"
         "padding:6px 12px;white-space:nowrap}.cases{display:grid;"
         "grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}"
-        ".case{padding:20px;border:1px solid #baccc6;background:white;border-radius:12px;"
-        "min-width:0;overflow-wrap:anywhere}.case .eyebrow{margin:0}"
-        ".status{display:inline-block;border:1px solid #baccc6;border-radius:6px;"
+        ".case{padding:20px;border:1px solid var(--border);background:var(--surface);"
+        "border-radius:12px;min-width:0;overflow-wrap:anywhere}.case .eyebrow{margin:0}"
+        ".status{display:inline-block;border:1px solid var(--border);border-radius:6px;"
         "padding:2px 8px;margin-right:8px}.score{font-size:.95rem}"
-        "pre{background:#fff;padding:20px;border:1px solid #baccc6;"
+        "pre{background:var(--surface);padding:20px;border:1px solid var(--border);"
         "white-space:pre-wrap;overflow-wrap:anywhere;border-radius:8px;font-size:.9rem}"
         ".hash{overflow-wrap:anywhere;font-size:.85rem}.hashes{display:grid;"
         "grid-template-columns:180px minmax(0,1fr);gap:12px}.hashes dd{margin:0}"
         ".links{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0}"
         ".links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;"
-        "background:white;border:1px solid #baccc6;border-radius:8px}"
+        "background:var(--surface);border:1px solid var(--border);border-radius:8px}"
         "summary{cursor:pointer;padding:12px 0;min-height:44px}footer{margin-top:36px}"
-        "a{color:#075851}a:hover{text-decoration:underline}"
-        ":focus-visible{outline:3px solid #075851;outline-offset:3px}"
+        "a{color:var(--link)}a:hover{text-decoration:underline}"
+        ".appearance input:focus,:focus-visible{outline:3px solid var(--link);outline-offset:3px}"
+        ".suite-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}"
+        ".suite-nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;"
+        "border:1px solid var(--border);border-radius:8px}"
+        ".suite-nav [aria-current]{font-weight:700;text-decoration-thickness:3px}"
+        ".appearance{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px;"
+        "width:fit-content;max-width:100%;margin:0 0 20px;padding:0 12px;"
+        "border:1px solid var(--border);border-radius:8px}"
+        ".appearance legend{padding:0 4px;font-size:.85rem}"
+        ".appearance label{display:inline-flex;align-items:center;min-height:44px;"
+        "padding:0 8px;cursor:pointer}.appearance input{accent-color:var(--link)}"
         "@media(max-width:700px){main{padding:24px 18px}.cards{grid-template-columns:"
         "repeat(2,minmax(0,1fr))}.cases{grid-template-columns:minmax(0,1fr)}"
         ".coverage{gap:16px;padding:20px}.hashes{grid-template-columns:minmax(0,1fr);"
         "gap:6px}.hashes dd{margin-bottom:12px}}"
-        '</style></head><body><main><p class="eyebrow">SIFTGRAIN AUDIT / LOCAL EVIDENCE / '
+        '</style></head><body><main id="top" tabindex="-1">'
+        '<nav class="suite-nav" aria-label="Siftgrain tools">'
+        '<a tabindex="0" href="#top" aria-current="page">Audit</a>'
+        '<a tabindex="0" href="https://alawein.github.io/siftgrain-state/">State</a>'
+        '<a tabindex="0" href="https://alawein.github.io/siftgrain-cite/">Cite</a></nav>'
+        '<fieldset class="appearance"><legend>Appearance</legend>'
+        '<input type="radio" name="appearance" id="theme-dark" checked>'
+        '<label for="theme-dark">Dark</label>'
+        '<input type="radio" name="appearance" id="theme-light">'
+        '<label for="theme-light">Light</label></fieldset>'
+        '<p class="eyebrow">SIFTGRAIN AUDIT / LOCAL EVIDENCE / '
         "EXPLICIT POPULATION</p>"
         f"<h1>{title}</h1><p>{label}</p><p>{description}</p>"
         f'<p class="run">Run: <code>{html.escape(str(report.get("run_id", "")))}</code></p>'
