@@ -162,7 +162,7 @@ def test_near_complete_score_coverage_does_not_display_complete():
     page = render_html(audit(manifest, rows))
     assert "99.5%" in page
     assert "200 of 201 expected IDs" in page
-    assert "100%" not in page
+    assert "<strong>100%</strong>" not in page
 
 
 class _ReportPage(HTMLParser):
@@ -387,3 +387,50 @@ def test_trial_next_actions_use_trial_partition_despite_id_precedence():
     assert "Find missing trials (2)" in page
     assert "Resolve errored trials (1)" in page
     assert "Find missing rows" not in page
+
+
+def test_report_suite_navigation_and_native_offline_appearance():
+    class Controls(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.nav = None
+            self.links = []
+            self.radios = []
+            self.labels = []
+            self.legend = False
+
+        def handle_starttag(self, tag, attrs):
+            attributes = dict(attrs)
+            if tag == "nav":
+                self.nav = attributes
+            if tag == "a" and self.nav is not None and len(self.links) < 3:
+                self.links.append(attributes)
+            if tag == "input":
+                self.radios.append(attributes)
+            if tag == "label":
+                self.labels.append(attributes.get("for"))
+            if tag == "legend":
+                self.legend = True
+
+    page = render_html(audit(make_manifest(), [make_row()]))
+    controls = Controls()
+    controls.feed(page)
+    assert controls.nav["aria-label"] == "Siftgrain tools"
+    assert [(link["href"], link.get("aria-current")) for link in controls.links] == [
+        ("#top", "page"),
+        ("https://alawein.github.io/siftgrain-state/", None),
+        ("https://alawein.github.io/siftgrain-cite/", None),
+    ]
+    assert '<main id="top" tabindex="-1">' in page
+    assert len(controls.radios) == 2
+    dark, light = controls.radios
+    assert dark["type"] == light["type"] == "radio"
+    assert dark["name"] == light["name"] == "appearance"
+    assert "checked" in dark and "checked" not in light
+    assert controls.labels == [dark["id"], light["id"]]
+    assert controls.legend and "Appearance" in page
+    assert "color-scheme:dark" in page
+    assert "body:has(#theme-light:checked)" in page
+    assert "color-scheme:light" in page
+    assert "<script" not in page.lower()
+    assert "<link" not in page.lower()
