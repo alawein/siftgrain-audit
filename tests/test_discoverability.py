@@ -280,7 +280,6 @@ def test_demo_build_preserves_original_and_adds_downloadable_acceptance_evidence
         (fixtures / name).write_bytes((repository / "examples" / name).read_bytes())
     monkeypatch.chdir(tmp_path)
     runpy.run_path(str(repository / "scripts" / "build_demo.py"), run_name="__main__")
-
     site = tmp_path / "site"
     assert (site / "acceptance.html").is_file()
     original_manifest, original_rows, original_hashes = load_inputs(
@@ -288,7 +287,7 @@ def test_demo_build_preserves_original_and_adds_downloadable_acceptance_evidence
     )
     assert json.loads((site / "report.json").read_text(encoding="utf-8")) == (
         audit(original_manifest, original_rows)
-        | {"inputs": original_hashes, "provenance": "Synthetic, AI-assisted, non-client"}
+        | {"inputs": original_hashes, "provenance": "Synthetic, non-client"}
     )
     acceptance = json.loads((site / "acceptance-report.json").read_text(encoding="utf-8"))
     assert set(acceptance) == {
@@ -333,7 +332,58 @@ def test_demo_build_preserves_original_and_adds_downloadable_acceptance_evidence
         assert prefix.startswith("data:") and prefix.endswith(";base64")
         assert base64.b64decode(encoded, validate=True) == (site / name).read_bytes()
     assert hashlib.sha256((site / names[4]).read_bytes()).hexdigest() in page
-    assert "Synthetic, AI-assisted, non-client" in page
+    assert "Synthetic, non-client" in page
     assert "50%" in page
     assert "2 of 4 expected IDs" in page
     assert "acceptance.html" in (site / "index.html").read_text(encoding="utf-8")
+
+
+def test_cli_html_downloads_bind_exact_supplied_bytes(tmp_path):
+    manifest = tmp_path / "manifest.json"
+    records = tmp_path / "results.jsonl"
+    manifest.write_bytes(b'{"schema_version":1,"run_id":"own","expected_ids":["a","b"]}')
+    records.write_bytes('{"id":"a","status":"scored","score":0,"reason":"café"}\r\n'.encode())
+    target = tmp_path / "report.html"
+    assert main([str(manifest), str(records), "--html", str(target)]) == 1
+    page = target.read_text(encoding="utf-8")
+    parsed = _ReportPage()
+    parsed.feed(page)
+    for name, source in [("manifest.json", manifest), ("results.jsonl", records)]:
+        payload = base64.b64decode(parsed.downloads[name].split(",", 1)[1])
+        assert payload == source.read_bytes()
+        assert hashlib.sha256(payload).hexdigest() in page
+    downloaded = json.loads(base64.b64decode(parsed.downloads["report.json"].split(",", 1)[1]))
+    assert downloaded["counts"]["missing"] == 1
+    assert "Are expected evaluation results present?" in page
+    assert "Find missing rows" in page
+    assert "Supplied-input report" in page
+    assert len(parsed.articles) == 2
+
+
+def test_trial_cards_keep_zero_error_and_missing_trials_separate():
+    manifest = make_manifest(["a"]) | {"schema_version": 2, "trials_per_id": 3}
+    rows = [make_row(score=0) | {"trial": 1}, make_row("errored", 0.5) | {"trial": 2}]
+    page = render_html(audit(manifest, rows), manifest=manifest, records=rows)
+    parsed = _ReportPage()
+    parsed.feed(page)
+    assert len(parsed.articles) == 3
+    assert "Trial 1" in parsed.articles[0] and "Score: 0" in parsed.articles[0]
+    assert "Trial 2" in parsed.articles[1] and "errored" in parsed.articles[1]
+    assert "Score: 0.5" in parsed.articles[1]
+    assert "Trial 3" in parsed.articles[2] and "No result record" in parsed.articles[2]
+
+
+def test_errored_only_summary_does_not_request_nonexistent_missing_rows():
+    report = audit(make_manifest(["a"]), [make_row("errored", 0.5)])
+    page = render_html(report)
+    assert "Resolve evaluation errors (1)" in page
+    assert "Find missing rows" not in page
+
+
+def test_trial_next_actions_use_trial_partition_despite_id_precedence():
+    manifest = make_manifest(["a"]) | {"schema_version": 2, "trials_per_id": 3}
+    rows = [make_row("errored", 0.9) | {"trial": 1}]
+    page = render_html(audit(manifest, rows), manifest=manifest, records=rows)
+    assert "Find missing trials (2)" in page
+    assert "Resolve errored trials (1)" in page
+    assert "Find missing rows" not in page
