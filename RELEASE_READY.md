@@ -5,8 +5,8 @@
 v0.3.0 [PR 15](https://github.com/alawein/eval-audit/pull/15) merged at
 `b3d116f66840387013848781daa66f3968c9a5d6`. The immutable `v0.3.0` tag and
 [GitHub Release](https://github.com/alawein/eval-audit/releases/tag/v0.3.0) exist.
-[Registry run](https://github.com/alawein/eval-audit/actions/runs/37799361873)
-failed with `invalid-publisher`, because PyPI found no publisher matching the
+The historical Registry run link now returns 404, so the recorded
+`invalid-publisher` result cannot be independently verified here. It recorded no publisher matching the
 valid token claims. Separately, its authenticated pending-publisher form rejected
 `eval-audit` as too similar to an existing project. Its JSON 404 was not name
 acceptance. Local v0.3.0 GitHub assets retain their documented CI-attestation
@@ -20,11 +20,11 @@ needed for that named scope. Preserve feature branches and avoid `--delete-branc
 Maintenance distribution `alawein-eval-audit` version 0.3.1 merged at
 `af0eacba86add5311e901467352619fe01e53135`. Its immutable `v0.3.1` tag and
 [GitHub Release](https://github.com/alawein/eval-audit/releases/tag/v0.3.1) exist.
-[Canonical release run](https://github.com/alawein/eval-audit/actions/runs/37828182517)
-retained the canonical artifacts but registry authentication failed with
-`invalid-publisher`. The public GitHub-only release records that actual state.
-[Pages run](https://github.com/alawein/eval-audit/actions/runs/37828182476)
-succeeded at the merged revision. The merged test suite passed 157 cases.
+The historical Canonical release run link now returns 404. It recorded
+retained canonical artifacts but registry authentication failing with
+`invalid-publisher`, which cannot be independently verified here. The public GitHub-only release records that actual state.
+The historical Pages run link now returns 404. It recorded
+success at the merged revision, which cannot be independently verified here. The merged test suite passed 157 cases.
 Repository `eval-audit`, module `eval_audit` and command `eval-audit` are unchanged.
 Pending-publisher acceptance and publication have not completed: the authenticated
 PyPI session needs owner-entered sensitive-action password confirmation. This is
