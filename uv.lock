@@ -1,53 +1,9 @@
 version = 1
-revision = 3
+revision = 5
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.15'",
     "python_full_version < '3.15'",
-]
-
-[[package]]
-name = "alawein-eval-audit"
-version = "0.3.1"
-source = { editable = "." }
-
-[package.optional-dependencies]
-cli = [
-    { name = "rich" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "build" },
-    { name = "hatchling" },
-    { name = "hypothesis" },
-    { name = "jsonschema" },
-    { name = "mypy" },
-    { name = "pip-audit" },
-    { name = "pypi-attestations" },
-    { name = "pyright" },
-    { name = "pytest" },
-    { name = "ruff" },
-    { name = "twine" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "rich", marker = "extra == 'cli'", specifier = "==15.0.0" }]
-provides-extras = ["cli"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "build", specifier = ">=1.6.1" },
-    { name = "hatchling", specifier = "==1.32.4" },
-    { name = "hypothesis", specifier = ">=6.168.5" },
-    { name = "jsonschema", specifier = ">=4.26.0" },
-    { name = "mypy", specifier = ">=2.4.0" },
-    { name = "pip-audit", specifier = ">=2.10.1" },
-    { name = "pypi-attestations", specifier = "==0.0.30" },
-    { name = "pyright", specifier = ">=1.1.414" },
-    { name = "pytest", specifier = ">=8" },
-    { name = "ruff", specifier = ">=0.8" },
-    { name = "twine", specifier = ">=7.0.0" },
 ]
 
 [[package]]
@@ -709,7 +665,7 @@ name = "importlib-metadata"
 version = "9.0.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "zipp", marker = "python_full_version < '3.15'" },
+    { name = "zipp" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/6f/7e/1e7e8dc30634b93ebb3d58a3dea569ad146e656218d3960ab04f62047b29/importlib_metadata-9.0.1.tar.gz", hash = "sha256:ab830580bc0ef3db61ce8fae716389e5462b67e033018bab6d8f80ef17172f99", size = 59124, upload-time = "2026-08-28T15:30:34.646Z" }
 wheels = [
@@ -1851,6 +1807,50 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/81/d4/f9323507144693d869f30f13694035438ab6642153b94e3057945cf0584f/securesystemslib-1.5.1.tar.gz", hash = "sha256:4b8d00abd93707ead10b69eb2b8582376a1364de3b0a71077de534c2ef4985e0", size = 947087, upload-time = "2026-09-04T06:55:32.066Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/38/fc/c71335a5046d46bf3b761a8c7fa092b40a7721429a5613538f0a28ae80a6/securesystemslib-1.5.1-py3-none-any.whl", hash = "sha256:ada8bdf817da29ece4ba91654f6a162ce7cfbadbc3ae3f840f7313f9d22675de", size = 876390, upload-time = "2026-09-04T06:55:30.393Z" },
+]
+
+[[package]]
+name = "siftgrain-audit"
+version = "0.3.1"
+source = { editable = "." }
+
+[package.optional-dependencies]
+cli = [
+    { name = "rich" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "build" },
+    { name = "hatchling" },
+    { name = "hypothesis" },
+    { name = "jsonschema" },
+    { name = "mypy" },
+    { name = "pip-audit" },
+    { name = "pypi-attestations" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "ruff" },
+    { name = "twine" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "rich", marker = "extra == 'cli'", specifier = "==15.0.0" }]
+provides-extras = ["cli"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "build", specifier = ">=1.6.1" },
+    { name = "hatchling", specifier = "==1.32.4" },
+    { name = "hypothesis", specifier = ">=6.168.5" },
+    { name = "jsonschema", specifier = ">=4.26.0" },
+    { name = "mypy", specifier = ">=2.4.0" },
+    { name = "pip-audit", specifier = ">=2.10.1" },
+    { name = "pypi-attestations", specifier = "==0.0.30" },
+    { name = "pyright", specifier = ">=1.1.414" },
+    { name = "pytest", specifier = ">=8" },
+    { name = "ruff", specifier = ">=0.8" },
+    { name = "twine", specifier = ">=7.0.0" },
 ]
 
 [[package]]

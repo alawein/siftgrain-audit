@@ -15,7 +15,7 @@ def main() -> None:
     artifact, examples = args.artifact.resolve(), args.examples.resolve()
     env = os.environ.copy()
     env.pop("PYTHONPATH", None)
-    with tempfile.TemporaryDirectory(prefix="eval-audit-release-") as directory:
+    with tempfile.TemporaryDirectory(prefix="siftgrain-audit-release-") as directory:
         root = Path(directory)
         subprocess.run([sys.executable, "-m", "venv", str(root / "venv")], check=True, env=env)
         scripts = root / "venv" / ("Scripts" if os.name == "nt" else "bin")
@@ -27,14 +27,14 @@ def main() -> None:
             check=True,
         )
         origin = subprocess.check_output(
-            [str(python), "-c", "import eval_audit; print(eval_audit.__file__)"],
+            [str(python), "-c", "import siftgrain_audit; print(siftgrain_audit.__file__)"],
             cwd=root,
             env=env,
             text=True,
         ).strip()
         if not Path(origin).resolve().is_relative_to(root):
             raise RuntimeError("Imported checkout instead of isolated artifact")
-        command = scripts / ("eval-audit.exe" if os.name == "nt" else "eval-audit")
+        command = scripts / ("siftgrain-audit.exe" if os.name == "nt" else "siftgrain-audit")
         subprocess.run([str(command), "--help"], cwd=root, env=env, check=True)
         result = subprocess.run(
             [str(command), str(examples / "manifest.json"), str(examples / "results.jsonl")],

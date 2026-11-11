@@ -1,4 +1,4 @@
-# Eval audit
+# Siftgrain audit
 
 Strict, offline evaluation coverage auditor. Read README.md and docs/contract.md
 before behavior changes. Python 3.11+, stdlib runtime; uv manages the dev lock.
@@ -11,7 +11,7 @@ before behavior changes. Python 3.11+, stdlib runtime; uv manages the dev lock.
 - Escape imported text in HTML; reject malformed input without dropping records.
 - Preserve input/output identity checks, including existing hard links.
 - Examples are synthetic, AI-assisted, non-client, CC0 data. No adoption claim.
-- Do not edit the lock manually, expose secrets or spend money.
+- Do not edit the lock manually or expose secrets. Inference spending follows canonical policy; other spending requires owner authorization.
 
 Owner authorized publication mode (c), October 4, 2026: bootstrap, first-release
 feature and release PRs to main, public MIT repo, GitHub Release v0.1.0 and Pages
@@ -46,8 +46,9 @@ remote changes, new repositories, or kohyr copies are part of this closeout.
 
 The v0.3.0 [merged PR](https://github.com/alawein/eval-audit/pull/15), immutable
 `v0.3.0` tag, and [GitHub Release](https://github.com/alawein/eval-audit/releases/tag/v0.3.0)
-are published. [PyPI run](https://github.com/alawein/eval-audit/actions/runs/37799361873)
-failed with invalid-publisher; the authenticated form separately rejected the
+are published. The historical PyPI run link now returns 404, so the recorded
+invalid-publisher result cannot be independently verified here. The authenticated
+form separately rejected the
 original name. Maintenance alawein-eval-audit 0.3.1 is not yet published and its
 pending-publisher acceptance remains blocked on owner-entered password confirmation.
 See [release readiness](RELEASE_READY.md) for the actual states and retry rules.

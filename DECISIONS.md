@@ -65,8 +65,8 @@ created as a workaround.
 v0.3.0 [PR 15](https://github.com/alawein/eval-audit/pull/15) merged at
 `b3d116f66840387013848781daa66f3968c9a5d6`; its immutable tag and
 [GitHub Release](https://github.com/alawein/eval-audit/releases/tag/v0.3.0) are
-published. [Publishing run](https://github.com/alawein/eval-audit/actions/runs/37799361873)
-failed with PyPI `invalid-publisher`: no publisher matched the valid token's
+published. The historical Publishing run link now returns 404, so the recorded
+PyPI `invalid-publisher` result cannot be independently verified here. It recorded no matching publisher for the valid token's
 claims. This is distinct from the separately observed name rejection. v0.3.1
 publication is not yet attempted. Preserve old tags, feature branches and assets.
 

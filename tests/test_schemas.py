@@ -5,7 +5,7 @@ import pytest
 from jsonschema import Draft202012Validator, ValidationError
 from test_audit import manifest, row
 
-from eval_audit.core import audit
+from siftgrain_audit.core import audit
 
 
 def validator(name):

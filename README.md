@@ -1,6 +1,10 @@
 # Siftgrain Audit
 
-Count the run before reading the score.
+Siftgrain Audit is an offline Python command line tool for people who run
+evaluations and need to know which expected results are missing before they
+read the scores.
+
+The package and command are `siftgrain-audit`.
 
 ![Evaluation coverage](assets/label-purpose.svg)
 ![Python](assets/label-stack.svg)
@@ -15,7 +19,6 @@ alongside [Siftgrain Cite](https://github.com/alawein/siftgrain-cite) for human
 citation review and [Siftgrain State](https://github.com/alawein/siftgrain-state)
 for checking requested outcomes against supplied observations. Audit checks
 record completeness and denominators; it does not validate evaluation methods.
-The compatible package and command remain `alawein-eval-audit` and `eval-audit`.
 Its self-contained report offers four vibes, dark/light appearance, missing-trial
 waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
 
@@ -23,20 +26,29 @@ waffles, trial strips, a filterable table and descriptive score-policy arithmeti
 [Benchmark results](benchmarks/RESULTS.md) | [Migration](MIGRATION.md) |
 [Performance](PERF.md)
 
-## Run
+## Install and run
 
-Python 3.11+. Build the v0.3.1 wheel from this branch with `uv build`, then install it
-with `python -m pip install path/to/alawein_eval_audit-0.3.1-py3-none-any.whl`.
-No runtime dependencies. From a clone:
+Python 3.11+. No runtime dependencies. Clone the repository, then:
 
 ```sh
 uv sync --frozen
-uv run eval-audit examples/manifest.json examples/results.jsonl
+uv run siftgrain-audit examples/manifest.json examples/results.jsonl
 ```
+
+For your own run, create a manifest with your expected IDs independently of the
+results, supply JSONL rows, and run:
+
+```sh
+uv run siftgrain-audit manifest.json results.jsonl --html report.html --json report.json
+```
+
+HTML includes the supplied manifest, result bytes and reasons as downloadable
+local evidence. Review those contents before sharing the report. Downloads retain
+exact input bytes and their displayed hashes. Nothing is uploaded.
 
 JSON prints to stdout by default, so a first run writes nothing to the repo. Add
 `--html report.html` or `--json report.json` for files; reruns over an existing
-path need `--force`. `eval-audit --help` shows the manifest and JSONL shapes, the
+path need `--force`. `siftgrain-audit --help` shows the manifest and JSONL shapes, the
 standard invocations, and exit-code meanings.
 
 The synthetic example exits **1**: four expected IDs, one scored, one errored,
@@ -49,7 +61,7 @@ Agent Acceptance is a working demo title for synthetic refund case 1042. Audit
 the supplied evaluation rows with the same offline engine:
 
 ```sh
-uv run eval-audit examples/acceptance-manifest.json examples/acceptance-results.jsonl
+uv run siftgrain-audit examples/acceptance-manifest.json examples/acceptance-results.jsonl
 uv run python scripts/build_demo.py
 ```
 
@@ -63,7 +75,7 @@ retaining a number stays errored.
 This is score availability, not refund correctness or task quality. The auditor
 does not decide whether the supplied refund claim is correct, the completion
 observation is fresh, or the agent caused a change. The source text provides
-context for original synthetic, AI-assisted, non-client CC0 fixtures.
+context for the synthetic fixtures.
 
 The page shows expected-record cards, reasons, provenance, and input hashes. It
 links to `acceptance-report.json` and byte-for-byte copies of the manifest,
@@ -92,9 +104,24 @@ Convert local Inspect `.eval`/`.json`, lm-evaluation-harness per-sample JSONL or
 promptfoo JSON, HELM per-instance statistics or Open LLM exported details with an explicit population:
 
 ```sh
-uv run eval-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl
-uv run eval-audit manifest.json results.jsonl
+uv run siftgrain-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl
+uv run siftgrain-audit manifest.json results.jsonl
 ```
+
+For a report in one command, add `--html report.html` to conversion:
+
+```sh
+uv run siftgrain-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl --html report.html
+```
+
+Open `report.html` locally. The converted rows remain in `results.jsonl` for
+inspection or reuse. Use `--json report.json` instead of, or alongside, `--html`
+to save the audit's machine-readable report in the same command.
+With either report option, exit 0 means complete scored coverage,
+1 means missing, unexpected, errored or unscored records need attention, and
+2 means invalid input or an I/O failure. Without either report option, conversion still exits 0 on successful
+conversion, which does not establish coverage. Expected IDs always come from
+your manifest, never from the results being checked.
 
 [Adapter mappings and discarded fields](docs/adapters.md) explain supported shapes,
 categorical score maps and limitations. [Versioned JSON Schemas](schema/manifest.v1.json)
@@ -107,9 +134,8 @@ report's how-to-read section explains missing, unexpected, errored with score,
 unscored, score-present coverage, and exit codes. [Input contract](docs/contract.md),
 [test evidence](docs/evaluation.md), [usefulness exercise](docs/usefulness.md),
 [provenance](docs/provenance.md).
-[Related work and first-PR check history](docs/related-work.md) put these checks
-in context; [the public-log pilot](studies/inspect-security-guide/README.md) is a
-small recorded-run exercise with its stated limits. The [ten-sample archive study](studies/harness-coverage/README.md) independently verifies its selected population and unscored records.
+[Related work](docs/related-work.md) puts these checks in context; [the public-log pilot](studies/inspect-security-guide/README.md) is a
+small recorded-run exercise with its stated limits. The [ten-sample archive study](studies/harness-coverage/README.md) checks its selected population and unscored records.
 
 ## Related work and how this differs
 
@@ -136,15 +162,15 @@ transaction: one complete file can be installed before another fails. A staging
 or installation failure preserves that file's previous bytes. This does not
 provide race-proof input identity checks or a power-loss durability guarantee.
 
-This is [alawein/siftgrain-audit](https://github.com/alawein/siftgrain-audit), an offline
-coverage auditor. It is unrelated to similarly named statistical or human-grading
-tools. The GitHub v0.3.0 release is published. PyPI v0.3.0 failed because no matching trusted publisher existed; the original distribution name was also rejected. The owner-qualified v0.3.1 release is recorded in release readiness. This redesign has not published a new package release. No third-party adoption is claimed.
+This is [alawein/siftgrain-audit](https://github.com/alawein/siftgrain-audit), an
+offline coverage auditor. It is unrelated to similarly named statistical or
+human-grading tools. Releases are tagged v0.1.0 through v0.3.1.
 
 [Release readiness](RELEASE_READY.md) and [security settings](SECURITY_SETTINGS.md)
 record the publication setup and observed access limits.
 
-MIT code; original CC0 synthetic fixtures. AI-assisted independent implementation.
-No client work, production ownership or adoption claim.
+Code is MIT ([LICENSE](LICENSE)). The synthetic example fixtures are CC0
+([examples/LICENSE](examples/LICENSE)).
 
 ## CI and policy views
 

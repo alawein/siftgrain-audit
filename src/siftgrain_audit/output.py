@@ -1,4 +1,4 @@
-"""Atomic local exports; identical helpers are mirrored in eval-audit."""
+"""Atomic local exports; identical helpers are mirrored in the sibling tool."""
 
 import os
 import tempfile

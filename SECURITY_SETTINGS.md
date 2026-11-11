@@ -25,7 +25,7 @@ non-Dependabot settings change was needed. This is attributed coordinator eviden
 separate from this worker's local tests.
 
 The trusted publisher requires the accepted PyPI distribution, owner `alawein`,
-repository `eval-audit`, workflow `release.yml`, and environment `pypi`. See
+repository `siftgrain-audit`, workflow `release.yml`, and environment `pypi`. See
 [release readiness](RELEASE_READY.md). Credentials remain owner-entered through
 the managed-secret flow. Do not create or rotate a token as a workaround.
 

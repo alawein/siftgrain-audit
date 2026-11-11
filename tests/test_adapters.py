@@ -4,9 +4,9 @@ import zipfile
 import pytest
 from test_audit import manifest
 
-from eval_audit.adapters import convert
-from eval_audit.cli import main
-from eval_audit.contract import InputError, load_inputs
+from siftgrain_audit.adapters import convert
+from siftgrain_audit.cli import main
+from siftgrain_audit.contract import InputError, load_inputs
 
 
 def write(tmp_path, value):

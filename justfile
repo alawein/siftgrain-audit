@@ -21,8 +21,8 @@ build:
 check: lint test types schemas build
 
 types:
-    uv run mypy src/eval_audit
-    uv run pyright src/eval_audit
+    uv run mypy src/siftgrain_audit
+    uv run pyright src/siftgrain_audit
 
 schemas:
     uv run python scripts/validate_schemas.py

@@ -5,8 +5,8 @@ import hashlib
 import json
 from pathlib import Path
 
-from eval_audit.adapters import convert
-from eval_audit.core import audit
+from siftgrain_audit.adapters import convert
+from siftgrain_audit.core import audit
 
 SOURCE_SHA256 = "44f6203d88252de0c33f76c948ad7c537b412cff628c704e9a5449ffba9d5a34"
 

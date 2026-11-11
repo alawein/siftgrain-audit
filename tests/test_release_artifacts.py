@@ -17,7 +17,7 @@ verifier = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(verifier)
 
 
-def artifacts(tmp_path, name="alawein-eval-audit", version="0.3.1"):
+def artifacts(tmp_path, name="siftgrain-audit", version="0.3.1"):
     directory = tmp_path / "dist"
     directory.mkdir()
     stem = name.replace("-", "_") + "-" + version
@@ -41,7 +41,7 @@ def artifacts(tmp_path, name="alawein-eval-audit", version="0.3.1"):
 
 def test_exact_inventory_and_metadata(tmp_path):
     directory, manifest = artifacts(tmp_path)
-    assert len(verifier.verify(directory, manifest, "alawein-eval-audit", "0.3.1")) == 2
+    assert len(verifier.verify(directory, manifest, "siftgrain-audit", "0.3.1")) == 2
 
 
 def test_create_checksum_inventory_has_exact_lf_bytes(tmp_path, monkeypatch):
@@ -54,7 +54,7 @@ def test_create_checksum_inventory_has_exact_lf_bytes(tmp_path, monkeypatch):
     )
     verifier.main()
     assert b"\r" not in manifest.with_name("SHA256SUMS").read_bytes()
-    assert len(verifier.verify(directory, manifest, "alawein-eval-audit", "0.3.1")) == 2
+    assert len(verifier.verify(directory, manifest, "siftgrain-audit", "0.3.1")) == 2
 
 
 @pytest.mark.parametrize(
@@ -82,4 +82,4 @@ def test_modified_distribution_fails(tmp_path, mutation):
         with zipfile.ZipFile(wheel, "w") as archive:
             archive.writestr("x.dist-info/METADATA", "Name: wrong\nVersion: 0.3.1\n")
     with pytest.raises(ValueError):
-        verifier.verify(directory, manifest, "alawein-eval-audit", "0.3.1")
+        verifier.verify(directory, manifest, "siftgrain-audit", "0.3.1")

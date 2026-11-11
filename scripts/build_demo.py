@@ -1,9 +1,9 @@
 import hashlib
 from pathlib import Path
 
-from eval_audit.contract import load_inputs
-from eval_audit.core import audit
-from eval_audit.report import render_html, render_json
+from siftgrain_audit.contract import load_inputs
+from siftgrain_audit.core import audit
+from siftgrain_audit.report import render_html, render_json
 
 
 def main() -> None:
@@ -12,19 +12,29 @@ def main() -> None:
     )
     report = audit(manifest, rows) | {
         "inputs": hashes,
-        "provenance": "Synthetic, AI-assisted, non-client",
+        "provenance": "Synthetic, non-client",
     }
     target = Path("site")
     target.mkdir(exist_ok=True)
     original_page = render_html(
         report,
         example={
+            "synthetic": True,
             "description": (
                 "Original synthetic coverage example, executed with the offline audit engine. "
                 "CC0 fixtures; no client work or adoption claim."
             ),
             "links": {"Agent Acceptance refund demo": "acceptance.html"},
-            "downloads": {"Original report JSON": "report.json"},
+            "downloads": {
+                "Original report JSON": "report.json",
+                "Expected-ID manifest": "manifest.json",
+                "Result rows": "results.jsonl",
+            },
+            "download_files": {
+                "report.json": render_json(report).encode(),
+                "manifest.json": Path("examples/manifest.json").read_bytes(),
+                "results.jsonl": Path("examples/results.jsonl").read_bytes(),
+            },
         },
     )
     (target / "index.html").write_text(original_page, encoding="utf-8")
@@ -35,7 +45,7 @@ def main() -> None:
     )
     report = audit(manifest, rows) | {
         "inputs": hashes,
-        "provenance": "Synthetic, AI-assisted, non-client",
+        "provenance": "Synthetic, non-client",
     }
     source = Path("examples/acceptance-source.txt").read_bytes()
     report_bytes = render_json(report).encode("utf-8")
@@ -50,6 +60,7 @@ def main() -> None:
         manifest=manifest,
         records=rows,
         example={
+            "synthetic": True,
             "title": "Agent Acceptance",
             "description": (
                 "Synthetic refund case 1042. This static example was executed with the "

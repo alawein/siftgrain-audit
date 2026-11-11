@@ -2,8 +2,7 @@ import base64
 import html
 import json
 
-from eval_audit.contract import trial_mode
-from eval_audit.viewer import enhance
+from siftgrain_audit.viewer import enhance
 
 
 def render_json(report: dict) -> str:
@@ -48,22 +47,26 @@ def _links(values: object, *, download: bool = False, files: object = None) -> s
 def _case_cards(report: dict, manifest: dict | None, records: list[dict] | None) -> str:
     if manifest is None or records is None:
         return ""
-    if trial_mode(manifest):
-        return ""
-    indexed = {row["id"]: row for row in records}
-    missing = set(report.get("missing_ids", []))
-    cases = []
+    trial_mode = report.get("schema_version") == 2
+    indexed = {(row["id"], row.get("trial", 1)): row for row in records}
+    identities: list[tuple[str, int]] = []
     for identifier in manifest["expected_ids"]:
-        row = indexed.get(identifier)
-        if identifier in missing or row is None:
+        plan = manifest.get("trials_per_id", 1) if trial_mode else 1
+        total = plan.get(identifier, 1) if isinstance(plan, dict) else plan
+        identities.extend((identifier, trial) for trial in range(1, total + 1))
+    cases = []
+    for identifier, trial in identities:
+        row = indexed.get((identifier, trial))
+        if row is None:
             status, score, reason = "missing", "No result record", "No JSONL row was supplied."
         else:
             status = row["status"]
             score = "No numeric score" if row["score"] is None else f"Score: {row['score']}"
             reason = row["reason"]
+        trial_label = f" / Trial {trial}" if trial_mode else ""
         cases.append(
             '<article class="case"><p class="eyebrow">EXPECTED ID</p>'
-            f"<h3>{html.escape(identifier)}</h3>"
+            f"<h3>{html.escape(identifier)}{trial_label}</h3>"
             f'<p><span class="status">{html.escape(status)}</span> '
             f'<strong class="score">{html.escape(score)}</strong></p>'
             f"<p>{html.escape(reason)}</p></article>"
@@ -82,13 +85,48 @@ def _render_html(
     records: list[dict] | None = None,
     example: dict | None = None,
 ) -> str:
-    example = example or {}
+    example = dict(example or {})
+    files = dict(example.get("download_files", {}))
+    files.setdefault("report.json", render_json(report).encode("utf-8"))
+    example["download_files"] = files
+    example.setdefault("downloads", {"Download report JSON": "report.json"})
     content = html.escape(render_json(report))
-    title = html.escape(str(example.get("title", "Siftgrain Audit")))
+    title = html.escape(str(example.get("title", "Siftgrain audit")))
     description = html.escape(
         str(example.get("description", "Coverage of supplied records, not model accuracy."))
     )
     counts = report.get("counts", {})
+    complete = report.get("exit_code") == 0
+    result = "All expected IDs are scored." if complete else "Coverage needs attention."
+    action_counts = report.get("trial_counts", counts)
+    trial_mode = report.get("schema_version") == 2
+    actions = []
+    for key, instruction in (
+        ("missing", "Find missing trials" if trial_mode else "Find missing rows"),
+        ("errored", "Resolve errored trials" if trial_mode else "Resolve evaluation errors"),
+        ("unscored", "Score unscored trials" if trial_mode else "Score unscored rows"),
+    ):
+        if action_counts.get(key, 0):
+            actions.append(f"{instruction} ({action_counts[key]})")
+    unexpected = len(report.get("unexpected_trials", report.get("unexpected_ids", [])))
+    if unexpected:
+        actions.append(f"Review unexpected records ({unexpected})")
+    next_action = (
+        "; ".join(actions) + "."
+        if actions
+        else "Inspect scores in your evaluation tool; availability does not establish quality."
+    )
+    first_use = (
+        '<section aria-label="Result and next action">'
+        "<h2>Are expected evaluation results present?</h2>"
+        f"<p><strong>{result}</strong> {next_action}</p>"
+        "<p>Invalid input produces exit 2 and no coverage verdict; "
+        "fix the reported row or file first.</p>"
+        "<h3>Check your own inputs</h3><p>Declare expected IDs independently of the results, "
+        "then run locally:</p><pre>uv run siftgrain-audit manifest.json results.jsonl "
+        "--html report.html --json report.json</pre></section>"
+    )
+    label = "Synthetic example" if example.get("synthetic") else "Supplied-input report"
     cards = "".join(
         f'<div class="card"><strong>{html.escape(str(v))}</strong>'
         f"<span>{html.escape(k.replace('_', ' '))}</span></div>"
@@ -171,10 +209,14 @@ def _render_html(
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         '<meta name="description" content="Coverage of supplied evaluation records: '
         'scored, errored, unscored, missing and unexpected, with input hashes.">'
-        '<meta name="theme-color" content="#f4f6f5">'
+        '<meta name="theme-color" content="#101c1b">'
         f"<title>{title} | Siftgrain Audit coverage report</title><style>"
-        ":root{color-scheme:light}"
-        "body{margin:0;background:#f4f6f5;color:#142c2a;font:17px/1.6 system-ui;"
+        ":root{color-scheme:dark}"
+        "body{--bg:#101c1b;--surface:#1a2e2b;--text:#edf5f2;--border:#78988e;"
+        "--link:#98e1cd;color-scheme:dark}"
+        "body:has(#theme-light:checked){--bg:#f4f6f5;--surface:#fff;--text:#142c2a;"
+        "--border:#718b82;--link:#075851;color-scheme:light}"
+        "body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui;"
         "-webkit-tap-highlight-color:transparent}"
         "*{box-sizing:border-box}main{max-width:1120px;margin:auto;padding:36px 24px}"
         "h1{font-size:clamp(2.4rem,5vw,3.7rem);line-height:1.1;margin:12px 0;"
@@ -182,7 +224,7 @@ def _render_html(
         "section{margin-top:36px}.run{overflow-wrap:anywhere;font-size:.9rem}"
         ".eyebrow{letter-spacing:.12em;font-size:.85rem}"
         ".cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;"
-        "margin-top:24px}.card{background:white;border:1px solid #baccc6;"
+        "margin-top:24px}.card{background:var(--surface);border:1px solid var(--border);"
         "border-radius:12px;padding:16px;min-width:0}"
         ".card strong{display:block;font-size:2rem;font-variant-numeric:tabular-nums}"
         ".card span{display:block}"
@@ -192,29 +234,50 @@ def _render_html(
         ".coverage span{display:block}.exit{border:1px solid #9bbcb1;border-radius:6px;"
         "padding:6px 12px;white-space:nowrap}.cases{display:grid;"
         "grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}"
-        ".case{padding:20px;border:1px solid #baccc6;background:white;border-radius:12px;"
-        "min-width:0;overflow-wrap:anywhere}.case .eyebrow{margin:0}"
-        ".status{display:inline-block;border:1px solid #baccc6;border-radius:6px;"
+        ".case{padding:20px;border:1px solid var(--border);background:var(--surface);"
+        "border-radius:12px;min-width:0;overflow-wrap:anywhere}.case .eyebrow{margin:0}"
+        ".status{display:inline-block;border:1px solid var(--border);border-radius:6px;"
         "padding:2px 8px;margin-right:8px}.score{font-size:.95rem}"
-        "pre{background:#fff;padding:20px;border:1px solid #baccc6;"
+        "pre{background:var(--surface);padding:20px;border:1px solid var(--border);"
         "white-space:pre-wrap;overflow-wrap:anywhere;border-radius:8px;font-size:.9rem}"
         ".hash{overflow-wrap:anywhere;font-size:.85rem}.hashes{display:grid;"
         "grid-template-columns:180px minmax(0,1fr);gap:12px}.hashes dd{margin:0}"
         ".links{display:flex;gap:12px;flex-wrap:wrap;list-style:none;padding:0}"
         ".links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;"
-        "background:white;border:1px solid #baccc6;border-radius:8px}"
+        "background:var(--surface);border:1px solid var(--border);border-radius:8px}"
         "summary{cursor:pointer;padding:12px 0;min-height:44px}footer{margin-top:36px}"
-        "a{color:#075851}a:hover{text-decoration:underline}"
-        ":focus-visible{outline:3px solid #075851;outline-offset:3px}"
+        "a{color:var(--link)}a:hover{text-decoration:underline}"
+        ".appearance input:focus,:focus-visible{outline:3px solid var(--link);outline-offset:3px}"
+        ".suite-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}"
+        ".suite-nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;"
+        "border:1px solid var(--border);border-radius:8px}"
+        ".suite-nav [aria-current]{font-weight:700;text-decoration-thickness:3px}"
+        ".appearance{display:flex;flex-wrap:wrap;align-items:center;gap:0 8px;"
+        "width:fit-content;max-width:100%;margin:0 0 20px;padding:0 12px;"
+        "border:1px solid var(--border);border-radius:8px}"
+        ".appearance legend{padding:0 4px;font-size:.85rem}"
+        ".appearance label{display:inline-flex;align-items:center;min-height:44px;"
+        "padding:0 8px;cursor:pointer}.appearance input{accent-color:var(--link)}"
         "@media(max-width:700px){main{padding:24px 18px}.cards{grid-template-columns:"
         "repeat(2,minmax(0,1fr))}.cases{grid-template-columns:minmax(0,1fr)}"
         ".coverage{gap:16px;padding:20px}.hashes{grid-template-columns:minmax(0,1fr);"
         "gap:6px}.hashes dd{margin-bottom:12px}}"
-        '</style></head><body><main><p class="eyebrow">SIFTGRAIN AUDIT / LOCAL EVIDENCE / '
+        '</style></head><body><main id="top" tabindex="-1">'
+        '<nav class="suite-nav" aria-label="Siftgrain tools">'
+        '<a tabindex="0" href="#top" aria-current="page">Audit</a>'
+        '<a tabindex="0" href="https://alawein.github.io/siftgrain-state/">State</a>'
+        '<a tabindex="0" href="https://alawein.github.io/siftgrain-cite/">Cite</a></nav>'
+        '<fieldset class="appearance"><legend>Appearance</legend>'
+        '<input type="radio" name="appearance" id="theme-dark" checked>'
+        '<label for="theme-dark">Dark</label>'
+        '<input type="radio" name="appearance" id="theme-light">'
+        '<label for="theme-light">Light</label></fieldset>'
+        '<p class="eyebrow">SIFTGRAIN AUDIT / LOCAL EVIDENCE / '
         "EXPLICIT POPULATION</p>"
-        f"<h1>{title}</h1><p>{description}</p>"
+        f"<h1>{title}</h1><p>{label}</p><p>{description}</p>"
         f'<p class="run">Run: <code>{html.escape(str(report.get("run_id", "")))}</code></p>'
         + _links(example.get("links"))
+        + first_use
         + '<div class="cards">'
         + cards
         + "</div>"
