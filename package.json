@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test:browser": "playwright test",
+    "test:lighthouse-date": "node --test scripts/lighthouse-date.test.mjs",
     "test:tokens": "node --test design-tokens/tokens.test.mjs",
     "perf": "node scripts/lighthouse.mjs"
   },
