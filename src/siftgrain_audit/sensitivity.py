@@ -3,7 +3,7 @@
 from decimal import Decimal
 from fractions import Fraction
 
-from eval_audit.contract import trial_plan, validate
+from siftgrain_audit.contract import trial_plan, validate
 
 
 def score_sensitivity(manifest: dict, records: list[dict]) -> dict:

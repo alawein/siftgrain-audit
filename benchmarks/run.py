@@ -15,8 +15,8 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-from eval_audit.adapters import convert
-from eval_audit.core import audit
+from siftgrain_audit.adapters import convert
+from siftgrain_audit.core import audit
 
 ROOT = Path(__file__).resolve().parent
 URL = (

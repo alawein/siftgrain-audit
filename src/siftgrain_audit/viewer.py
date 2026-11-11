@@ -5,8 +5,8 @@ import hashlib
 import html
 from importlib.resources import files
 
-from eval_audit.contract import trial_plan
-from eval_audit.sensitivity import score_sensitivity
+from siftgrain_audit.contract import trial_plan
+from siftgrain_audit.sensitivity import score_sensitivity
 
 
 def trial_view(manifest: dict | None, records: list[dict] | None) -> str:
@@ -71,9 +71,9 @@ def trial_view(manifest: dict | None, records: list[dict] | None) -> str:
 
 
 def enhance(page: str, manifest: dict | None, records: list[dict] | None) -> str:
-    css = files("eval_audit").joinpath("tokens.css").read_text(encoding="utf-8")
-    css += files("eval_audit").joinpath("viewer.css").read_text(encoding="utf-8")
-    js = files("eval_audit").joinpath("viewer.js").read_text(encoding="utf-8")
+    css = files("siftgrain_audit").joinpath("tokens.css").read_text(encoding="utf-8")
+    css += files("siftgrain_audit").joinpath("viewer.css").read_text(encoding="utf-8")
+    js = files("siftgrain_audit").joinpath("viewer.js").read_text(encoding="utf-8")
     # These assets are authored code, never imported user content.
     script_hash = base64.b64encode(hashlib.sha256(js.encode()).digest()).decode()
     policy = (

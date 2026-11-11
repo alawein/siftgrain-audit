@@ -1,5 +1,5 @@
-from eval_audit.core import audit
-from eval_audit.report import render_html
+from siftgrain_audit.core import audit
+from siftgrain_audit.report import render_html
 
 
 def test_report_keeps_every_planned_trial_and_safe_text():

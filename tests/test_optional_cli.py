@@ -1,6 +1,6 @@
 import sys
 
-from eval_audit.cli import main
+from siftgrain_audit.cli import main
 
 
 def test_rich_is_opt_in_and_missing_extra_is_controlled(monkeypatch, capsys):

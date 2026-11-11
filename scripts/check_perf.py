@@ -11,7 +11,7 @@ def main() -> None:
     compressed = len(gzip.compress(page, mtime=0))
     if compressed > 32768:
         raise SystemExit(f"report gzip budget exceeded: {compressed} > 32768")
-    if (ROOT / "src/eval_audit/tokens.css").read_bytes() != (
+    if (ROOT / "src/siftgrain_audit/tokens.css").read_bytes() != (
         ROOT / "design-tokens/tokens.css"
     ).read_bytes():
         raise SystemExit("runtime token projection differs from vendored owner")

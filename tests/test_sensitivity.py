@@ -1,6 +1,6 @@
 import pytest
 
-from eval_audit import sensitivity
+from siftgrain_audit import sensitivity
 
 
 def test_sensitivity_keeps_error_policy_and_missing_denominator_explicit():

@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from eval_audit.adapters import convert
+from siftgrain_audit.adapters import convert
 
 
 @pytest.mark.parametrize(
