@@ -115,6 +115,8 @@ jobs:
   product-validation:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    env:
+      UV_PYTHON: ${{ matrix.python }}
     strategy:
       fail-fast: false
       matrix:
@@ -128,6 +130,7 @@ jobs:
         with:
           version: "0.9.5"
       - run: uv sync --frozen
+      - run: uv run python -c "import sys; print(sys.version)"
       - run: uv run ruff check .
       - run: uv run ruff format --check .
       - run: uv run mypy src
@@ -138,3 +141,35 @@ jobs:
       - name: Report dependency audit
         continue-on-error: true
         run: uv run pip-audit --local
+
+  viewer-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      UV_PYTHON: "3.11"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: "22"
+          cache: npm
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e
+        with:
+          version: "0.9.5"
+      - run: uv sync --frozen
+      - run: npm ci --ignore-scripts
+      - run: npm run test:tokens
+      - run: uv run python scripts/build_demo.py
+      - run: uv run python scripts/check_perf.py
+      - run: npx playwright install --with-deps chromium firefox webkit
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_GC: "1"
+      - run: npm run test:browser
+      - run: npm run perf
+      - run: uv run python benchmarks/run.py --fetch
+      - name: Report browser-tool dependency audit
+        continue-on-error: true
+        run: npm audit

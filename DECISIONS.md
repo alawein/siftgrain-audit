@@ -138,3 +138,38 @@ existing asset and complete upload readback match canonical bytes. Conflicting
 existing assets or corrupt readback stop before editing notes. Tags, version,
 core behavior and artifacts remain unchanged; live registry setup remains pending
 owner-entered sensitive-action password confirmation and name acceptance.
+
+## Census redesign, October 13, 2026
+
+This is architectural work spanning import boundaries, a viewer and a benchmark.
+The user's original brief supplies the purpose and explicitly requests autonomous
+execution; its no-pause instruction overrides optional design approval ceremonies.
+Implementation plan stays in chat; this file records decisions, not a new tracker.
+
+- Preserve the validated coverage engine and schema-1 output. Existing hardening
+  findings are superseded rather than reimplemented. Keep Python 3.11 and stdlib.
+- Add HELM original-instance stats and Open LLM exported JSON adapters as narrow
+  explicit formats. Reject ambiguous metric/perturbation shapes; never infer N.
+- Separate score sensitivity from audit JSON and pass readiness. Report exact
+  rational sums/means under named policies; errors retain their original status.
+- Keep Siftgrain Census as product branding while retaining repo/package/CLI names.
+  Siftgrain replaces rejected Spanward; limited searches are not legal clearance.
+- Vendor the single frozen unpublished suite token package byte-for-byte. Use
+  data-theme and data-vibe attributes; do not create another shared registry.
+- Embed trusted viewer assets, escape all imported evidence, block connect-src,
+  guard every storage call, and apply stored appearance before first paint.
+- Use an opt-in WebGL2 background in an OffscreenCanvas worker. Initial static
+  rendering avoids startup shader stalls; missing-cell state settling stays
+  lightweight. Unsupported workers/contexts, reduced motion and hidden pages keep
+  evidence usable. No WebGPU dependency is justified for this effect.
+- Put trial controls immediately after coverage. Detailed cards, source and hashes
+  remain inside a labeled disclosure; no supplied evidence is lost on mobile.
+- Benchmark actual pinned three-sample Inspect scores with explicitly synthetic
+  cloned epochs and faults. Dev/test are disjoint fault seeds sharing source IDs.
+  Report exact controlled counts without binomial CIs or human labels. Native
+  Inspect parser/accuracy is an executed baseline, not its whole evaluation policy.
+- A core/gold mismatch fails the benchmark command. Naive baseline performance is
+  descriptive. Default product remains network-free; fetch is an explicit dev tool.
+- Preserve prior tags/branches and all unrelated work. Draft PR plus coordinator
+  review precede any eligible merge. Identity changes and external dataset uploads
+  remain prepared steps with exact commands, not executed outcomes.

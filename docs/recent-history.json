@@ -1,0 +1,380 @@
+{
+  "access_date": "2026-10-13",
+  "since": "2026-10-04",
+  "commits_all_local_remote_refs": [
+    {
+      "sha": "7fe0b7b05369ed3778d72775c3f2f913604ef96f",
+      "date": "2026-10-10T12:27:29-07:00",
+      "subject": "feat: add Agent Acceptance coverage demo (#18)"
+    },
+    {
+      "sha": "6ed88ea626cb55a7b5450e5dc29e9955996cdfea",
+      "date": "2026-10-10T12:17:22-07:00",
+      "subject": "docs: link directly to verified upstream evidence bytes"
+    },
+    {
+      "sha": "5409ae7e7fe1500b1ead3a6713543103986f580d",
+      "date": "2026-10-10T12:16:41-07:00",
+      "subject": "fix: ground acceptance fixture explanation in supplied evidence"
+    },
+    {
+      "sha": "78ce7387eb15e1c63618b854810e0a5b187f16f3",
+      "date": "2026-10-10T12:02:26-07:00",
+      "subject": "Merge remote-tracking branch 'origin/main' into feature/agent-acceptance-demo"
+    },
+    {
+      "sha": "74de461aa70f4be4659b170942579235f255063e",
+      "date": "2026-10-10T11:57:16-07:00",
+      "subject": "feat: add evidence-first Agent Acceptance demo"
+    },
+    {
+      "sha": "97e812fbd733e214bc2f007827c5ec7b302e24c7",
+      "date": "2026-10-08T12:09:11-07:00",
+      "subject": "fix: reconcile release notes after verified retries (#17)"
+    },
+    {
+      "sha": "af0eacba86add5311e901467352619fe01e53135",
+      "date": "2026-10-08T11:50:16-07:00",
+      "subject": "fix: complete release artifacts and audit evidence for v0.3.1 (#16)"
+    },
+    {
+      "sha": "561bb8900e5c09d16c94234165e25be9d0c28747",
+      "date": "2026-10-08T08:16:52-07:00",
+      "subject": "docs: record PyPI project name rejection"
+    },
+    {
+      "sha": "b3d116f66840387013848781daa66f3968c9a5d6",
+      "date": "2026-10-08T07:59:36-07:00",
+      "subject": "feat: harden repeated-trial evaluation audits for v0.3.0 (#15)"
+    },
+    {
+      "sha": "9124ab441307c1b641731469beb0dc89ae7d1460",
+      "date": "2026-10-08T07:55:08-07:00",
+      "subject": "docs(policy): record approved v0.3.0 release delivery"
+    },
+    {
+      "sha": "0dc334afd3e45d53b95cced326fb29259735d47c",
+      "date": "2026-10-08T04:59:11-07:00",
+      "subject": "fix(docs): distinguish protected settings links from public sources"
+    },
+    {
+      "sha": "46e779104771a0313f56cdb9c0287fa53d832fbc",
+      "date": "2026-10-08T04:55:23-07:00",
+      "subject": "docs(audit): record clean clone and artifact verification"
+    },
+    {
+      "sha": "8f6e67f7c56313f1c7104b250a18ec4bf8fe7529",
+      "date": "2026-10-08T04:50:57-07:00",
+      "subject": "chore(release): prepare gated publishing and public log study"
+    },
+    {
+      "sha": "d9d6997c4bdf5d583f7a1bf93400cd753c32779b",
+      "date": "2026-10-08T04:50:00-07:00",
+      "subject": "docs: record final hardening verification"
+    },
+    {
+      "sha": "b41a51b381423af6f0df94344b60537d06e9d658",
+      "date": "2026-10-08T04:48:19-07:00",
+      "subject": "fix: bound UTF-8 conversion and handle corrupt compressed logs"
+    },
+    {
+      "sha": "f5668dc11f5300c104bb8bf1ceda6aa41fe59c40",
+      "date": "2026-10-08T04:43:21-07:00",
+      "subject": "fix: support documented promptfoo v3 outputs"
+    },
+    {
+      "sha": "bd10cb860941fe95993061c9f92d06af1c0ae986",
+      "date": "2026-10-08T04:40:57-07:00",
+      "subject": "fix: reject malformed adapter fields and preserve legacy diagnostics"
+    },
+    {
+      "sha": "0b58f10bd23bd4f1301a641dd203de06f80511a1",
+      "date": "2026-10-08T04:33:45-07:00",
+      "subject": "feat: add trial coverage and local evaluation adapters"
+    },
+    {
+      "sha": "06b6d1eebe01455b08277a2caace54aa2417af28",
+      "date": "2026-10-07T04:45:06-07:00",
+      "subject": "docs: refine README introduction and add stack labels (#14)"
+    },
+    {
+      "sha": "61ebd9ff4704b3d770cb9e1f7df0b60275467fee",
+      "date": "2026-10-06T08:36:41-07:00",
+      "subject": "ci: trim redundant workflow runs (#13)"
+    },
+    {
+      "sha": "8d4b8bcde1f9eb48320ae74205494ef75e3c48cc",
+      "date": "2026-10-06T00:04:38-07:00",
+      "subject": "chore: remove Dependabot config (#12)"
+    },
+    {
+      "sha": "ca1e8442b347c6b581c35430c8d0ece318bd8239",
+      "date": "2026-10-05T21:55:45-07:00",
+      "subject": "chore(deps): bump actions/configure-pages from 5.0.0 to 6.0.0 (#9)"
+    },
+    {
+      "sha": "a848fb909b27ca677b1417dd3ab844afd305be81",
+      "date": "2026-10-05T21:55:29-07:00",
+      "subject": "chore(deps): bump actions/setup-python from 5.6.0 to 7.0.0 (#8)"
+    },
+    {
+      "sha": "82d6ebddc28300246161b6891e6824c11c8d8dc5",
+      "date": "2026-10-05T21:49:30-07:00",
+      "subject": "chore(deps): bump actions/deploy-pages from 4.0.5 to 5.0.1 (#7)"
+    },
+    {
+      "sha": "88030f23bd90d5fcbbdc0e8fb4b9b58d7edcf2e0",
+      "date": "2026-10-05T21:49:24-07:00",
+      "subject": "chore(deps): bump actions/upload-pages-artifact from 3.0.1 to 5.0.0 (#6)"
+    },
+    {
+      "sha": "ec4510dd9b4afddd482b00bbfc067467cfcbbada",
+      "date": "2026-10-05T21:49:19-07:00",
+      "subject": "chore(deps): bump actions/checkout from 4.4.0 to 7.0.1 (#5)"
+    },
+    {
+      "sha": "f3a0b0789cf4b6257cbb1605e3915ce7960d377d",
+      "date": "2026-10-05T21:19:13-07:00",
+      "subject": "fix(ci): reject missing pull request title coverage (#10)"
+    },
+    {
+      "sha": "3bd4c74626d4ff7782dd71d0e0efe2f4aa18a0e0",
+      "date": "2026-10-04T12:56:06-07:00",
+      "subject": "feat: CLI discoverability and report explanations (v0.2.0) (#4)"
+    },
+    {
+      "sha": "f3fc1c020c565c5dedc5848aec5b54befb233188",
+      "date": "2026-10-04T10:32:14-07:00",
+      "subject": "fix: regenerate canonical example digests for v0.1.1 (#3)"
+    },
+    {
+      "sha": "60c8c202d8e470e6a480bdb723867a2565636b18",
+      "date": "2026-10-04T09:49:04-07:00",
+      "subject": "chore(release): v0.1.0 (#2)"
+    },
+    {
+      "sha": "3d35ea82df5b90107cfadfe97dca3decc4197d0c",
+      "date": "2026-10-04T09:46:03-07:00",
+      "subject": "feat: implement offline evaluation coverage audit (#1)"
+    },
+    {
+      "sha": "b45e5fffa96a21ddab5a50738ec3dedc3ebaa5db",
+      "date": "2026-10-04T09:35:02-07:00",
+      "subject": "chore: bootstrap eval audit"
+    }
+  ],
+  "prs": [
+    {
+      "createdAt": "2026-10-10T19:03:46Z",
+      "headRefOid": "6ed88ea626cb55a7b5450e5dc29e9955996cdfea",
+      "mergedAt": "2026-10-10T19:27:29Z",
+      "number": 18,
+      "state": "MERGED",
+      "title": "feat: add Agent Acceptance coverage demo",
+      "url": "https://github.com/alawein/eval-audit/pull/18"
+    },
+    {
+      "createdAt": "2026-10-08T19:07:19Z",
+      "headRefOid": "8d859536b2d432fdb4d6840136f4a0431b6202f3",
+      "mergedAt": "2026-10-08T19:09:12Z",
+      "number": 17,
+      "state": "MERGED",
+      "title": "fix: reconcile release notes after verified retries",
+      "url": "https://github.com/alawein/eval-audit/pull/17"
+    },
+    {
+      "createdAt": "2026-10-08T17:52:53Z",
+      "headRefOid": "90c09103fa3c120b7581414ce826247ec386f9c4",
+      "mergedAt": "2026-10-08T18:50:17Z",
+      "number": 16,
+      "state": "MERGED",
+      "title": "fix: complete release artifacts and audit evidence for v0.3.1",
+      "url": "https://github.com/alawein/eval-audit/pull/16"
+    },
+    {
+      "createdAt": "2026-10-08T11:56:53Z",
+      "headRefOid": "9124ab441307c1b641731469beb0dc89ae7d1460",
+      "mergedAt": "2026-10-08T14:59:37Z",
+      "number": 15,
+      "state": "MERGED",
+      "title": "feat: harden repeated-trial evaluation audits for v0.3.0",
+      "url": "https://github.com/alawein/eval-audit/pull/15"
+    },
+    {
+      "createdAt": "2026-10-07T11:42:04Z",
+      "headRefOid": "934ebcc5a69ea2bc61045660904a206177d8e554",
+      "mergedAt": "2026-10-07T11:45:07Z",
+      "number": 14,
+      "state": "MERGED",
+      "title": "docs: refine README introduction and add stack labels",
+      "url": "https://github.com/alawein/eval-audit/pull/14"
+    },
+    {
+      "createdAt": "2026-10-06T15:34:44Z",
+      "headRefOid": "914b61481b4d40e118d8d430c72ac9fa792e7231",
+      "mergedAt": "2026-10-06T15:36:42Z",
+      "number": 13,
+      "state": "MERGED",
+      "title": "ci: trim redundant workflow runs",
+      "url": "https://github.com/alawein/eval-audit/pull/13"
+    },
+    {
+      "createdAt": "2026-10-06T07:03:10Z",
+      "headRefOid": "52ef2641907c957d0a4367a93acac81b4a8308df",
+      "mergedAt": "2026-10-06T07:04:38Z",
+      "number": 12,
+      "state": "MERGED",
+      "title": "chore: remove Dependabot config",
+      "url": "https://github.com/alawein/eval-audit/pull/12"
+    },
+    {
+      "createdAt": "2026-10-06T06:25:43Z",
+      "headRefOid": "b42a958b1b92ebf2cbfdb19b9bfee4f81d6e5834",
+      "mergedAt": null,
+      "number": 11,
+      "state": "CLOSED",
+      "title": "chore: remove Dependabot config",
+      "url": "https://github.com/alawein/eval-audit/pull/11"
+    },
+    {
+      "createdAt": "2026-10-06T04:16:57Z",
+      "headRefOid": "a67cbf0aa04f58e24b41c4c789c22827677a21b3",
+      "mergedAt": "2026-10-06T04:19:14Z",
+      "number": 10,
+      "state": "MERGED",
+      "title": "fix(ci): reject missing pull request title coverage",
+      "url": "https://github.com/alawein/eval-audit/pull/10"
+    },
+    {
+      "createdAt": "2026-10-05T01:14:15Z",
+      "headRefOid": "95face8d2e37016cb905d9d651cb98ade35bda3b",
+      "mergedAt": "2026-10-06T04:55:46Z",
+      "number": 9,
+      "state": "MERGED",
+      "title": "chore(deps): bump actions/configure-pages from 5.0.0 to 6.0.0",
+      "url": "https://github.com/alawein/eval-audit/pull/9"
+    },
+    {
+      "createdAt": "2026-10-05T01:14:11Z",
+      "headRefOid": "bc60a49af6fff5a10c4ec9e6348309b7b91184cd",
+      "mergedAt": "2026-10-06T04:55:30Z",
+      "number": 8,
+      "state": "MERGED",
+      "title": "chore(deps): bump actions/setup-python from 5.6.0 to 7.0.0",
+      "url": "https://github.com/alawein/eval-audit/pull/8"
+    },
+    {
+      "createdAt": "2026-10-05T01:14:07Z",
+      "headRefOid": "4007d38895b02c9feff2a21ecc42ef76d9b398a4",
+      "mergedAt": "2026-10-06T04:49:30Z",
+      "number": 7,
+      "state": "MERGED",
+      "title": "chore(deps): bump actions/deploy-pages from 4.0.5 to 5.0.1",
+      "url": "https://github.com/alawein/eval-audit/pull/7"
+    },
+    {
+      "createdAt": "2026-10-05T01:14:03Z",
+      "headRefOid": "974ca10dc2d3a3088883ec1194bd3791c67635d1",
+      "mergedAt": "2026-10-06T04:49:25Z",
+      "number": 6,
+      "state": "MERGED",
+      "title": "chore(deps): bump actions/upload-pages-artifact from 3.0.1 to 5.0.0",
+      "url": "https://github.com/alawein/eval-audit/pull/6"
+    },
+    {
+      "createdAt": "2026-10-05T01:14:02Z",
+      "headRefOid": "0cf29c55f58c7e1478084639445e20bf27bfadd2",
+      "mergedAt": "2026-10-06T04:49:19Z",
+      "number": 5,
+      "state": "MERGED",
+      "title": "chore(deps): bump actions/checkout from 4.4.0 to 7.0.1",
+      "url": "https://github.com/alawein/eval-audit/pull/5"
+    },
+    {
+      "createdAt": "2026-10-04T19:35:48Z",
+      "headRefOid": "78865908dad94fff5380e6c1b61b1826abd95084",
+      "mergedAt": "2026-10-04T19:56:07Z",
+      "number": 4,
+      "state": "MERGED",
+      "title": "feat: CLI discoverability and report explanations (v0.2.0)",
+      "url": "https://github.com/alawein/eval-audit/pull/4"
+    },
+    {
+      "createdAt": "2026-10-04T17:30:53Z",
+      "headRefOid": "14c6c57136fcbc3efe12fd68653208faaa980371",
+      "mergedAt": "2026-10-04T17:32:14Z",
+      "number": 3,
+      "state": "MERGED",
+      "title": "fix: regenerate canonical example digests for v0.1.1",
+      "url": "https://github.com/alawein/eval-audit/pull/3"
+    },
+    {
+      "createdAt": "2026-10-04T16:46:11Z",
+      "headRefOid": "f45049b2cb1fb85d2406f7478b1006c2e61192e5",
+      "mergedAt": "2026-10-04T16:49:05Z",
+      "number": 2,
+      "state": "MERGED",
+      "title": "chore(release): v0.1.0",
+      "url": "https://github.com/alawein/eval-audit/pull/2"
+    },
+    {
+      "createdAt": "2026-10-04T16:42:42Z",
+      "headRefOid": "e4f955490ba2508135b14851e0a1b918238d2ea1",
+      "mergedAt": "2026-10-04T16:46:04Z",
+      "number": 1,
+      "state": "MERGED",
+      "title": "feat: implement offline evaluation coverage audit",
+      "url": "https://github.com/alawein/eval-audit/pull/1"
+    }
+  ],
+  "releases": [
+    {
+      "tag": "v0.3.1",
+      "published_at": "2026-10-08T19:00:59Z",
+      "url": "https://github.com/alawein/eval-audit/releases/tag/v0.3.1"
+    },
+    {
+      "tag": "v0.3.0",
+      "published_at": "2026-10-08T15:21:55Z",
+      "url": "https://github.com/alawein/eval-audit/releases/tag/v0.3.0"
+    },
+    {
+      "tag": "v0.2.0",
+      "published_at": "2026-10-04T19:58:11Z",
+      "url": "https://github.com/alawein/eval-audit/releases/tag/v0.2.0"
+    },
+    {
+      "tag": "v0.1.1",
+      "published_at": "2026-10-04T17:34:42Z",
+      "url": "https://github.com/alawein/eval-audit/releases/tag/v0.1.1"
+    },
+    {
+      "tag": "v0.1.0",
+      "published_at": "2026-10-04T16:49:43Z",
+      "url": "https://github.com/alawein/eval-audit/releases/tag/v0.1.0"
+    }
+  ],
+  "settings_current": {
+    "default_branch": "main",
+    "visibility": "public",
+    "archived": false,
+    "security_and_analysis": {
+      "secret_scanning": {
+        "status": "enabled"
+      },
+      "secret_scanning_push_protection": {
+        "status": "enabled"
+      },
+      "dependabot_security_updates": {
+        "status": "disabled"
+      },
+      "secret_scanning_non_provider_patterns": {
+        "status": "disabled"
+      },
+      "secret_scanning_validity_checks": {
+        "status": "disabled"
+      }
+    }
+  },
+  "settings_history": "Commit/PR history records Dependabot config removal. Complete historical settings audit not exposed by repository endpoint; current settings only."
+}

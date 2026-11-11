@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alawein.github.io/eval-audit/score-sensitivity.v1.json",
+  "title": "Separate descriptive score sensitivity v1",
+  "type": "object",
+  "required": ["schema_version", "run_id", "unit", "meaning", "number_format", "policies", "errored_score_rule"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "minLength": 1, "maxLength": 200},
+    "unit": {"const": "expected trial"},
+    "meaning": {"type": "string"},
+    "number_format": {"type": "string"},
+    "errored_score_rule": {"type": "string"},
+    "policies": {
+      "type": "object",
+      "required": ["expected_zero_fill", "score_available", "scored_only"],
+      "properties": {
+        "expected_zero_fill": {"$ref": "#/$defs/policy"},
+        "score_available": {"$ref": "#/$defs/policy"},
+        "scored_only": {"$ref": "#/$defs/policy"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "rational": {"type": "string", "pattern": "^-?[0-9]+(/[1-9][0-9]*)?$"},
+    "policy": {
+      "type": "object",
+      "required": ["denominator", "sum", "mean"],
+      "properties": {
+        "denominator": {"type": "integer", "minimum": 0, "maximum": 10000},
+        "sum": {"$ref": "#/$defs/rational"},
+        "mean": {"anyOf": [{"$ref": "#/$defs/rational"}, {"type": "null"}]}
+      },
+      "additionalProperties": false
+    }
+  }
+}

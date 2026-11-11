@@ -10,9 +10,21 @@ The package and command are `siftgrain-audit`.
 ![Python](assets/label-stack.svg)
 ![Offline CLI](assets/label-runtime.svg)
 
-Declare the expected IDs and supply JSONL results. Siftgrain Audit separates scored,
-errored, unscored, missing, and unexpected records, including errored records
-that retain a score.
+Declare the expected IDs and supply JSONL results. Siftgrain Audit separates
+scored, errored, unscored, missing, and unexpected records, including errored
+records that retain a score.
+
+Siftgrain Audit is the evaluation completeness tool in the Siftgrain suite,
+alongside [Siftgrain Cite](https://github.com/alawein/siftgrain-cite) for human
+citation review and [Siftgrain State](https://github.com/alawein/siftgrain-state)
+for checking requested outcomes against supplied observations. Audit checks
+record completeness and denominators; it does not validate evaluation methods.
+Its self-contained report offers four vibes, dark/light appearance, missing-trial
+waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
+
+[Brand and name checks](BRAND.md) | [Download test set](benchmarks/dataset-v1.zip) |
+[Benchmark results](benchmarks/RESULTS.md) | [Migration](MIGRATION.md) |
+[Performance](PERF.md)
 
 ## Install and run
 
@@ -77,7 +89,7 @@ Deterministic JSON, readable HTML, input SHA-256 hashes, sorted missing/unexpect
 IDs, and errored records retaining a score. The population is supplied, never
 guessed. Zero is a present score. Unexpected records do not inflate counts.
 
-No accuracy, quality, means or rankings. It cannot verify the supplied population
+The audit JSON computes no accuracy, quality, means or rankings. It cannot verify the supplied population
 or whether a partial score is usable. Native framework diagnostics remain useful.
 
 For repeated trials, add `"trials_per_id": 5` to the manifest, or an exact ID-to-count
@@ -89,7 +101,7 @@ with a numeric score contributes to score availability, but remains errored and
 does not qualify for these readiness counts.
 
 Convert local Inspect `.eval`/`.json`, lm-evaluation-harness per-sample JSONL or
-promptfoo JSON with an explicit population:
+promptfoo JSON, HELM per-instance statistics or Open LLM exported details with an explicit population:
 
 ```sh
 uv run siftgrain-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl
@@ -154,5 +166,30 @@ This is [alawein/siftgrain-audit](https://github.com/alawein/siftgrain-audit), a
 offline coverage auditor. It is unrelated to similarly named statistical or
 human-grading tools. Releases are tagged v0.1.0 through v0.3.1.
 
+[Release readiness](RELEASE_READY.md) and [security settings](SECURITY_SETTINGS.md)
+record the publication setup and observed access limits.
+
 Code is MIT ([LICENSE](LICENSE)). The synthetic example fixtures are CC0
 ([examples/LICENSE](examples/LICENSE)).
+
+## CI and policy views
+
+Use the repository composite Action with `manifest` and `records` inputs, pinned
+to the reviewed commit SHA. Its stdlib runner fails on missing, errored, unscored,
+unexpected or malformed work. For pre-commit, use hook `evaluation-completeness`
+with `args: [manifest.json, results.jsonl]`; filenames are never inferred as the
+population. The hook runs even when no matching files changed. Consumer entrypoints treat
+manifest/results arguments as paths, including option-like filenames.
+
+`--sensitivity policy.json` writes separate zero-fill, score-available and
+scored-only means as exact rational strings. Missing is zero only in zero-fill;
+error scores are excluded only in scored-only. This is descriptive arithmetic,
+not a pass@k or pass^k rate. `--rich` adds an optional stderr summary after
+`uv sync --extra cli`; ordinary JSON stays machine-readable.
+
+`make bench` reproduces the pinned public-log fault suite. It can fetch only
+when explicitly requested by that benchmark script; the product never fetches.
+Browser checks: `npm ci`, `uv run python scripts/build_demo.py`, then
+`npm run test:browser`, `npm run perf`, and `uv run python scripts/check_perf.py`.
+All browser dependencies are development-only. Actual recordings are in
+`brand/demos/`; no human-study measurements are claimed.

@@ -1,0 +1,1482 @@
+[
+  {
+    "case": "dev-1000-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1000-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1000-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1000-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1000-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1000-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1000-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1001-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1001-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1001-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1001-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1001-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1001-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1001-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1002-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1002-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1002-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1002-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1002-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1002-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1002-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1003-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1003-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1003-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1003-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1003-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1003-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1003-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1004-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1004-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1004-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1004-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1004-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1004-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1004-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1005-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1005-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1005-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1005-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1005-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1005-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1005-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1006-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1006-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1006-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1006-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1006-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1006-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1006-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1007-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1007-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1007-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1007-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1007-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1007-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1007-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1008-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1008-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1008-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1008-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1008-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1008-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1008-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1009-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1009-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1009-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1009-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1009-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1009-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1009-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1010-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1010-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1010-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1010-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1010-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1010-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1010-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1011-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1011-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1011-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1011-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1011-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1011-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1011-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1012-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1012-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1012-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1012-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1012-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1012-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1012-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1013-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1013-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1013-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1013-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1013-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1013-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1013-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1014-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1014-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1014-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1014-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1014-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1014-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1014-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1015-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1015-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1015-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1015-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1015-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1015-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1015-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1016-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1016-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1016-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1016-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1016-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1016-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1016-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1017-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1017-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "2",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1017-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1017-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1017-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1017-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1017-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1018-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1018-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1018-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1018-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1018-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1018-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1018-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1019-clean",
+    "expected_trials": 6,
+    "fault": "clean",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1019-drop",
+    "expected_trials": 6,
+    "fault": "drop",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "3",
+        "trial": 1
+      }
+    ],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1019-duplicate",
+    "expected_trials": 6,
+    "fault": "duplicate",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1019-error",
+    "expected_trials": 6,
+    "fault": "error",
+    "invalid": false,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1019-nan",
+    "expected_trials": 6,
+    "fault": "nan",
+    "invalid": true,
+    "missing": [],
+    "should_flag": true
+  },
+  {
+    "case": "dev-1019-shuffled_epochs",
+    "expected_trials": 6,
+    "fault": "shuffled_epochs",
+    "invalid": false,
+    "missing": [],
+    "should_flag": false
+  },
+  {
+    "case": "dev-1019-partial_retries",
+    "expected_trials": 6,
+    "fault": "partial_retries",
+    "invalid": false,
+    "missing": [
+      {
+        "id": "1",
+        "trial": 2
+      },
+      {
+        "id": "2",
+        "trial": 2
+      },
+      {
+        "id": "3",
+        "trial": 2
+      }
+    ],
+    "should_flag": true
+  }
+]

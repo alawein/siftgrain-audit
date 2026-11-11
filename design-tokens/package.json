@@ -1,0 +1,15 @@
+{
+  "name": "siftgrain-design-tokens",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node generate.mjs",
+    "test": "node --test tokens.test.mjs"
+  },
+  "files": [
+    "tokens.json",
+    "tokens.css",
+    "generate.mjs"
+  ]
+}

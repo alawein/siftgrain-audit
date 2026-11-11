@@ -1,5 +1,32 @@
 # Audit verification
 
+## Current baseline verification, October 13, 2026
+
+Prechange baseline: clean main `7fe0b7b05369ed3778d72775c3f2f913604ef96f`.
+Fresh baseline pytest: **170 passed in 8.49 seconds**, no skips. All file:line
+references in this table bind that baseline, before this redesign's edits.
+
+| Prior hypothesis | Finding now | Baseline evidence |
+| --- | --- | --- |
+| Repeated trials absent | Refuted; superseded by v0.3.0 | src/eval_audit/core.py:35 and contract.py:56, trial plans and pair identity |
+| No adapter support | Partially confirmed | adapters.py:82 supports Inspect, lm-eval and promptfoo; HELM/Open LLM missing |
+| NaN/infinity/bool silently accepted | Refuted | contract.py:114-126 exact numeric types, finite floats and row-number diagnostics; parse rejects lexical constants |
+| Errored-score numerator undefined | Refuted | core.py:21,54,71 availability includes numeric error scores; core.py:74 excludes errors from all-k-scored readiness; docs/contract.md explicit |
+| Nonatomic writes | Refuted | output.py:26 stages same-directory bytes and atomically installs per file; multiple outputs are not a transaction |
+| Python floor too high | Refuted | pyproject.toml:10 requires Python >=3.11; CI matrix covers 3.11-3.13 |
+| Schemas absent | Refuted | schema/manifest.v1.json, result-record.v1.json, report.v1.json are Draft 2020-12; tests/test_schemas.py |
+| Only synthetic empirical evidence | Partially confirmed | studies/inspect-security-guide and harness-coverage contain actual tiny pinned public-log studies; no seeded fault benchmark existed |
+| Animated trial viewer and sensitivity absent | Confirmed | report.py:75 renders static counts/cards; cli.py:90 has no separate score-policy output |
+| Generic name collision | Confirmed as positioning risk | Existing README disambiguates eval-audit; dated docs/name-checks.json records proposed-family searches |
+| First PR has one check not passing | Partially confirmed, pending status | Fresh API for PR1 head e4f955490ba2508135b14851e0a1b918238d2ea1 returned 30 success check-runs, zero nonpassing; legacy CodeRabbit commit status remains pending since October 4. This is not a failed required build. |
+
+Current remote history and settings observations: docs/recent-history.json.
+Main uses an active ruleset, not legacy branch-protection API; a 404 on the latter
+is not proof of unprotected main. No settings or Dependabot controls changed.
+Current changes add regression tests for strict adapters, policy separation,
+viewer states, consumer exit failure and benchmark gold failure. Historical
+verification below remains bound to its own explicitly named revisions.
+
 ## Phase 0, October 8, 2026
 
 Source: `compass_artifact_wf-8f32e147-9bf3-5208-ba05-acfbbd390eae_text_markdown.md`,
@@ -185,3 +212,80 @@ packages-dir setting, completed partial uploads, foreign publishers, canonical
 directory preservation, nested staging rejection, and successful/failed note
 generation ordering. Runtime, adapters, study inputs/results and schemas are
 unchanged. Actual new-version publication and live provenance remain pending.
+
+## Census redesign verification
+
+The implementation adds meaningful negative tests before new adapter, sensitivity,
+viewer and gold-gate behavior. Original core/contract/output helpers remain intact.
+The updated suite reaches 187 tests after a new regression reproduced overflow of
+Python's integer-to-string digit bound when summing two valid 4300-digit scores.
+The policy formatter now uses exact Decimal(int) conversion and leaves the
+process-wide security limit unchanged. Small-score policy output is unchanged.
+
+Local baseline had 170 tests; the first checkpoint passed 183 plus full lint,
+types, schemas and builds. Actual three-engine viewer/axe suite: nine passed,
+all eight appearance/vibe combinations per engine. Lighthouse three-run worst-case
+budgets passed; PERF.md records real measurements and the field/midrange limits.
+Native Inspect0.3.279 parser/accuracy ran on all 280 fault cases. The downloadable
+archive's regeneration was byte-identical before adding its standalone license
+and metadata; its final checksum is recorded in Croissant metadata and RESULTS.md.
+
+Actual mlcroissant1.1.1 parses the official inline-context metadata as two RecordSets;
+local and coordinator extraction each observed 140 dev and 140 test rows. Optional warnings concern
+recommended citeAs/datePublished and newer context terms; no publication date is
+invented for an unpublished dataset. These are executed consumer checks, not
+external certification or an HF upload.
+
+First source checkpoint ae6ca569902269f8b411b7639edae79f787b1f57 matched fresh
+origin/feat/spanward-census. Automatic approval review then rejected the draft-PR
+and fresh-clone command as "blocked by policy". Readback found no PR and no clone.
+No alternate route was attempted. Independent review of the pushed branch and
+local fresh-environment checks continued; neither substitutes for hosted final-head
+checks, clean-clone verification, a PR, merge or landed-content verification.
+
+A subsequent packaging check reproduced Windows CRLF serialization and backslash
+checksum keys: Git normalized corpus blobs, so their recorded checksums did not
+match committed bytes. Two negative tests failed before LF byte serialization,
+POSIX paths and fixed ZIP host attributes/order corrected the artifact. Corpus
+checksums now match each file; ZIP regeneration is tested twice. CI now explicitly
+sets UV_PYTHON per matrix job and prints the actual interpreter; setup-python
+labels alone did not override .python-version. Fresh local verification explicitly
+printed Python 3.11.13 before the full passing suite. No matrix-label-only claim
+or clean-clone substitution is made.
+
+Final corpus ZIP regeneration after LF/POSIX/header correction produced identical
+SHA-256 df075472efd09bcf3355d3d2737ab2a961b8a8fbdcdc2f7f890f382584928895 twice.
+Fresh Python 3.11.13 full gate then passed 186 tests, both type checkers, Ruff,
+schemas and wheel/sdist builds. Actual local native Croissant extraction returned
+140 dev and 140 test records with no parse/extraction error. Opt-in Chromium
+worker reported WebGL state webgl2 in an executed browser check.
+
+The final repeated browser suite again passed all nine tests. Its subsequent
+cold Lighthouse session had TBT 271.5/0/0 ms, failing the unchanged worst-run
+assertion while LCP/AA passed. The prior passing run is historical evidence,
+not a substitute for this failure. A single isolated rerun is justified by
+observed concurrent browser work; its actual outcome will be recorded separately.
+
+A final consumer regression used a real manifest literally named --help with a
+missing expected row. The Action wrapper returned argparse help with exit 0
+instead of auditing it. The subprocess test failed before adding the -- positional
+separator to the wrapper and pre-commit entry. Normal CLI help stays unchanged.
+The fresh Python 3.11.13 full gate then passed 187 tests, Ruff, both type checkers,
+schemas and wheel/sdist builds. No browser asset changed in this correction.
+
+## Coordinator closeout
+
+The coordinator reviewed the source and consumer correction, ran the seven
+focused portability/sensitivity cases on Python 3.11.13, and verified native
+Croissant extraction of 140 dev and 140 test records. All five canonical token
+files and the paired Python output-safety module match their sibling bytes.
+The consumer now treats option-like manifest paths literally; its subprocess
+regression fails the old help/exit-zero path and passes the corrected audit.
+The coordinator then ran the full gate on explicitly printed Python 3.11.13:
+187 tests passed in 17.98 seconds; Ruff lint/format, mypy, Pyright, canonical
+schema/fixture validation, wheel and source-distribution builds all passed.
+The original-profile isolated-suite Lighthouse rerun passed all three runs;
+the preceding cold TBT outlier remains in docs/lighthouse-contention.json.
+The wordmark now has an opaque night background so its light lettering remains
+readable on light image-viewer and GitHub backgrounds. No PR, clean clone,
+merge, release, settings change, or dataset upload is inferred from these checks.

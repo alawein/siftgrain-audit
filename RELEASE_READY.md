@@ -25,7 +25,8 @@ retained canonical artifacts but registry authentication failing with
 `invalid-publisher`, which cannot be independently verified here. The public GitHub-only release records that actual state.
 The historical Pages run link now returns 404. It recorded
 success at the merged revision, which cannot be independently verified here. The merged test suite passed 157 cases.
-Repository `eval-audit`, module `eval_audit` and command `eval-audit` are unchanged.
+That release predates the rename. The current repository and command are
+`siftgrain-audit`; the Python module is `siftgrain_audit`.
 Pending-publisher acceptance and publication have not completed: the authenticated
 PyPI session needs owner-entered sensitive-action password confirmation. This is
 an access blocker, not a new approval gate. Do not put credentials in logs or use
@@ -35,8 +36,11 @@ before trying the authorized `alawein-evaluation-audit` alternative.
 ## Maintenance delivery
 
 Register the accepted project's [pending publisher](https://pypi.org/manage/account/publishing/):
-GitHub owner `alawein`, repository `eval-audit`, workflow `release.yml`, environment
-`pypi`. The existing immutable `v0.3.1` tag retains the merged revision; never alter it
+GitHub owner `alawein`, repository `siftgrain-audit`, workflow `release.yml`, environment
+`pypi`. On October 13, the browser was signed out of PyPI when the State publisher
+page was opened. Audit publisher settings were not inspected or changed; its
+native binding remains unverified after the rename.
+The existing immutable `v0.3.1` tag retains the merged revision; never alter it
 or `v0.3.0`. After publisher acceptance, reconcile retained canonical bytes and
 exact provenance through the coordinator-owned recovery path.
 

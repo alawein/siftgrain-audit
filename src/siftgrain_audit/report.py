@@ -2,6 +2,8 @@ import base64
 import html
 import json
 
+from siftgrain_audit.viewer import enhance
+
 
 def render_json(report: dict) -> str:
     return json.dumps(report, sort_keys=True, indent=2, allow_nan=False) + "\n"
@@ -76,7 +78,7 @@ def _case_cards(report: dict, manifest: dict | None, records: list[dict] | None)
     )
 
 
-def render_html(
+def _render_html(
     report: dict,
     *,
     manifest: dict | None = None,
@@ -280,13 +282,28 @@ def render_html(
         + cards
         + "</div>"
         + coverage
+        + '<details class="evidence-details"><summary>'
+        "Record explanations, source and provenance</summary>"
         + _case_cards(report, manifest, records)
         + source
         + how_to
         + evidence
+        + "</details>"
         + "<section><h2>Inspectable report</h2><details><summary>Expand JSON report</summary><pre>"
         + content
         + "</pre></details></section>"
         '<footer><a href="https://github.com/alawein/siftgrain-audit">Source and installation</a>'
         "</footer></main></body></html>"
+    )
+
+
+def render_html(
+    report: dict,
+    *,
+    manifest: dict | None = None,
+    records: list[dict] | None = None,
+    example: dict | None = None,
+) -> str:
+    return enhance(
+        _render_html(report, manifest=manifest, records=records, example=example), manifest, records
     )

@@ -1,0 +1,1 @@
+{"samples": [{"epoch": 2, "id": 2, "scores": {"model_graded_fact": {"value": "C"}}}, {"epoch": 1, "id": 2, "scores": {"model_graded_fact": {"value": "C"}}}, {"epoch": 2, "id": 3, "scores": {"model_graded_fact": {"value": "C"}}}, {"epoch": 1, "id": 1, "scores": {"model_graded_fact": {"value": "C"}}}, {"epoch": 2, "id": 1, "scores": {"model_graded_fact": {"value": "C"}}}]}
