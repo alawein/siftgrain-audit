@@ -4,7 +4,7 @@ const read=(key,fallback,allowed)=>{try{const value=localStorage.getItem(key);re
 const save=(key,value)=>{try{localStorage.setItem(key,value)}catch{}};
 root.dataset.theme=read('census-appearance','dark',['dark','light']);
 root.dataset.vibe=read('census-vibe','pixel',['cartoon','calm','pixel','lab']);
-document.addEventListener('DOMContentLoaded',()=>{
+function initialize(){
   const syncAppearance=()=>{document.getElementById('theme-'+root.dataset.theme).checked=true};
   syncAppearance();
   for(const [id,key,values] of [['appearance','census-appearance',['dark','light']],['vibe','census-vibe',['cartoon','calm','pixel','lab']]]){
@@ -56,4 +56,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.addEventListener('visibilitychange',()=>{root.dataset.paused=String(paused||document.hidden);start()});reduced.addEventListener('change',start);
   if('IntersectionObserver'in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;start()}).observe(canvas);
   window.addEventListener('pagehide',()=>{if(worker)worker.terminate();worker=null});start();
-});})();
+}
+// Keep appearance before first paint, but yield control setup until after load.
+window.addEventListener('load',()=>{
+  if(typeof window.requestIdleCallback==='function')window.requestIdleCallback(initialize,{timeout:1000});
+  else setTimeout(initialize,0);
+},{once:true});})();

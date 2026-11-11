@@ -4,10 +4,28 @@ import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {writeFileSync,mkdirSync} from 'node:fs';
 const url=pathToFileURL(resolve('site/acceptance.html')).href;
+for(const idle of [true,false])test(`viewer initializes after load with ${idle?'idle callback':'timer fallback'}`,async({page})=>{
+  await page.addInitScript(idle=>{
+    window.requestIdleCallback=idle?callback=>{window.initializeViewer=callback;return 1}:undefined;
+    window.addEventListener('load',()=>{window.viewerAtLoad=document.getElementById('field').dataset.gpu});
+  },idle);
+  await page.goto(url);
+  expect(await page.evaluate(()=>window.viewerAtLoad)).toBeUndefined();
+  if(idle){
+    await expect(page.locator('#field')).not.toHaveAttribute('data-gpu');
+    await page.evaluate(()=>window.initializeViewer());
+  }
+  await expect(page.locator('#field')).toHaveAttribute('data-gpu','static');
+  await page.selectOption('#appearance','light');
+  await expect(page.locator('#theme-light')).toBeChecked();
+  await page.selectOption('#status-filter','missing');
+  await expect(page.locator('#trial-table tbody tr:visible')).toHaveCount(1);
+});
 test('offline report, all vibes, both appearances, keyboard and missing filter',async({page},testInfo)=>{
   const requests=[],errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.route('http**://**',route=>{requests.push(route.request().url());route.abort()});
   await page.goto(url);
+  await expect(page.locator('#field')).toHaveAttribute('data-gpu','static');
   for(const theme of ['dark','light'])for(const vibe of ['cartoon','calm','pixel','lab']){
     await page.selectOption('#appearance',theme);await page.selectOption('#vibe',vibe);
     await expect(page.locator('html')).toHaveAttribute('data-theme',theme);
@@ -34,14 +52,16 @@ test('offline report, all vibes, both appearances, keyboard and missing filter',
 test('blocked storage, reduced motion and absent WebGL remain usable',async({page})=>{
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.addInitScript(()=>{Object.defineProperty(window,'localStorage',{get(){throw new Error('blocked')}});HTMLCanvasElement.prototype.getContext=()=>null});
-  await page.goto(url);await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
+  await page.goto(url);await expect(page.locator('#field')).toHaveAttribute('data-gpu','static');
+  await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
   await page.selectOption('#vibe','calm');await page.selectOption('#appearance','light');
   expect(await page.locator('.trial-cell.missing').evaluate(e=>getComputedStyle(e).animationName)).toBe('none');
   await expect(page.locator('#trial-table')).toBeVisible();
 });
 test('local-file interaction and frame measurements',async({page},testInfo)=>{
   await page.addInitScript(()=>{window.censusEvents=[];try{new PerformanceObserver(list=>window.censusEvents.push(...list.getEntries().filter(e=>e.interactionId>0).map(e=>e.duration))).observe({type:'event',buffered:true,durationThreshold:16})}catch{}});
-  await page.goto(url);for(let i=0;i<12;i++)await page.locator('#motion').click();
+  await page.goto(url);await expect(page.locator('#field')).toHaveAttribute('data-gpu','static');
+  for(let i=0;i<12;i++)await page.locator('#motion').click();
   const measurements=await page.evaluate(async()=>{
     const lcp=[];try{new PerformanceObserver(list=>lcp.push(...list.getEntries().map(e=>e.startTime))).observe({type:'largest-contentful-paint',buffered:true})}catch{}
     const durations=[];for(let i=0;i<20;i++){const start=performance.now();document.getElementById('status-filter').value=i%2?'missing':'all';document.getElementById('status-filter').dispatchEvent(new Event('change'));await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);durations.push(performance.now()-start)}
