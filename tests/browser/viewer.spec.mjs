@@ -4,6 +4,43 @@ import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {writeFileSync,mkdirSync} from 'node:fs';
 const url=pathToFileURL(resolve('site/acceptance.html')).href;
+test('large trial tables render automatically across frame slices without changing evidence',async({page})=>{
+  await page.addInitScript(()=>{
+    window.requestIdleCallback=callback=>{window.initializeViewer=callback;return 1};
+  });
+  await page.goto(url);
+  const evidence=await page.evaluate(()=>{
+    const table=document.querySelector('#trial-table tbody');
+    const rows=Array.from(table.rows);
+    while(table.rows.length<300)table.append(rows[table.rows.length%rows.length].cloneNode(true));
+    window.renderedRowCounts=[];
+    const frame=window.requestAnimationFrame;
+    window.requestAnimationFrame=callback=>frame.call(window,time=>{
+      window.renderedRowCounts.push(Array.from(table.rows).filter(row=>getComputedStyle(row).display!=='none').length);
+      callback(time);
+    });
+    const text=table.textContent;
+    window.initializeViewer();
+    return text;
+  });
+  await expect(page.locator('#field')).toHaveAttribute('data-gpu','static');
+  await expect(page.locator('#trial-table tbody tr:visible')).toHaveCount(300);
+  expect(await page.locator('#trial-table tbody').textContent()).toBe(evidence);
+  const counts=await page.evaluate(()=>window.renderedRowCounts);
+  expect(counts.some(count=>count>0&&count<300)).toBe(true);
+  expect(Math.max(...counts.map((count,index)=>count-(counts[index-1]??0)))).toBeLessThanOrEqual(25);
+  await page.selectOption('#status-filter','missing');
+  await expect(page.locator('#trial-table tbody tr:visible')).toHaveCount(75);
+});
+test('all trial evidence remains visible without JavaScript',async({browser})=>{
+  const context=await browser.newContext({javaScriptEnabled:false});
+  try{
+    const page=await context.newPage();await page.goto(url);
+    await expect(page.locator('#trial-table tbody tr:visible')).toHaveCount(4);
+    await expect(page.locator('.trial-strip:visible')).toHaveCount(4);
+    await expect(page.locator('h1')).toBeVisible();
+  }finally{await context.close()}
+});
 for(const idle of [true,false])test(`viewer initializes after load with ${idle?'idle callback':'timer fallback'}`,async({page})=>{
   await page.addInitScript(idle=>{
     window.requestIdleCallback=idle?callback=>{window.initializeViewer=callback;return 1}:undefined;

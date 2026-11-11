@@ -4,7 +4,13 @@ const read=(key,fallback,allowed)=>{try{const value=localStorage.getItem(key);re
 const save=(key,value)=>{try{localStorage.setItem(key,value)}catch{}};
 root.dataset.theme=read('census-appearance','dark',['dark','light']);
 root.dataset.vibe=read('census-vibe','pixel',['cartoon','calm','pixel','lab']);
-function initialize(){
+root.dataset.censusRendering='pending';
+window.addEventListener('beforeprint',()=>{delete root.dataset.censusRendering});
+const yieldToBrowser=()=>new Promise(resolve=>{
+  if(document.hidden)setTimeout(resolve,0);
+  else requestAnimationFrame(()=>setTimeout(resolve,0));
+});
+async function initialize(){
   const syncAppearance=()=>{document.getElementById('theme-'+root.dataset.theme).checked=true};
   syncAppearance();
   for(const [id,key,values] of [['appearance','census-appearance',['dark','light']],['vibe','census-vibe',['cartoon','calm','pixel','lab']]]){
@@ -16,7 +22,7 @@ function initialize(){
   if(filter)filter.addEventListener('change',()=>{let shown=0;const rows=document.querySelectorAll('#trial-table tbody tr');for(const row of rows){row.hidden=filter.value!=='all'&&row.dataset.status!==filter.value;if(!row.hidden)shown++}document.getElementById('filter-status').textContent=`${shown} of ${rows.length} planned trials shown. The denominator is unchanged.`});
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let paused=true,visible=true,worker=null,attempted=false;
-  const canvas=document.getElementById('field');canvas.dataset.gpu='static';
+  const canvas=document.getElementById('field');
   function fieldWorker(){
     let gl=null,program=null,frame=0,running=false,canvas=null;
     function stop(){if(frame)cancelAnimationFrame(frame);frame=0}
@@ -56,6 +62,20 @@ function initialize(){
   document.addEventListener('visibilitychange',()=>{root.dataset.paused=String(paused||document.hidden);start()});reduced.addEventListener('change',start);
   if('IntersectionObserver'in window)new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;start()}).observe(canvas);
   window.addEventListener('pagehide',()=>{if(worker)worker.terminate();worker=null});start();
+  // The evidence is server-rendered: reveal it in bounded layout/paint slices.
+  for(const section of document.getElementById('top').children){
+    section.dataset.censusRendered='';
+    let count=0,since=performance.now();
+    for(const row of section.querySelectorAll('.trial-strip,.trial-cell,#trial-table tbody tr')){
+      row.dataset.censusRendered='';
+      if(++count===25||performance.now()-since>=8){
+        await yieldToBrowser();count=0;since=performance.now();
+      }
+    }
+    await yieldToBrowser();
+  }
+  delete root.dataset.censusRendering;
+  if(!canvas.dataset.gpu)canvas.dataset.gpu='static';
 }
 // Keep appearance before first paint, but yield control setup until after load.
 window.addEventListener('load',()=>{

@@ -5,3 +5,6 @@ body{background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,sans-serif}ma
 .skip{left:16px;top:8px}.skip:focus{position:relative;left:0;top:0;display:block;margin:8px 24px;width:max-content;max-width:calc(100% - 48px)}.evidence-details{margin-top:36px;border-top:1px solid var(--line)}
 
 :focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* JavaScript reveals server-rendered evidence across frames; no-JS stays visible. */
+html[data-census-rendering] main>:not([data-census-rendered]),html[data-census-rendering] .trial-strip:not([data-census-rendered]),html[data-census-rendering] .trial-cell:not([data-census-rendered]),html[data-census-rendering] #trial-table tbody tr:not([data-census-rendered]){display:none}
