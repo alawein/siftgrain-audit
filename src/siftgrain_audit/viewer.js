@@ -5,10 +5,13 @@ const save=(key,value)=>{try{localStorage.setItem(key,value)}catch{}};
 root.dataset.theme=read('census-appearance','dark',['dark','light']);
 root.dataset.vibe=read('census-vibe','pixel',['cartoon','calm','pixel','lab']);
 document.addEventListener('DOMContentLoaded',()=>{
+  const syncAppearance=()=>{document.getElementById('theme-'+root.dataset.theme).checked=true};
+  syncAppearance();
   for(const [id,key,values] of [['appearance','census-appearance',['dark','light']],['vibe','census-vibe',['cartoon','calm','pixel','lab']]]){
     const control=document.getElementById(id);control.value=root.dataset[id==='appearance'?'theme':id];
-    control.addEventListener('change',()=>{if(values.includes(control.value)){root.dataset[id==='appearance'?'theme':id]=control.value;save(key,control.value);start()}});
+    control.addEventListener('change',()=>{if(values.includes(control.value)){root.dataset[id==='appearance'?'theme':id]=control.value;save(key,control.value);syncAppearance();start()}});
   }
+  for(const theme of ['dark','light'])document.getElementById('theme-'+theme).addEventListener('change',()=>{root.dataset.theme=theme;document.getElementById('appearance').value=theme;save('census-appearance',theme);start()});
   const filter=document.getElementById('status-filter');
   if(filter)filter.addEventListener('change',()=>{let shown=0;const rows=document.querySelectorAll('#trial-table tbody tr');for(const row of rows){row.hidden=filter.value!=='all'&&row.dataset.status!==filter.value;if(!row.hidden)shown++}document.getElementById('filter-status').textContent=`${shown} of ${rows.length} planned trials shown. The denominator is unchanged.`});
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');

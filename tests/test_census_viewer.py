@@ -24,9 +24,16 @@ def test_report_keeps_every_planned_trial_and_safe_text():
     assert "https://github.com/alawein/siftgrain-audit" in page
     assert "Content-Security-Policy" in page and "connect-src 'none'" in page
     assert "prefers-reduced-motion" in page
+    assert '<main id="top" tabindex="-1">' in page
+    assert 'aria-label="Siftgrain tools"' in page
+    assert 'id="theme-dark"' in page and 'id="theme-light"' in page
+    assert 'href="#top">Skip to evidence' in page
+    assert 'id="field"' in page
 
 
 def test_report_without_inputs_does_not_invent_trial_states():
     manifest = {"schema_version": 1, "run_id": "r", "expected_ids": ["a"]}
     page = render_html(audit(manifest, []))
     assert "Trial details require the supplied manifest and records" in page
+    assert "<script" not in page.lower()
+    assert 'id="theme-dark"' in page and 'id="theme-light"' in page

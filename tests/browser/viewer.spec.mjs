@@ -11,10 +11,17 @@ test('offline report, all vibes, both appearances, keyboard and missing filter',
   for(const theme of ['dark','light'])for(const vibe of ['cartoon','calm','pixel','lab']){
     await page.selectOption('#appearance',theme);await page.selectOption('#vibe',vibe);
     await expect(page.locator('html')).toHaveAttribute('data-theme',theme);
+    await expect(page.locator('#theme-'+theme)).toBeChecked();
     await expect(page.locator('html')).toHaveAttribute('data-vibe',vibe);
     const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
     expect(a11y.violations).toEqual([]);
   }
+  await page.locator('#theme-dark').check();
+  await expect(page.locator('#appearance')).toHaveValue('dark');
+  await expect(page.locator('html')).toHaveAttribute('data-theme','dark');
+  await page.locator('#theme-light').check();
+  await expect(page.locator('#appearance')).toHaveValue('light');
+  await expect(page.locator('html')).toHaveAttribute('data-theme','light');
   await page.selectOption('#status-filter','missing');
   await expect(page.locator('#trial-table tbody tr:visible')).toHaveCount(1);
   await expect(page.locator('#filter-status')).toContainText('denominator is unchanged');

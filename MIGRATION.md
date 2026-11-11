@@ -1,8 +1,8 @@
 # Migration and identity
 
 Siftgrain Audit is the product title and the GitHub repository is
-`alawein/siftgrain-audit`. Python distribution `alawein-eval-audit`, module
-`eval_audit`, and command `eval-audit` remain compatible. Existing tags and
+`alawein/siftgrain-audit`. The Python distribution and command are now
+`siftgrain-audit`, and the module is `siftgrain_audit`. Existing tags and
 feature branches are retained. The family also includes Siftgrain Cite and
 Siftgrain State; limited collision searches are not legal clearance.
 
@@ -23,9 +23,9 @@ scenario/run/metric export at a time. Open LLM conversion accepts an exported
 details JSON array with doc_id and a literal metric key. Neither downloads
 datasets or reads Parquet. Unsupported shapes fail; population is always supplied.
 
-The GitHub repository has been renamed to `alawein/siftgrain-audit`. Keep the
-Python distribution and command names as compatibility entrypoints. No kohyr
-transfer is proposed without explicit destination consent.
+The historical `alawein-eval-audit` distribution and `eval-audit` command predate
+the package rename. Update imports, hook entrypoints and scripts to the current
+names; this branch does not restore the removed `eval_audit` package.
 
 After a repository rename, verify current README/badges, package repository
 metadata and the release-workflow repository guard. Read back the native PyPI

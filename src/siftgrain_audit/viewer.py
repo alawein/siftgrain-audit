@@ -71,6 +71,10 @@ def trial_view(manifest: dict | None, records: list[dict] | None) -> str:
 
 
 def enhance(page: str, manifest: dict | None, records: list[dict] | None) -> str:
+    anchor = '<details class="evidence-details">'
+    page = page.replace(anchor, trial_view(manifest, records) + anchor, 1)
+    if manifest is None or records is None:
+        return page
     css = files("siftgrain_audit").joinpath("tokens.css").read_text(encoding="utf-8")
     css += files("siftgrain_audit").joinpath("viewer.css").read_text(encoding="utf-8")
     js = files("siftgrain_audit").joinpath("viewer.js").read_text(encoding="utf-8")
@@ -83,7 +87,7 @@ def enhance(page: str, manifest: dict | None, records: list[dict] | None) -> str
     head = f'<meta http-equiv="Content-Security-Policy" content="{policy}">'
     head += f"<style>{css}</style><script data-census-viewer>{js}</script>"
     controls = (
-        '<a class="skip" href="#evidence">Skip to evidence</a><nav aria-label="Viewer">'
+        '<a class="skip" href="#top">Skip to evidence</a><nav aria-label="Viewer">'
         '<span class="product">Siftgrain Audit <small>evaluation completeness</small></span>'
         '<label for="appearance">Appearance</label><select id="appearance">'
         '<option value="dark">Dark</option><option value="light">Light</option></select>'
@@ -94,10 +98,10 @@ def enhance(page: str, manifest: dict | None, records: list[dict] | None) -> str
         "Enable background motion</button></nav>"
     )
     page = page.replace("</head>", head + "</head>")
-    page = page.replace(
-        "<body><main>",
-        "<body>" + controls + '<main id="evidence">'
-        '<canvas id="field" width="960" height="100" aria-hidden="true"></canvas>',
+    page = page.replace("<body>", "<body>" + controls, 1)
+    main = '<main id="top" tabindex="-1">'
+    return page.replace(
+        main,
+        main + '<canvas id="field" width="960" height="100" aria-hidden="true"></canvas>',
+        1,
     )
-    anchor = '<details class="evidence-details">'
-    return page.replace(anchor, trial_view(manifest, records) + anchor, 1)
