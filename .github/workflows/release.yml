@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    if: github.repository == 'alawein/eval-audit'
+    if: github.repository == 'alawein/siftgrain-audit'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

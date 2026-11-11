@@ -1,8 +1,8 @@
 import pytest
 from test_audit import manifest, row
 
-from eval_audit.contract import InputError
-from eval_audit.core import audit
+from siftgrain_audit.contract import InputError
+from siftgrain_audit.core import audit
 
 
 def test_trials_missing_and_mixed_partition():

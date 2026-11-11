@@ -3,10 +3,10 @@ import os
 
 import pytest
 
-from eval_audit.cli import main
-from eval_audit.contract import InputError, load_inputs, validate
-from eval_audit.core import audit
-from eval_audit.report import render_html
+from siftgrain_audit.cli import main
+from siftgrain_audit.contract import InputError, load_inputs, validate
+from siftgrain_audit.core import audit
+from siftgrain_audit.report import render_html
 
 
 def manifest(ids=None):

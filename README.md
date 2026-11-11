@@ -1,16 +1,16 @@
-# Eval Audit
+# Siftgrain Audit
 
-Eval Audit is an offline Python command line tool for people who run
+Siftgrain Audit is an offline Python command line tool for people who run
 evaluations and need to know which expected results are missing before they
 read the scores.
 
-The package is `alawein-eval-audit`; the command is `eval-audit`.
+The package and command are `siftgrain-audit`.
 
 ![Evaluation coverage](assets/label-purpose.svg)
 ![Python](assets/label-stack.svg)
 ![Offline CLI](assets/label-runtime.svg)
 
-Declare the expected IDs and supply JSONL results. Eval Audit separates scored,
+Declare the expected IDs and supply JSONL results. Siftgrain Audit separates scored,
 errored, unscored, missing, and unexpected records, including errored records
 that retain a score.
 
@@ -20,12 +20,23 @@ Python 3.11+. No runtime dependencies. Clone the repository, then:
 
 ```sh
 uv sync --frozen
-uv run eval-audit examples/manifest.json examples/results.jsonl
+uv run siftgrain-audit examples/manifest.json examples/results.jsonl
 ```
+
+For your own run, create a manifest with your expected IDs independently of the
+results, supply JSONL rows, and run:
+
+```sh
+uv run siftgrain-audit manifest.json results.jsonl --html report.html --json report.json
+```
+
+HTML includes the supplied manifest, result bytes and reasons as downloadable
+local evidence. Review those contents before sharing the report. Downloads retain
+exact input bytes and their displayed hashes. Nothing is uploaded.
 
 JSON prints to stdout by default, so a first run writes nothing to the repo. Add
 `--html report.html` or `--json report.json` for files; reruns over an existing
-path need `--force`. `eval-audit --help` shows the manifest and JSONL shapes, the
+path need `--force`. `siftgrain-audit --help` shows the manifest and JSONL shapes, the
 standard invocations, and exit-code meanings.
 
 The synthetic example exits **1**: four expected IDs, one scored, one errored,
@@ -38,7 +49,7 @@ Agent Acceptance is a working demo title for synthetic refund case 1042. Audit
 the supplied evaluation rows with the same offline engine:
 
 ```sh
-uv run eval-audit examples/acceptance-manifest.json examples/acceptance-results.jsonl
+uv run siftgrain-audit examples/acceptance-manifest.json examples/acceptance-results.jsonl
 uv run python scripts/build_demo.py
 ```
 
@@ -81,14 +92,14 @@ Convert local Inspect `.eval`/`.json`, lm-evaluation-harness per-sample JSONL or
 promptfoo JSON with an explicit population:
 
 ```sh
-uv run eval-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl
-uv run eval-audit manifest.json results.jsonl
+uv run siftgrain-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl
+uv run siftgrain-audit manifest.json results.jsonl
 ```
 
 For a report in one command, add `--html report.html` to conversion:
 
 ```sh
-uv run eval-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl --html report.html
+uv run siftgrain-audit convert inspect log.json --manifest manifest.json --score-key metric --output results.jsonl --html report.html
 ```
 
 Open `report.html` locally. The converted rows remain in `results.jsonl` for
@@ -118,7 +129,7 @@ small recorded-run exercise with its stated limits. The [ten-sample archive stud
 
 [Inspect error handling](https://inspect.aisi.org.uk/handling-errors.html) and
 [missing-score metric policies](https://inspect.aisi.org.uk/metrics.html) already
-provide native controls. Eval Audit independently compares delivered rows with
+provide native controls. Siftgrain Audit independently compares delivered rows with
 a caller-supplied expected population. [Retry issue 5659](https://github.com/UKGovernmentBEIS/inspect_ai/issues/5659)
 is a report about sample selection, not proof of a general harness defect.
 

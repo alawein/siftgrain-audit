@@ -5,9 +5,9 @@ import json
 import pytest
 from test_audit import manifest
 
-from eval_audit.adapters import convert
-from eval_audit.cli import main
-from eval_audit.contract import InputError
+from siftgrain_audit.adapters import convert
+from siftgrain_audit.cli import main
+from siftgrain_audit.contract import InputError
 
 
 def source_file(tmp_path, scores):

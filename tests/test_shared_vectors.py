@@ -1,12 +1,12 @@
-"""Shared conformance vectors; mirrored in eval-audit with import substitutions."""
+"""Shared conformance vectors; mirrored in the sibling tool with import substitutions."""
 
 import os
 from pathlib import Path
 
 import pytest
 
-from eval_audit import output
-from eval_audit.report import render_html, render_json
+from siftgrain_audit import output
+from siftgrain_audit.report import render_html, render_json
 
 
 def test_existing_force_and_input_alias(tmp_path):
