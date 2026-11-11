@@ -162,6 +162,7 @@ jobs:
       - run: uv sync --frozen
       - run: npm ci --ignore-scripts
       - run: npm run test:tokens
+      - run: npm run test:lighthouse-date
       - run: uv run python scripts/build_demo.py
       - run: uv run python scripts/check_perf.py
       - run: npx playwright install --with-deps chromium firefox webkit
