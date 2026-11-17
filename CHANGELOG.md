@@ -2,14 +2,23 @@
 
 ## Unreleased
 
-- Add Siftgrain Census offline four-vibe report and planned-trial evidence.
+- Rename the distribution, import package and command to siftgrain-audit
+  (module `siftgrain_audit`); audit output bytes are unchanged. The historical
+  `eval_audit` package and `eval-audit` command are not restored.
+- Add the offline four-vibe HTML report (developed as Siftgrain Census) and planned-trial evidence.
 - Add strict HELM/Open LLM export adapters, separate score sensitivity, optional rich summary, composite Action and pre-commit hook.
 - Add pinned public-log fault corpus, native Inspect baseline, downloadable test set, browser/accessibility/performance checks and recorded demos.
-- Preserve legacy audit JSON, stdlib runtime and existing package/CLI identities.
+- Add the synthetic Agent Acceptance refund demo and lead reports with coverage
+  actions and downloadable supplied inputs.
+- Write the HTML or JSON audit report during `convert` with `--html` or `--json`,
+  explain unexpected IDs and trial counts in coverage summaries, and suggest
+  available Inspect scorer names when `--score-key` does not match.
+- Link the Siftgrain suite from offline reports, derive the viewer Lighthouse
+  date from the record, and pin the shared CI kit at v1.4.0.
+- Preserve legacy audit JSON and the stdlib runtime.
 
-## 0.3.1 (not yet published)
+## 0.3.1 (GitHub released October 8, 2026; not published to PyPI)
 
-- Rename distribution, import package and command to siftgrain-audit; output bytes unchanged.
 - Rename distribution to alawein-eval-audit; preserve eval_audit imports and eval-audit CLI.
 - Build once, retain and attest exact artifacts, reconcile registry retries and immutable release assets.
 - Add mirrored output conformance vectors and a pinned ten-sample offline Inspect study.
