@@ -164,7 +164,9 @@ provide race-proof input identity checks or a power-loss durability guarantee.
 
 This is [alawein/siftgrain-audit](https://github.com/alawein/siftgrain-audit), an
 offline coverage auditor. It is unrelated to similarly named statistical or
-human-grading tools. Releases are tagged v0.1.0 through v0.3.1.
+human-grading tools. Releases are tagged v0.1.0 through v0.3.1. They predate
+the rename, are distributed through GitHub Releases only, and no version is on
+PyPI yet.
 
 [Release readiness](RELEASE_READY.md) and [security settings](SECURITY_SETTINGS.md)
 record the publication setup and observed access limits.
@@ -187,8 +189,8 @@ error scores are excluded only in scored-only. This is descriptive arithmetic,
 not a pass@k or pass^k rate. `--rich` adds an optional stderr summary after
 `uv sync --extra cli`; ordinary JSON stays machine-readable.
 
-`make bench` reproduces the pinned public-log fault suite. It can fetch only
-when explicitly requested by that benchmark script; the product never fetches.
+`make bench` fetches the pinned public log and reproduces the fault suite; the
+product itself never fetches.
 Browser checks: `npm ci`, `uv run python scripts/build_demo.py`, then
 `npm run test:browser`, `npm run perf`, and `uv run python scripts/check_perf.py`.
 All browser dependencies are development-only. Actual recordings are in
