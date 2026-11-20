@@ -81,12 +81,10 @@ changelog. Local preparation notes are not used as the public publication status
 Update v0.3.0's release description to point to the new distribution after actual
 success, retaining the old tag/assets. The manual Pages workflow remains authorized;
 verify its run and public page before claiming deployment. Follow
-[non-Dependabot security controls](SECURITY_SETTINGS.md).
+[non-Dependabot security controls](security-settings.md).
 
 ## Dated prepublication history
 
 Earlier v0.3.0 preparation permitted a draft PR only, and separated merge, tag,
 registry, release, Pages and settings gates. Those were the permissions at that
-time; the owner's October 8 follow-up superseded them. The original Phase 0 and
-prepublication test results remain in [AUDIT_VERIFICATION.md](AUDIT_VERIFICATION.md).
-No historical test run is represented as a maintenance validation run.
+time; the owner's October 8 follow-up superseded them. No historical test run is represented as a maintenance validation run.

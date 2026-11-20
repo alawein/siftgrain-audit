@@ -26,7 +26,7 @@ separate from this worker's local tests.
 
 The trusted publisher requires the accepted PyPI distribution, owner `alawein`,
 repository `siftgrain-audit`, workflow `release.yml`, and environment `pypi`. See
-[release readiness](RELEASE_READY.md). Credentials remain owner-entered through
+[release readiness](release.md). Credentials remain owner-entered through
 the managed-secret flow. Do not create or rotate a token as a workaround.
 
 ## Dated settings evidence
