@@ -23,6 +23,5 @@ Atomic tests inject stage-write, forced-install and exclusive-create failures,
 checking old bytes and stage cleanup. Published schemas validate both legacy
 and extended example packets and reject malformed records/version extensions.
 
-The exact current verification counts and interpreter versions are maintained
-in [AUDIT_VERIFICATION.md](../AUDIT_VERIFICATION.md). Tests establish the supplied
+Verification counts come from `just check`. Tests establish the supplied
 data contract, not the truth or representativeness of the source population.

@@ -22,9 +22,9 @@ record completeness and denominators; it does not validate evaluation methods.
 Its self-contained report offers four vibes, dark/light appearance, missing-trial
 waffles, trial strips, a filterable table and descriptive score-policy arithmetic.
 
-[Brand and name checks](BRAND.md) | [Download test set](benchmarks/dataset-v1.zip) |
-[Benchmark results](benchmarks/RESULTS.md) | [Migration](MIGRATION.md) |
-[Performance](PERF.md)
+[Brand and name checks](docs/brand.md) | [Download test set](benchmarks/dataset-v1.zip) |
+[Benchmark results](benchmarks/RESULTS.md) | [Migration](docs/migration.md) |
+[Performance](docs/performance.md)
 
 ## Install and run
 
@@ -168,8 +168,11 @@ human-grading tools. Releases are tagged v0.1.0 through v0.3.1. They predate
 the rename, are distributed through GitHub Releases only, and no version is on
 PyPI yet.
 
-[Release readiness](RELEASE_READY.md) and [security settings](SECURITY_SETTINGS.md)
+[Release process](docs/release.md) and [security settings](docs/security-settings.md)
 record the publication setup and observed access limits.
+
+[Decisions](docs/decisions.md), [research](docs/research.md), [shared code](docs/shared-code.md),
+[changelog](CHANGELOG.md), [AGENTS.md](AGENTS.md), [REVIEW.md](REVIEW.md).
 
 Code is MIT ([LICENSE](LICENSE)). The synthetic example fixtures are CC0
 ([examples/LICENSE](examples/LICENSE)).

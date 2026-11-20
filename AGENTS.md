@@ -51,5 +51,5 @@ invalid-publisher result cannot be independently verified here. The authenticate
 form separately rejected the
 original name. Maintenance alawein-eval-audit 0.3.1 is not yet published and its
 pending-publisher acceptance remains blocked on owner-entered password confirmation.
-See [release readiness](RELEASE_READY.md) for the actual states and retry rules.
+See [release readiness](docs/release.md) for the actual states and retry rules.
 Historical preparation and checks below retain their original dates and scope.
