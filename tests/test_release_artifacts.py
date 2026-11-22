@@ -4,6 +4,7 @@ import io
 import json
 import sys
 import tarfile
+import tomllib
 import zipfile
 from pathlib import Path
 
@@ -45,8 +46,12 @@ def test_exact_inventory_and_metadata(tmp_path):
 
 
 def test_create_checksum_inventory_has_exact_lf_bytes(tmp_path, monkeypatch):
-    directory, manifest = artifacts(tmp_path)
-    monkeypatch.chdir(Path(__file__).parents[1])
+    root = Path(__file__).parents[1]
+    version = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))["project"][
+        "version"
+    ]
+    directory, manifest = artifacts(tmp_path, version=version)
+    monkeypatch.chdir(root)
     monkeypatch.setattr(
         sys,
         "argv",
@@ -54,7 +59,7 @@ def test_create_checksum_inventory_has_exact_lf_bytes(tmp_path, monkeypatch):
     )
     verifier.main()
     assert b"\r" not in manifest.with_name("SHA256SUMS").read_bytes()
-    assert len(verifier.verify(directory, manifest, "siftgrain-audit", "0.3.1")) == 2
+    assert len(verifier.verify(directory, manifest, "siftgrain-audit", version)) == 2
 
 
 @pytest.mark.parametrize(

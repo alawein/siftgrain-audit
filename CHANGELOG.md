@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.4.0
 
 - Rename the distribution, import package and command to siftgrain-audit
   (module `siftgrain_audit`); audit output bytes are unchanged. The historical
