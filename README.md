@@ -1,14 +1,14 @@
 # Siftgrain Audit
 
+![Siftgrain Audit](brand/wordmark.svg)
+
 Siftgrain Audit is an offline Python command line tool for people who run
 evaluations and need to know which expected results are missing before they
 read the scores.
 
-The package and command are `siftgrain-audit`.
+![Evaluation coverage](assets/label-purpose.svg) ![Python](assets/label-stack.svg) ![Offline CLI](assets/label-runtime.svg)
 
-![Evaluation coverage](assets/label-purpose.svg)
-![Python](assets/label-stack.svg)
-![Offline CLI](assets/label-runtime.svg)
+The package and command are `siftgrain-audit`.
 
 Declare the expected IDs and supply JSONL results. Siftgrain Audit separates
 scored, errored, unscored, missing, and unexpected records, including errored
