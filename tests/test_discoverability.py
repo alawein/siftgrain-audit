@@ -21,7 +21,7 @@ def test_distribution_metadata_preserves_module_and_cli():
         (Path(__file__).parents[1] / "pyproject.toml").read_text(encoding="utf-8")
     )["project"]
     assert project["name"] == "siftgrain-audit"
-    assert project["version"] == "0.3.1"
+    assert project["version"] == "0.4.0"
     assert project["scripts"] == {"siftgrain-audit": "siftgrain_audit.cli:main"}
     assert project["dependencies"] == []
 
