@@ -53,3 +53,7 @@ original name. Maintenance alawein-eval-audit 0.3.1 is not yet published and its
 pending-publisher acceptance remains blocked on owner-entered password confirmation.
 See [release readiness](docs/release.md) for the actual states and retry rules.
 Historical preparation and checks below retain their original dates and scope.
+
+## Review guidelines
+
+Apply [`REVIEW.md`](REVIEW.md) and the shared [reviewer policy](https://github.com/alawein/.github/blob/main/docs/system/reviewers.md). Kilo Code reviews automatically; CodeRabbit only where the owner allow-lists this repository; Bugbot, Codex, Claude and Copilot run only on a named owner request.
